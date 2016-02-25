@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* CSS Document */
 /*
  Theme Name:   Pbadectim
@@ -122,7 +123,6 @@
 .site-navigation a {
   padding-right: 20px;
   padding-left: 20px;
-  transition: ease-in-out 0.15s;
   font-size: 16px;
   padding-bottom: 6px; }
 
@@ -177,13 +177,85 @@ nav ul li a:hover{
 
 .search-toggle:hover,
 .search-toggle.active {
-  background-color: #d3cac1;
+  background-color: #f1f1f1;
   color: white; }
 
+/*QUAND ON CLIQUE SUR LA LOUPE*/
 .search-toggle:before {
   color: #880000; }
 
 .search-box {
   background-color: black;
   opacity: 0.8;
-  padding: 12px; }
+  padding: 12px;
+  min-height: 100vh;
+  margin-top: 22px; }
+
+.search-box .search-field {
+  width: 25%;
+  margin: 0 auto;
+  font-family: zona_problack;
+  text-transform: uppercase;
+  font-size: 24px;
+  color: white;
+  float: none;
+  padding: 10px;
+  background-color: rgba(0, 0, 255, 0);
+  position: fixed;
+  top: 50%;
+  left: 35%; }
+
+/*------IMPORT -------*/
+/*-----------VARIABLES SASS-----------*/
+/*STYLE G├ëN├ëRAUX*/
+#footer-content {
+  background-color: #f1f1f1;
+  font-family: zona_proregular;
+  font-size: 16px;
+  text-align: center;
+  color: #656565;
+  border-top: #d3cac1 5px solid;
+  padding-top: 63px;
+  padding-bottom: 20px;
+  -moz-box-shadow: 0px 2px 15.68px 0.32px rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: 0px 2px 15.68px 0.32px rgba(0, 0, 0, 0.35);
+  box-shadow: 0px 2px 15.68px 0.32px rgba(0, 0, 0, 0.35); }
+
+/*SECTION AVEC LES BOUTONS*/
+#footer-Button-zone {
+  padding-bottom: 63px; }
+
+#footer-Button-zone a:first-child {
+  margin-right: 20px; }
+
+#footer-Button-zone a {
+  color: #880000;
+  font-family: zona_problack;
+  border: 1px #880000 solid;
+  padding: 22px 2.8125%;
+  transition: ease-in-out 0.15s; }
+
+#footer-Button-zone a:hover {
+  color: white;
+  font-family: zona_problack;
+  border: 1px #880000 solid;
+  background-color: #880000; }
+
+/*SECTION INFO CONTACT*/
+#footer-contact-infos p {
+  width: 17.23958%;
+  min-width: 280px;
+  margin: 0 auto; }
+
+/*SECTION COPYRIGHT*/
+#footer-copyright {
+  padding-bottom: 0px;
+  margin-top: 40px;
+  margin-bottom: 0px; }
+
+/*SECTION FONC├ëE AVEC IC├öNE*/
+#footer-icon-zone {
+  background-color: #0f0f0f;
+  text-align: center;
+  margin: 0 auto;
+  padding: 40px 0; }

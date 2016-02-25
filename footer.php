@@ -10,19 +10,46 @@
  */
 ?>
 
-		</div><!-- #main -->
+    </div>
+    <!-- #main -->
 
-		<footer id="colophon" class="site-footer" role="contentinfo">
+    <footer id="colophon" role="contentinfo">
+        
+        
 
-			<?php get_sidebar( 'footer' ); ?>
+        <div id='footer-content'>
 
-			<div class="site-info">
-				<?php do_action( 'twentyfourteen_credits' ); ?>
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'twentyfourteen' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentyfourteen' ), 'WordPress' ); ?></a>
-			</div><!-- .site-info -->
-		</footer><!-- #colophon -->
-	</div><!-- #page -->
+            <div id='footer-Button-zone'>
 
-	<?php wp_footer(); ?>
-</body>
-</html>
+                <a href="#">CARTE INTÉRACTIVE</a>
+                <a href="#">CONTACTEZ-NOUS</a>
+
+            </div>
+
+            <div id='footer-contact-infos'>
+
+                <p>la Société du patrimoine de Boucherville 566, boul. Marie-Victorin Boucherville (Québec) J4B 1X1</p>
+
+                
+
+            </div>
+            <p id='footer-copyright'>© 2016 Société du Patrimoine de Boucherville. Tous droits réservés.</p>
+        </div>
+
+
+
+        <div id='footer-icon-zone'>
+
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/logo_SPB.png" alt="logo"></a>
+
+        </div>
+
+    </footer>
+    <!-- #colophon -->
+    </div>
+    <!-- #page -->
+
+    <?php wp_footer(); ?>
+        </body>
+
+        </html>

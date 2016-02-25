@@ -1,0 +1,73 @@
+/*------IMPORT -------*/
+
+@import "variables.scss";
+
+/*STYLE GÉNÉRAUX*/
+
+#footer-content {
+    background-color: $lightColor2;
+    font-family: zona_proregular;
+    font-size: 16px;
+    text-align: center;
+    color: $lightColor3;
+    border-top: $lightColor4 5px solid;
+    padding-top: 63px;
+    padding-bottom: 20px;
+    -moz-box-shadow: 0px 2px 15.68px 0.32px rgba(0, 0, 0, 0.35);
+    -webkit-box-shadow: 0px 2px 15.68px 0.32px rgba(0, 0, 0, 0.35);
+    box-shadow: 0px 2px 15.68px 0.32px rgba(0, 0, 0, 0.35);
+}
+
+
+/*SECTION AVEC LES BOUTONS*/
+
+#footer-Button-zone {
+    padding-bottom: 63px;
+}
+
+#footer-Button-zone a:first-child {
+    margin-right: 20px;
+}
+
+#footer-Button-zone a {
+    color: $primaryColor;
+    font-family: zona_problack;
+    border: 1px $primaryColor solid;
+    padding: 22px 54px/1920px * 100%;
+    transition: ease-in-out 0.15s;
+}
+
+#footer-Button-zone a:hover {
+    color: white;
+    font-family: zona_problack;
+    border: 1px $primaryColor solid;
+    background-color: $primaryColor;
+}
+
+
+/*SECTION INFO CONTACT*/
+
+#footer-contact-infos p {
+    width: 331px/ 1920px * 100%;
+    min-width:280px;
+    margin: 0 auto;
+}
+
+
+/*SECTION COPYRIGHT*/
+
+#footer-copyright {
+    padding-bottom: 0px;
+    margin-top: 40px;
+    margin-bottom: 0px;
+}
+
+
+/*SECTION FONCÉE AVEC ICÔNE*/
+
+#footer-icon-zone {
+    background-color: $darkColor1;
+    text-align: center;
+    margin: 0 auto;
+    padding: 40px 0;
+}
