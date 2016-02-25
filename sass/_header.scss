@@ -3,6 +3,7 @@
 
 /* SITE */
 
+
 ::selection {
     background: $primaryColor;
     color: $lightColor1;
@@ -20,17 +21,44 @@
     background-color: $primaryColor;
     box-shadow: 0px 2px 2px 0.00px rgba(0, 0, 0, 0.12);
     position: fixed;
-    font-family: zona_problack;
+    font-family: zona_proregular;
+    
 }
 
-.primary-navigation {
-    font-size: 18px;
+/*HEADER*/
+
+.header-main{
+    padding-top:0px;
+    padding-bottom:0px;
+    
 }
+
+.site-title
+{
+    line-height:70px;    
+}
+
+/*FONT SIZE*/
+
+.primary-navigation {
+    font-size: 16px;
+    margin-right:0px;
+    line-height: 70px;
+}
+
+/*LIENS DU NAV*/
 
 .site-navigation a {
     padding-right: 20px;
     padding-left: 20px;
     transition: ease-in-out 0.15s;
+    font-size: 16px;
+    padding-bottom: 6px;
+}
+
+#primary-menu li:last-child
+{
+    padding-right:40px;    
 }
 
 .primary-navigation li:hover > a,
@@ -42,7 +70,7 @@
     background: none;
     border-style: solid;
     border-color: $lightColor1;
-    border-bottom-width: 2px;
+    border-bottom-width: 5px;
     border-right: 0px;
     border-left: 0px;
     border-top: 0px;
@@ -51,6 +79,7 @@
 nav ul li a {
     font-size: 18px;
     color: $lightColor1;
+    
 }
 
 
@@ -82,9 +111,9 @@ nav ul li a:hover{
     color: $primaryColor;
     padding-left: 40px;
     padding-right: 40px;
-    /*padding-top: 25px;
-    padding-bottom: 25px;*/
+    padding-bottom: 22px;
     transition: ease-in-out 0.15s;
+    line-height: 80px;
 }
 
 .search-toggle:before {
@@ -93,7 +122,7 @@ nav ul li a:hover{
 
 .search-toggle:hover,
 .search-toggle.active {
-    background-color: $darkColor1;
+    background-color: $lightColor2;
     color: $lightColor1;
 }
 
