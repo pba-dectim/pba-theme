@@ -1,0 +1,84 @@
+/*------IMPORT -------*/
+/*-----------VARIABLES SASS-----------*/
+/* SITE */
+::selection {
+  background: #880000;
+  color: white; }
+
+.site {
+  max-width: 100%; }
+
+/* -------------------HEADER---------------------------- */
+.site-header {
+  max-width: 100%;
+  background-color: #880000;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12);
+  position: fixed;
+  font-family: zona_problack; }
+
+.primary-navigation {
+  font-size: 18px; }
+
+.site-navigation a {
+  padding-right: 20px;
+  padding-left: 20px;
+  transition: ease-in-out 0.15s; }
+
+.primary-navigation li:hover > a,
+.primary-navigation li.focus > a {
+  background: none; }
+
+.site-navigation a:hover {
+  background: none;
+  border-style: solid;
+  border-color: white;
+  border-bottom-width: 2px;
+  border-right: 0px;
+  border-left: 0px;
+  border-top: 0px; }
+
+nav ul li a {
+  font-size: 18px;
+  color: white; }
+
+/* HEADER HOVER
+
+nav ul li a:hover{
+    background-color:$primaryColor;
+    
+    transition: ease-in-out 0.25s;
+}
+*/
+/* CURRENT PAGE */
+.site-navigation .current_page_item > a,
+.site-navigation .current_page_ancestor > a,
+.site-navigation .current-menu-item > a,
+.site-navigation .current-menu-ancestor > a {
+  color: white;
+  /*font-weight: 900;*/ }
+
+/* SEARCH */
+.search-toggle {
+  background-color: white;
+  color: #880000;
+  padding-left: 40px;
+  padding-right: 40px;
+  /*padding-top: 25px;
+  padding-bottom: 25px;*/
+  transition: ease-in-out 0.15s; }
+
+.search-toggle:before {
+  font-size: 24px; }
+
+.search-toggle:hover,
+.search-toggle.active {
+  background-color: #0f0f0f;
+  color: white; }
+
+.search-toggle:before {
+  color: #880000; }
+
+.search-box {
+  background-color: black;
+  opacity: 0.8;
+  padding: 12px; }
