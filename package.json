@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/pba-dectim/pba-theme/issues"
   },
-  "homepage": "https://github.com/pba-dectim/pba-theme#readme"
+  "homepage": "https://github.com/pba-dectim/pba-theme#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-ruby-sass": "^2.0.6"
+  }
 }
