@@ -1,0 +1,19 @@
+{
+  "name": "pba-theme",
+  "version": "1.0.0",
+  "description": "Thème WordPress pour le site web de la société du patrimoine de Bouchervile, créé dans le cadre du cours projet final en techniques d'intégration multimédia au Cégep Édouard-Montpetit.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pba-dectim/pba-theme.git"
+  },
+  "author": "Frédéric Lestage, Félix-Antoine Gosselin, Gabriel Ramier, Rémy Groleau & Jean-Frédéric Dubé",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pba-dectim/pba-theme/issues"
+  },
+  "homepage": "https://github.com/pba-dectim/pba-theme#readme"
+}
