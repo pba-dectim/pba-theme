@@ -1,8 +1,11 @@
+/*------------------------------------------STYLE DU HEADER------------------------------*/
+
 /*------IMPORT -------*/
 @import "variables.scss";
 
 
 /* SITE */
+
 
 
 ::selection {
@@ -12,10 +15,25 @@
 
 .site {
     max-width: 100%;
+    
+}
+
+.site-content{
+    width:100%;
+    margin:0 auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+    
+}
+
+body{
+    font-family:zona_proregular;
+    box-sizing: border-box;
+    line-height: 24px;
 }
 
 
-/* -------------------HEADER---------------------------- */
+/* NAV */
 
 .site-header {
     max-width: 100%;

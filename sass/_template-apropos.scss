@@ -1,0 +1,53 @@
+/*------IMPORT -------*/
+
+@import "variables.scss";
+
+/*ENLEVER LA SIDEBAR*/
+
+.site:before{
+    display:none;
+}
+
+/*STYLES DES TITRES*/
+
+h1{
+    font-family:zona_problack;
+    font-size:75px;
+    text-align:center;
+    margin: 178px 0px;
+    text-transform: uppercase;
+}
+
+h2{
+    font-size:35px;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+h3{
+
+}
+
+/*STYLE DES LIENS*/
+a{
+    color:$primaryColor;
+}
+
+a:hover{
+    color:$primaryColor;
+}
+
+/*STYLES DU TEXTE*/
+
+/*STYLE DES LISTES*/
+li{
+    list-style-type: square;
+}
+
+/*STYLE DE LA SECTION DE CONTENU*/
+
+.section-content{
+    width:50%;
+}
+
+ 
