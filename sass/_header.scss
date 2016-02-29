@@ -4,6 +4,12 @@
 @import "variables.scss";
 
 
+/*DÉCHIAGE DU PARENT*/
+
+.content-area, .content-sidebar{
+    padding-top: 0px;   
+}
+
 /* SITE */
 
 
@@ -21,7 +27,6 @@
 .site-content{
     width:100%;
     margin:0 auto;
-    padding: 0 40px;
     box-sizing: border-box;
     
 }

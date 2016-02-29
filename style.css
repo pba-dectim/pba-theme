@@ -90,6 +90,10 @@
 /*------------------------------------------STYLE DU HEADER------------------------------*/
 /*------IMPORT -------*/
 /*-----------VARIABLES SASS-----------*/
+/*D├ëCHIAGE DU PARENT*/
+.content-area, .content-sidebar {
+  padding-top: 0px; }
+
 /* SITE */
 ::selection {
   background: #880000;
@@ -101,7 +105,6 @@
 .site-content {
   width: 100%;
   margin: 0 auto;
-  padding: 0 40px;
   box-sizing: border-box; }
 
 body {
@@ -278,13 +281,35 @@ nav ul li a:hover{
 .site:before {
   display: none; }
 
+/*STYLES DU BANNER*/
+.banner-titre {
+  padding: 178px 0px;
+  background-position: center center;
+  position: relative;
+  z-index: 0; }
+
+.banner_filter {
+  background-color: black;
+  opacity: 0.5;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1; }
+
 /*STYLES DES TITRES*/
 h1 {
   font-family: zona_problack;
   font-size: 75px;
   text-align: center;
-  margin: 178px 0px;
+  margin: 0px;
   text-transform: uppercase; }
+
+.banner-titre h1 {
+  color: white;
+  z-index: 2;
+  position: relative; }
 
 h2 {
   font-size: 35px;
@@ -305,4 +330,5 @@ li {
 
 /*STYLE DE LA SECTION DE CONTENU*/
 .section-content {
-  width: 50%; }
+  width: 50%;
+  padding: 0 40px; }
