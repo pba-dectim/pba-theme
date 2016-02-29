@@ -224,7 +224,7 @@ footer p a {
 }
 
 .page section article a.has-img {
-    display: inline-block;
+    display: block;
     margin: 45px 0;
     width: 100%;
 }
@@ -235,12 +235,16 @@ footer p a {
     -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.12);
     -moz-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.12);
     box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.12);
-}
-
-.page section article img.img-cli {
-    max-width: 675px;
     display: block;
     margin: 0 auto;
+}
+
+.page section article img.img-size-cli {
+    max-width: 675px;
+}
+
+.page section article img.img-size-xampp {
+    max-width: 692px;
 }
 
 

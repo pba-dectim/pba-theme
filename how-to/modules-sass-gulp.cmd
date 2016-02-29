@@ -1,7 +1,7 @@
 @ECHO OFF
 
 :: init
-set /p numEtud= Entrez votre numero etudiant: 
+set /p numEtud= Entrez votre numero etudiant
 mkdir %numEtud%
 cd %numEtud%
 

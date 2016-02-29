@@ -35,6 +35,8 @@
                         <ul>
                             <li><a href="#step1">Étape 1 - Github</a></li>
                             <li><a href="#step2">Étape 2 - SASS</a></li>
+                            <li><a href="#step3">Étape 3 - XAMPP</a></li>
+                            <li><a href="#step4">Étape 4 - WordPress</a></li>
                         </ul>
                     </div>
                 </article>
@@ -53,13 +55,49 @@
                     <a href="modules-sass-gulp.cmd" download class="button">modules-sass-gulp.cmd</a>
                     <p>Copiez le fichier à la racine du dossier clone de github que vous avez installé précédemment et lancez-le. Gulp et de ses modules sy installeront automatiquement et vous serez prêts à utiliser l'invite de commande.</p>
                     <p>Ouvrez l'invite de commande (<span class="commands">WINDOWS+R, cmd, ENTER</span>) puis ciblez le dossier ou se trouve votre dossier clone de GihHub à l'aide de la commande &laquo;cd&raquo;.</p>
-                    <a href="img/step2-cd.png" class="has-img"><img src="img/step2-cd.png" alt="Cibler un dossier à l'aide de l'invite de commande" class="img-cli"></a>
+                    <a href="img/step2-cd.png" class="has-img"><img src="img/step2-cd.png" alt="Cibler un dossier à l'aide de l'invite de commande" class="img-size-cli"></a>
                     <p>À partir de là, vous pourrez utilisez les différentes commandes de gulp et celles que nous avons personnalisées pour notre projet.</p>
-                    <ul class="article-wrapper">
-                        <li><span class="commands">gulp</span> - Affiche les commandes disponibles.</li>
-                        <li><span class="commands">gulp styles</span> - Compile fichiers SASS dans le dossier sass en fichiers CSS.</li>
-                        <li><span class="commands">gulp watch</span> - Exécute la fonction <span class="commands">gulp styles</span> automatiquement à chaque changements dans les fichiers .scss, pour arrêter le watch, utilisez <span class="commands">CTRL+C</span>.</li>
-                    </ul>
+                    <div class="article-wrapper">
+                        <ul>
+                            <li><span class="commands">gulp</span> - Affiche les commandes disponibles.</li>
+                            <li><span class="commands">gulp styles</span> - Compile fichiers SASS dans le dossier sass en fichiers CSS.</li>
+                            <li><span class="commands">gulp watch</span> - Exécute la fonction <span class="commands">gulp styles</span> automatiquement à chaque changements dans les fichiers .scss, pour arrêter le watch, utilisez <span class="commands">CTRL+C</span>.</li>
+                        </ul>
+                    </div>
+                </article>
+                <article id="step3">
+                    <h3>Étape 3 - XAMPP</h3>
+                    <p>Téléchargez l'application XAMPP et installez-la sur votre ordinateur</p>
+                    <a href="https://www.apachefriends.org/fr/index.html" class="button" target="_blank">XAMPP</a>
+                    <p>Dans le dossier de l'isntallation (<span class="commands">C:/xampp</span>), trouvez le dossier nommé htdocs. C'est ce qui s'y trouve qui s'affichera lorsque vous ouvrirez une page locale dans votre navigateur.</p>
+                    <p>Vous pouvez maintenant ouvrir l'application XAMPP et démarrer les processus <span class="commands">Apache</span> et <span class="commands">MySQL</span>. Ensuite, ouvrez votre navigateur préféré et entrez <span class="comands">localhost</span>. Vous êtes maintenant connectés sur votre serveur local.</p>
+                    <a href="img/step3-xampp.png" class="has-img"><img src="img/step3-xampp.png" alt="Fenêtre de l'application xampp" class="img-size-xampp"></a>
+                    <a href="img/step3-localhost.png" class="has-img"><img src="img/step3-localhost.png" alt="Visitez localhost dans votre navigateur internet"></a>
+                </article>
+                <article id="step4">
+                    <h3>Étape 4 - WordPress</h3>
+                    <p>Nous allons maintenant installer WordPress dans l'environnement local que nous avons initié avec XAMPP. Pour commencer, allez sur la page phpMyAdmin (situé dans le menu de la page localhost)</p>
+                    <p>Créez une nouvelle base de données et assurez-vous de mettre son interclassement à utf8-bin. Ensuite, <a href="https://fr.wordpress.org/">téléchargez WordPress.</a></p>
+                    <a href="https://fr.wordpress.org/" class="button" target="_blank">WordPress</a>
+                    <a href="img/step3-phpmyadmin.png" class="has-img"><img src="img/step3-phpmyadmin.png" alt="Création d'une nouvelle base de données"></a>
+                    <p>Lorsque WordPress a terminé de télécharger, Copiez le fichier compressé dans le dossier htdocs de xampp (<span class="commands">c:/xampp/htdocs</span>) et décompressez-le. Vous pouvez ensuite supprimer le fichier compressé, nous n'en aurons plus besoin.</p>
+                    <p>Finalement, visitez la page <span class="commands">localhost/wordpress</span> (remplacez wordpress par le nom du dossier décompressé de wordpress si vous l'avez changé) et entrez-y les informations nécessaires</p>
+                    <div class="article-wrapper">
+                        <ul>
+                            <li><strong>Nom de la base de données:</strong> le nom que vous avez utilisé pour la BD</li>
+                            <li><strong>Identifiant:</strong> root</li>
+                            <li><strong>Mot de passe:</strong> laisser vide</li>
+                            <li><strong>Adresse:</strong> laisser localhost</li>
+                            <li><strong>Préfixe:</strong> laisser _wp</li>
+                        </ul>
+                    </div>
+                    <a href="img/step3-wp.png" class="has-img"><img src="img/step3-wp.png" alt="Initialisation de WorPress"></a>
+                    <p>Créez votre compte administrateur, ce compte sera utilisé temporairement, vous pouvez donc entrer n'importe quoi. WordPress est maintenant installé localement sur votre ordinateur.</p>
+                    <p>Cependant, ce WordPress local est vide. Pour s'assurer de travailler avec ce qui se rapproche le plus du produit final, nous copierons le WordPress actuel (<span class="commands">pba.decim.ca</span>) via le plugin duplicator. Pour ce faire, récupérez le fichier installer.php (installeur) et le fichier compressé (archive) puis copiez les à la racine de votre WordPress local. Finalement, supprimez le fichier <span class="commands">wp-config.php</span>.</p>
+                    <a href="img/step4-duplicator.png" class="has-img"><img src="img/step4-duplicator.png" alt="Télécharger les fichiers de duplicator"></a>
+                    <p>Allez ensuite sur <span class="commands">localhost/wordpress/installer.php</span> pour débuter la récupération des informations sur votre WordPress vide. Assurez-vous de cocher <i>Connect and remove All Data</i> et d'insérer toutes les informations requises pour la connection à la base de données. Vous pouvez utiliser le bouton <i>Test Connection</i> afin de vous assurer que le lien se fasse correctement.</p>
+                    <a href="img/step4-installer.png" class="has-img"><img src="img/step4-installer.png" alt="Duplicator - installer.php"></a>
+                    <p>Vous avez maintenant une copie de <span class="commands">pba.dectim.ca</span> sur vorte WordPress local. Vous pouvez donc vous y connecter à l'aide des mêmes informations et y travailler sans rien briser.</p>
                 </article>
             </section>
         </div>
@@ -68,7 +106,7 @@
 
     <footer>
         <div class="wrapper">
-            <p>&copy From <a href="flestage.ca">Frédéric Lestage</a> to Filthy Casuals</p>
+            <p>&copy; From <a href="flestage.ca">Frédéric Lestage</a> to Filthy Casuals</p>
         </div>
     </footer>
 
