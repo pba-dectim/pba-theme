@@ -1,0 +1,263 @@
+/* ========== Styles généraux ========== */
+
+body {
+    margin: 0;
+    background: #eee;
+    color: #222;
+    font-family: 'Noto Serif', serif;
+}
+
+#main {
+    background: #fafafa;
+    padding-bottom: 50px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #1a1a1a;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 700;
+}
+
+a {
+    font-family: 'Noto sans', sans-serif;
+    color: #2196F3;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a.button {
+    display: block;
+    width: 80%;
+    max-width: 300px;
+    margin: 35px auto;
+    padding: 12px 0;
+    border: 2px solid #F44336;
+    text-align: center;
+    color: #F44336;
+    -webkit-transition: 0.3s color, 0.3s background;
+    transition: 0.3s color, 0.3s background;
+}
+
+a.button:hover {
+    text-decoration: none;
+    background: #F44336;
+    color: #FFF;
+}
+
+p a {
+    font-family: 'Noto Serif', serif;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.46rem;
+    font-weight: 400;
+}
+
+.wrapper {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.material-shadow {
+    -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.commands {
+    font-family: monospace;
+}
+
+
+/* ========== Styles Header ========== */
+
+header {
+    background: #F44336;
+    overflow: auto;
+}
+
+header div {
+    overflow: auto;
+}
+
+header h1 {
+    float: left;
+    margin: 10px 0 0;
+}
+
+header h1 a {
+    color: #fff;
+    font-family: 'Noto Serif', serif;
+    font-weight: 700;
+}
+
+header h1 a:hover {
+    text-decoration: none;
+}
+
+header nav {
+    float: right;
+}
+
+header nav ul {
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li.current a {
+    font-weight: 700;
+}
+
+header nav ul li a {
+    display: inline-block;
+    margin: 10px 0 0;
+    padding: 10px 10px 20px;
+    color: #fff;
+    border-bottom: 4px solid transparent;
+    -webkit-transition: 0.3s border-bottom;
+    transition: 0.3s border-bottom;
+}
+
+header nav ul li a:hover {
+    text-decoration: none;
+    border-bottom: 4px solid #fff;
+}
+
+
+/* ========== Styles Footer ========== */
+
+footer {
+    font-family: 'Noto sans', sans-serif;
+    padding: 10px 0;
+}
+
+footer p {
+    font-size: 0.8rem;
+}
+
+footer p a {
+    color: #222;
+    font-family: 'Noto sans', sans-serif;
+}
+
+
+/* ========== Styles Index ========== */
+
+.home section h2 {
+    margin: 50px 0;
+    font-size: 2.5rem;
+}
+
+.home section a {
+    display: block;
+    padding: 50px;
+    margin: 20px 0;
+    font-weight: 700;
+    color: #F44336;
+    -webkit-transition: 0.3s background, 0.3s color;
+    transition: 0.3s background, 0.3s color;
+    background: #FFF;
+}
+
+.home section a:hover {
+    text-decoration: none;
+    background: #F44336;
+    color: #FFF;
+}
+
+
+/* ========== Styles at.school && at.home ========== */
+
+.page section > h2 {
+    margin: 50px 0 10px;
+    font-size: 2.5rem;
+}
+
+.page section article {
+    -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.12);
+    padding: 50px 0;
+    background: #fff;
+    margin: 20px 0;
+}
+
+.page section h3,
+.page section p,
+.page section .article-wrapper {
+    max-width: 650px;
+    padding: 0 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page section > p {
+    margin: 10px 0 50px;
+    font-family: 'Noto sans', sans-serif;
+    font-size: 0.8rem;
+    line-height: 1rem;
+    max-width: none;
+    padding: 0;
+}
+
+.page section > p a {
+    font-family: 'Noto sans', sans-serif;
+}
+
+.page section article h3 {
+    margin-top: 0;
+}
+
+.page section article a.has-img {
+    display: inline-block;
+    margin: 45px 0;
+    width: 100%;
+}
+
+.page section article img {
+    width: 100%;
+    height: auto;
+    -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.page section article img.img-cli {
+    max-width: 675px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* ========== Styles @media queries ========== */
+
+@media (max-width: 1200px) {
+    /* Styles généraux */
+    .wrapper {
+        width: calc(100% - 20px);
+    }
+    /* Styles at.school && at.home */
+    .page section article {
+        padding: 30px 0;
+    }
+    .page section h3,
+    .page section p,
+    .page section .article-wrapper {
+        padding: 0 20px;
+    }
+}

@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>How-to BPA</title>
+    <link href='https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Noto+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="at-school page">
+
+    <div id="main">
+
+        <header class="material-shadow">
+            <div class="wrapper">
+                <h1><a href="index.html">Filthy casuals</a></h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li class="current"><a href="at.school.html">À l'école</a></li>
+                        <li><a href="at.home.html">À la maison</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="wrapper">
+            <section>
+                <h2>Fonctionnement pour l'école</h2>
+                <p>Vous n'êtes pas à l'école? <a href="at.home.html">Voyez le tutoriel pour la maison</a></p>
+                <article id="introduction">
+                    <h3>Introduction</h3>
+                    <div class="article-wrapper">
+                        <ul>
+                            <li><a href="#step1">Étape 1 - Github</a></li>
+                            <li><a href="#step2">Étape 2 - SASS</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <article id="step1">
+                    <h3>Étape 1 - Github</h3>
+                    <p>Téléchargez <a href="https://desktop.github.com/" target="_blank">github pour desktop</a> puis installez-le sur votre ordinateur. Suivez les étapes <i>Log in</i>, <i>Configure</i> et sautez l'étape <i>Repositories</i>. Allez dans la section <i>dashboard</i>, en cliquant sur le + en haut à gauche, sélectionnez <i>clone</i> pour cloner tous les éléments de github où vous le désirez sur votre ordinateur ou sur votre clé usb.</p>
+                    <a href="https://desktop.github.com/" target="_blank" class="button">Application github pour desktop</a>
+                    <a href="img/step1-gitClone.png" class="has-img"><img src="img/step1-gitClone.png" alt="Cloner un repository Github à l'aide de l'application desktop de GitHub"></a>
+                    <p>Ainsi, vous avez une copie du <i>repository</i> de github sur lequel vous pouvez travailler. Ensuite, si ce n'est pas déjà fait, il est recommandé de créer une nouvelle branche au projet. En travaillant sur une copie et non pas sur la branche principale (<i>master</i>), il est moins probable de faire une erreur qui pourrait compromettre le projet.</p>
+                    <a href="img/step1-gitnewbranch.png" class="has-img"><img src="img/step1-gitnewbranch.png" alt="Créer une nouvelle branche au projet"></a>
+                    <p>Vous êtes maintenant prêts à passer à la prochaine étape.</p>
+                </article>
+                <article id="step2">
+                    <h3>Étape 2 - Utilisation de SASS</h3>
+                    <p>Si vous n'avez pas l'intention d'utiliser de SASS, vous pouvez passer directement à l'étape suivante. Autrement, téléchargez l'application personnalisée ci-dessous</p>
+                    <a href="modules-sass-gulp.cmd" download class="button">modules-sass-gulp.cmd</a>
+                    <p>Copiez le fichier à la racine du dossier clone de github que vous avez installé précédemment et lancez-le. Gulp et de ses modules sy installeront automatiquement et vous serez prêts à utiliser l'invite de commande.</p>
+                    <p>Ouvrez l'invite de commande (<span class="commands">WINDOWS+R, cmd, ENTER</span>) puis ciblez le dossier ou se trouve votre dossier clone de GihHub à l'aide de la commande &laquo;cd&raquo;.</p>
+                    <a href="img/step2-cd.png" class="has-img"><img src="img/step2-cd.png" alt="Cibler un dossier à l'aide de l'invite de commande" class="img-cli"></a>
+                    <p>À partir de là, vous pourrez utilisez les différentes commandes de gulp et celles que nous avons personnalisées pour notre projet.</p>
+                    <ul class="article-wrapper">
+                        <li><span class="commands">gulp</span> - Affiche les commandes disponibles.</li>
+                        <li><span class="commands">gulp styles</span> - Compile fichiers SASS dans le dossier sass en fichiers CSS.</li>
+                        <li><span class="commands">gulp watch</span> - Exécute la fonction <span class="commands">gulp styles</span> automatiquement à chaque changements dans les fichiers .scss, pour arrêter le watch, utilisez <span class="commands">CTRL+C</span>.</li>
+                    </ul>
+                </article>
+            </section>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="wrapper">
+            <p>&copy From <a href="flestage.ca">Frédéric Lestage</a> to Filthy Casuals</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
