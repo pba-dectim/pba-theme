@@ -107,6 +107,9 @@
   margin: 0 auto;
   box-sizing: border-box; }
 
+.site-main {
+  padding-top: 70px; }
+
 body {
   font-family: zona_proregular;
   box-sizing: border-box;
