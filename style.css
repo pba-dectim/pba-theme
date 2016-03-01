@@ -301,6 +301,10 @@ nav ul li a:hover{
   left: 0;
   z-index: 1; }
 
+/*STYLE DE LA SECTION DE CONTENU*/
+.section-content > * {
+  padding: 0 40px; }
+
 /*STYLES DES TITRES*/
 h1 {
   font-family: zona_problack;
@@ -317,7 +321,8 @@ h1 {
 h2 {
   font-size: 35px;
   line-height: normal;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin: 0; }
 
 /*STYLE DES LIENS*/
 a {
@@ -326,12 +331,48 @@ a {
 a:hover {
   color: #880000; }
 
-/*STYLES DU TEXTE*/
-/*STYLE DES LISTES*/
-li {
-  list-style-type: square; }
+/*-----SECTION AVEC MANDAT ET HISTORIQUE-----*/
+.articles-apropos {
+  padding-top: 80px;
+  padding-bottom: 80px; }
 
-/*STYLE DE LA SECTION DE CONTENU*/
-.section-content {
-  width: 50%;
-  padding: 0 40px; }
+.articles-apropos article {
+  display: inline-block;
+  width: 46.875%;
+  vertical-align: top; }
+
+.articles-apropos article:first-child {
+  margin-right: 4.16667%; }
+
+.articles-apropos p:last-child {
+  margin-bottom: 0px; }
+
+/*SECTION MEMBRES DU CA*/
+div #section-membres-ca {
+  background-color: #0f0f0f;
+  color: white; }
+
+#section-membres-ca h2 {
+  text-align: center; }
+
+#centre-CA {
+  width: 80%;
+  margin: 0 auto; }
+
+#section-membres-ca article {
+  margin: 0 auto; }
+
+#section-membres-ca article:first-child {
+  margin-right: 4.16667%; }
+
+/*SECTION POLITIQUE CULTURELLE*/
+#section-politique-culturelle {
+  text-align: center;
+  width: 75%;
+  margin: 0 auto; }
+
+/*STYLE DES LISTES*/
+.articles-apropos ul {
+  margin-bottom: 0px; }
+  .articles-apropos ul li {
+    list-style-type: square; }

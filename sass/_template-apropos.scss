@@ -4,78 +4,117 @@
 
 /*ENLEVER LA SIDEBAR*/
 
-.site:before{
-    display:none;
+.site:before {
+    display: none;
 }
 
 /*STYLES DU BANNER*/
 
-.banner-titre{
+.banner-titre {
     padding: 178px 0px;
     background-position: center center;
-    position:relative;
-    z-index:0;
+    position: relative;
+    z-index: 0;
 }
-
-.banner_filter{
+.banner_filter {
     background-color: black;
     opacity: 0.5;
-    height:100%;
-    width:100%;
-    position:absolute;
-    top:0;
-    left:0;
-    z-index:1;
-}
-
-/*STYLES DES TITRES*/
-
-h1{
-    font-family:zona_problack;
-    font-size:75px;
-    text-align:center;
-    margin: 0px;
-    text-transform: uppercase;
-    
-}
-
-.banner-titre h1{
-    color:white;
-    z-index:2;
-    position:relative;
-}
-
-h2{
-    font-size:35px;
-    line-height: normal;
-    text-transform: uppercase;
-}
-
-h3{
-
-}
-
-/*STYLE DES LIENS*/
-a{
-    color:$primaryColor;
-}
-
-a:hover{
-    color:$primaryColor;
-}
-
-/*STYLES DU TEXTE*/
-
-/*STYLE DES LISTES*/
-li{
-    list-style-type: square;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
 /*STYLE DE LA SECTION DE CONTENU*/
 
-.section-content{
-    width:50%;
+.section-content > * {
     padding: 0 40px;
 }
 
- 
+/*STYLES DES TITRES*/
+
+h1 {
+    font-family: zona_problack;
+    font-size: 75px;
+    text-align: center;
+    margin: 0px;
+    text-transform: uppercase;
+}
+.banner-titre h1 {
+    color: white;
+    z-index: 2;
+    position: relative;
+}
+h2 {
+    font-size: 35px;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 0;
+}
+h3 {}
+
+/*STYLE DES LIENS*/
+
+a {
+    color: $primaryColor;
+}
+a:hover {
+    color: $primaryColor;
+}
+
+/*-----SECTION AVEC MANDAT ET HISTORIQUE-----*/
+
+.articles-apropos {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.articles-apropos article {
+    display: inline-block;
+    width: 900px / 1920px * 100%;
+    vertical-align: top;
+}
+.articles-apropos article:first-child {
+    margin-right: 80px / 1920px * 100%;
+}
+.articles-apropos p:last-child {
+    margin-bottom: 0px;
+}
+
+/*SECTION MEMBRES DU CA*/
+
+div #section-membres-ca {
+    background-color: $darkColor1;
+    color: $lightColor1;
+}
+#section-membres-ca h2 {
+    text-align: center;
+}
+#centre-CA {
+    width: 80%;
+    margin: 0 auto;
+}
+#section-membres-ca article {
+    margin: 0 auto;
+}
+#section-membres-ca article:first-child {
+    margin-right: 80px / 1920px * 100%;
+}
+
+/*SECTION POLITIQUE CULTURELLE*/
+
+#section-politique-culturelle {
+    text-align: center;
+    width: 75%;
+    margin: 0 auto;
+}
+
+/*STYLE DES LISTES*/
+
+.articles-apropos ul {
+    margin-bottom: 0px;
+    li {
+        list-style-type: square;
+    }
+}
