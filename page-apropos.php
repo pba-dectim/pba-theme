@@ -19,16 +19,36 @@ get_header(); ?>
 <!--//					get_template_part( 'content', 'page' );-->
                    
                     <section class = 'banner-titre' style = 'background-image:url("<?php the_post_thumbnail_url('full'); ?>"); '>
-                        <h1><?php the_title(); ?></h1>
                         <div class = 'banner_filter'></div>
+                        <h1><?php the_title(); ?></h1>
                     </section>
                     
                     
                     <section class = 'section-content'>
-                        <p><?php the_content(); ?></p>
+                    	<h2><?php the_field('titre_mandat'); ?></h2>
+                            <hr>
+                            <div><?php the_field('contenu_mandat'); ?></div>
+                            
+                        <h2><?php the_field('titre_historique'); ?></h2>
+                          	<hr>
+                            <div><?php the_field('contenu_historique'); ?></div>
+                            
+                        <h2><?php the_field('titre_membres_du_ca'); ?></h2>
+                            <hr>
+                            
+                            <h3><?php the_field('titre_membres_fondateurs'); ?></h3>
+                        		<div><?php the_field('liste_membres_fondateurs'); ?></div>
+                                
+                            <h3><?php the_field('titre_presidentes'); ?></h3>
+                            	<div><?php the_field('liste_presidentes'); ?></div>
+                                
+                        <h2><?php the_field('titre_politique_culturelle'); ?></h2>
+                            <hr>
+                            <?php the_field('contenu_politique_culturelle'); ?>
+                            
                     </section>
                     
-					
+					<p><?php the_content(); ?></p>
 				<?php endwhile; ?>
 			
 
