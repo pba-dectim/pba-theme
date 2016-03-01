@@ -1,0 +1,21 @@
+/*------------------------------------------STYLE FRONT PAGE------------------------------*/
+
+/*------IMPORT -------*/
+@import "variables.scss";
+
+.firstSlide{
+ width:100%;
+}
+
+.firstSlide img{
+ width: 1280px / 1920px *100%;
+}
+
+section .asideSlide1 h2{
+
+    font-size: $h1Section;
+    text-transform: uppercase;
+    font-family: zona_problack;
+    text-align: center;
+    
+}
