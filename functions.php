@@ -5,6 +5,9 @@ function theme_enqueue_styles() {
 
 }
 
+
+add_theme_support( 'post-thumbnails' );
+
 // Register Custom Post Type
 function cpt_patrimoine() {
 
