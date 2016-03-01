@@ -1,5 +1,5 @@
 node_modules
-.sass-cache
-.cmd
+*.sass-cache
+*.cmd
 how-to
-.md
+*.md
