@@ -6,6 +6,8 @@
 
 div.articles-apropos{
     
+    /*-----SECTION GAUCHE-----*/
+    
     h1{
         line-height:1;
         margin-bottom:70px;
@@ -13,11 +15,12 @@ div.articles-apropos{
     
     i{
         color:$primaryColor;
+        margin-bottom:25px;
     }
     
     .contact-infos{
         display:inline-block;
-        width: 600px / 1920px * 100%;
+        width: 31%;
         vertical-align: top;
         text-align:center;
         margin-right: 50px / 1920px * 100%;
@@ -28,6 +31,52 @@ div.articles-apropos{
         margin-right: 0px
     }
     
+    /*----FORM-----*/
+    #section-form
+    
+        
+    {
+        form{
+            //float:right;
+            //width: 594px / 854.531px * 100%;
+            text-align:right;
+            margin: 0 145px;
+        }
+        
+        input, textarea{
+            border-radius:0px;
+            width:100%;
+            
+            //width: 594px / 854.531px * 100%;
+        }
+        textarea{
+            max-height: 183px;
+        }
+        p{
+            text-align:left;
+        }
+        
+        
+        .wpcf7-submit{
+            background-color:white;
+            border: 1px $primaryColor solid;
+            color:$primaryColor;
+            transition:ease-in-out 0.15s;
+            height:55px;
+            font-size:16px;
+            font-family:zona_proregular;
+            line-height:1;
+            
+        }
+        .wpcf7-submit:hover{
+            background-color:$primaryColor;
+            color:white;
+        }
+        
+    }
+    
 }
+
+
 
 

@@ -32,7 +32,7 @@ get_header(); ?>
                                 <div id='contact-telephone' class = 'contact-infos'>
                                     <i class="fa fa-phone fa-5x"></i>
                                     <div>
-                                        <?php the_field('numero_de_telephone'); ?>
+                                        <?php the_field('numero_de_telephone'); ?><br>
                                             <?php the_field('numero_du_telecopieur'); ?>
                                     </div>
                                 </div>
@@ -64,7 +64,7 @@ get_header(); ?>
 
                             </article>
 
-                            <article>
+                            <article id = 'section-form'>
                                 <?php echo do_shortcode( '[contact-form-7 id="74" title="Formulaire de contact"]' ); ?>
                             </article>
 
