@@ -380,6 +380,7 @@ div #section-membres-ca {
   .articles-apropos ul li {
     list-style-type: square; }
 
+<<<<<<< HEAD
 /*--------------------STYLES DE LA PAGE CONTACT----------------------*/
 /*------IMPORT -------*/
 /*-----------VARIABLES SASS-----------*/
@@ -423,10 +424,13 @@ div.articles-apropos {
   div.articles-apropos #section-form .wpcf7-submit:hover {
     background-color: #880000;
     color: white; }
+=======
+>>>>>>> remy-index
 /*------------------------------------------STYLE FRONT PAGE------------------------------*/
 /*------IMPORT -------*/
 /*-----------VARIABLES SASS-----------*/
 /*--------- Front Page ---------------*/
+
 .firstSlide {
   width: 100%; }
 
@@ -438,3 +442,82 @@ section .asideSlide1 h2 {
   text-transform: uppercase;
   font-family: zona_problack;
   text-align: center; }
+
+#full_video {
+  max-width: 100%;
+  margin: 0; }
+
+.asideSlide1 h2 {
+  font-size: 2.5em;
+  text-transform: uppercase;
+  font-family: zona_problack;
+  text-align: center;
+  color: white;
+  background-color: black;
+  padding: 20px;
+  margin-bottom: 50px; }
+
+.asideSlide1 p {
+  max-width: 90%;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 50px; }
+
+.asideSlide1 {
+  width: 33.33333%;
+  float: right; }
+
+figure {
+  width: 66.66667%;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  top: 0;
+  left: 0; }
+
+figure h1 {
+  font-size: 7vmin; }
+
+figure h2 {
+  font-size: 3.3vmin; }
+
+figcaption {
+  left: 0;
+  top: 35%;
+  right: 0;
+  margin: 0;
+  padding: 0px;
+  bottom: 0;
+  position: absolute;
+  text-align: center;
+  color: white; }
+
+/*---------------------- secMandat ---------------------------*/
+.secMandat {
+  max-width: 1200px;
+  margin: auto; }
+
+.secMandat h1 {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  font-family: "zona_proregular";
+  font-weight: 100; }
+
+.secMandat article {
+  max-width: 540px;
+  display: inline-block;
+  min-height: 264px;
+  float: left;
+  margin: 20px;
+  margin-top: 0; }
+
+.secMandat article p {
+  margin-bottom: 70px; }
+
+/*---------------------- secFier ---------------------------*/
+.secFier h1 {
+  background-color: #880000;
+  color: white;
+  padding: 30px;
+  font-size: 4em; }
+
