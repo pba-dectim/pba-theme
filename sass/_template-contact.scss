@@ -1,0 +1,34 @@
+/*--------------------STYLES DE LA PAGE CONTACT----------------------*/
+
+/*------IMPORT -------*/
+
+@import "variables.scss";
+
+div.articles-apropos{
+    
+    h1{
+        line-height:1;
+        margin-bottom:70px;
+    }
+    
+    i{
+        color:$primaryColor;
+    }
+    
+    .contact-infos{
+        display:inline-block;
+        width: 600px / 1920px * 100%;
+        vertical-align: top;
+        text-align:center;
+        
+        margin-right: 50px / 1920px * 100%;
+    }
+    
+    .contact-infos:nth-child(2){
+       
+        margin-right: 0px
+    }
+    
+}
+
+
