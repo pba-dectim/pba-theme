@@ -380,6 +380,49 @@ div #section-membres-ca {
   .articles-apropos ul li {
     list-style-type: square; }
 
+/*--------------------STYLES DE LA PAGE CONTACT----------------------*/
+/*------IMPORT -------*/
+/*-----------VARIABLES SASS-----------*/
+/*--------- Front Page ---------------*/
+div.articles-apropos {
+  /*-----SECTION GAUCHE-----*/
+  /*----FORM-----*/ }
+  div.articles-apropos h1 {
+    line-height: 1;
+    margin-bottom: 70px; }
+  div.articles-apropos i {
+    color: #880000;
+    margin-bottom: 25px; }
+  div.articles-apropos .contact-infos {
+    display: inline-block;
+    width: 31%;
+    vertical-align: top;
+    text-align: center;
+    margin-right: 2.60417%; }
+  div.articles-apropos .contact-infos:nth-child(2) {
+    margin-right: 0px; }
+  div.articles-apropos #section-form form {
+    text-align: right;
+    margin: 0 145px; }
+  div.articles-apropos #section-form input, div.articles-apropos #section-form textarea {
+    border-radius: 0px;
+    width: 100%; }
+  div.articles-apropos #section-form textarea {
+    max-height: 183px; }
+  div.articles-apropos #section-form p {
+    text-align: left; }
+  div.articles-apropos #section-form .wpcf7-submit {
+    background-color: white;
+    border: 1px #880000 solid;
+    color: #880000;
+    transition: ease-in-out 0.15s;
+    height: 55px;
+    font-size: 16px;
+    font-family: zona_proregular;
+    line-height: 1; }
+  div.articles-apropos #section-form .wpcf7-submit:hover {
+    background-color: #880000;
+    color: white; }
 /*------------------------------------------STYLE FRONT PAGE------------------------------*/
 /*------IMPORT -------*/
 /*-----------VARIABLES SASS-----------*/
