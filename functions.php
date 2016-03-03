@@ -54,6 +54,7 @@ function cpt_patrimoine() {
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
+		'rewrite' => array('slug' => 'patrimoine'),
 	);
 	register_post_type( 'post_type_patrimoine', $args );
 
@@ -141,6 +142,7 @@ function custom_post_realisation() {
 		'items_list_navigation' => __( 'Navigation', 'text_domain' ),
 		'filter_items_list'     => __( 'Filter les réalisations', 'text_domain' ),
 	);
+		
 	$args = array(
 		'label'                 => __( 'Realisation', 'text_domain' ),
 		'description'           => __( 'Les réalisations', 'text_domain' ),
@@ -156,10 +158,11 @@ function custom_post_realisation() {
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
 		'can_export'            => true,
-		'has_archive'           => true,		
+		'has_archive'           => 'archive-realisation',		
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
+		'rewrite' => array('slug' => 'realisation'),
 	);
 	register_post_type( 'post_type_realisatio', $args );
 
