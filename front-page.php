@@ -6,7 +6,7 @@ get_header();
 
 
 <figure class="firstSlide">
-          <video id="full_video" id="js-video" src="<?php echo get_stylesheet_directory_uri(); ?>/video/accueil.mp4" autoplay="" loop="" muted="" type="video/mp4" poster="http://www.ville.candiac.qc.ca/modules/candiac/assets/images/home-background.jpg"></video> 
+          <video id="full_video" id="js-video" src="<?php echo get_stylesheet_directory_uri(); ?>/video/accueil2.mp4" autoplay="" loop="" muted="" type="video/mp4" poster="http://www.ville.candiac.qc.ca/modules/candiac/assets/images/home-background.jpg"></video> 
             <figcaption>
                 <h1>Le patrimoine</h1>
                 <h2>Pour que l'avenir se souvienne !</h2></figcaption>
@@ -93,6 +93,78 @@ Notre mission : préserver et faire rayonner les richesses de notre patrimoine B
 <section class="secFier">
     
     <h1>Fiers de notre patrimoine</h1>
+    
+    <article class="contPhoto">
+        
+                <div class="contInfo">
+           
+           <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/maison.jpg">
+            
+            <h4>62 de montbrun</h4>
+            
+            <div class="btnVoirPlus">
+            <a href="">En savoir plus</a>
+            </div>
+        </div>
+        
+                        <div class="contInfo">
+           
+           <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/maison.jpg">
+            
+            <h4>62 de montbrun</h4>
+            
+            <div class="btnVoirPlus">
+            <a href="">En savoir plus</a>
+            </div>
+        </div>
+        
+                        <div class="contInfo">
+           
+           <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/maison.jpg">
+            
+            <h4>62 de montbrun</h4>
+            
+            <div class="btnVoirPlus">
+            <a href="">En savoir plus</a>
+            </div>
+        </div>
+        
+                        <div class="contInfo">
+           
+           <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/maison.jpg">
+            
+            <h4>62 de montbrun</h4>
+            
+            <div class="btnVoirPlus">
+            <a href="">En savoir plus</a>
+            </div>
+        </div>
+        
+                        <div class="contInfo">
+           
+           <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/maison.jpg">
+            
+            <h4>62 de montbrun</h4>
+            
+            <div class="btnVoirPlus">
+            <a href="">En savoir plus</a>
+            </div>
+        </div>
+        
+                        <div class="contInfo">
+           
+           <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/maison.jpg">
+            
+            <h4>62 de montbrun</h4>
+            
+            <div class="btnVoirPlus">
+            <a href="">En savoir plus</a>
+            </div>
+        </div>
+        
+
+        
+    </article>
     
 </section>
 

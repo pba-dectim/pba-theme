@@ -32,14 +32,14 @@ max-width:90%;
 }
 
 .asideSlide1{
-     width: 640px / 1920px *100%;
+     width: 768px / 1920px *100%;
     float: right;
 
 }
 
 figure{
 
-     width: 1280px / 1920px *100%;
+     width: 1152px / 1920px *100%;
     display: inline-block;
     position: relative;
     z-index: 1;
@@ -97,13 +97,54 @@ max-width: 540px;
 
 .secMandat article p {
 margin-bottom: 70px;
+  
 }
 
 /*---------------------- secFier ---------------------------*/
+
+.secFier{
+text-align: center;
+}
 
 .secFier h1{
 background-color: #880000;
     color: white;
     padding:30px;
     font-size: 4em;
+}
+
+.contPhoto{
+padding:1%;
+}
+
+.contInfo{
+    max-width: calc(33.33% - 29px);
+box-shadow: 0px 2px 10px #e0e0e0;
+    background-color: #f1f1f1;
+    display: inline-block;
+       margin: calc(1% - 6px);
+    text-align: center;
+        padding-bottom: 25px;
+
+}
+
+.contInfo h4{
+font-size:2em;
+    text-transform: uppercase;
+}
+.contInfo a{
+
+    text-transform: uppercase;
+}
+
+.contInfo img{
+max-width: 100%;
+ 
+}
+
+.btnVoirPlus{
+    display: inline-block;
+    padding: 15px;
+    border: 1px #880000 solid;
+    width: 40%;
 }
