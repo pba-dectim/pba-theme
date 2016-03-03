@@ -92,7 +92,7 @@ Notre mission : préserver et faire rayonner les richesses de notre patrimoine B
 
 <section class="secFier">
     
-    <h1>Fiers de notre patrimoine</h1>
+    <h1>Fiers de notre patrimoines</h1>
     
 </section>
 
