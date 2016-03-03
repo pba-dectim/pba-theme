@@ -28,18 +28,18 @@ get_header(); ?>
 
                         <div id='section-mandat-historique' class='articles-apropos'>
                             <article>
-                                <h2><?php the_field('titre_mandat'); ?></h2>
+                                <h2><?php the_field('titre_references_virtuelles'); ?></h2>
                                 <hr>
                                 <div>
-                                    <?php the_field('contenu_mandat'); ?>
+                                    <?php the_field('texte_references_virtuelles'); ?>
                                 </div>
                             </article>
 
                             <article>
-                                <h2><?php the_field('titre_historique'); ?></h2>
+                                <h2><?php the_field('titre_references_papier'); ?></h2>
                                 <hr>
                                 <div>
-                                    <?php the_field('contenu_historique'); ?>
+                                    <?php the_field('texte_references_papier'); ?>
                                 </div>
                             </article>
 
