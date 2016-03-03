@@ -6,9 +6,7 @@ get_header();
 
 
 <section class="firstSlide">
-<?php
-the_post_thumbnail('full')
-?>
+<video class="full_video" id="js-video" src="video/accueil.mp4" autoplay="" loop="" muted="" type="video/mp4" poster="http://www.ville.candiac.qc.ca/modules/candiac/assets/images/home-background.jpg"></video>
 </section>
 
 
