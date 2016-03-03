@@ -536,3 +536,65 @@ figcaption {
   padding: 15px;
   border: 1px #880000 solid;
   width: 40%; }
+/*---------------------STYLES DE LA PAGE SINGLE---------------------------*/
+/*------IMPORT -------*/
+/*-----------VARIABLES SASS-----------*/
+/*--------- Front Page ---------------*/
+#contenu_single #ficheInfo {
+  background-color: #f1f1f1;
+  box-sizing: border-box;
+  padding: 40px;
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.4);
+  position: relative;
+  top: -50px; }
+  #contenu_single #ficheInfo p {
+    font-family: Roboto;
+    font-weight: bold;
+    color: #444444;
+    font-size: 1.2em; }
+#contenu_single #txtInfo {
+  margin: 0 5%;
+  box-sizing: border-box;
+  padding: 70px 0 0; }
+#contenu_single #galerie {
+  padding: 70px 0 0; }
+  #contenu_single #galerie ul {
+    margin: 0 auto;
+    list-style: none; }
+    #contenu_single #galerie ul li {
+      width: calc(25% - 4px);
+      margin-bottom: 4px;
+      display: inline-block; }
+      #contenu_single #galerie ul li img {
+        width: 100%; }
+  #contenu_single #galerie #boutonGalerie a {
+    color: #880000;
+    font-family: zona_problack; }
+  #contenu_single #galerie #boutonGalerie div {
+    width: calc( 50% - 2px );
+    display: inline-block;
+    box-sizing: border-box;
+    border: 1px #880000 solid;
+    text-align: center;
+    padding: 20px 0;
+    margin: 20px 0;
+    cursor: pointer;
+    transition: ease-in-out 0.15s; }
+  #contenu_single #galerie #boutonGalerie div:hover {
+    border: 1px #880000 solid;
+    background-color: #880000; }
+    #contenu_single #galerie #boutonGalerie div:hover a {
+      color: white; }
+  #contenu_single #galerie #boutonGalerie div:first-child {
+    margin: 0 4px 0 0; }
+#contenu_single h1, #contenu_single h2, #contenu_single h3, #contenu_single h4, #contenu_single h5, #contenu_single h6 {
+  margin: 0 auto;
+  font-family: zona_problack;
+  font-size: 2em; }
+
+#contenu_single .blockInfo {
+  display: inline-block;
+  vertical-align: top;
+  width: 30%; }
