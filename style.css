@@ -90,6 +90,7 @@
 /*------------------------------------------STYLE DU HEADER------------------------------*/
 /*------IMPORT -------*/
 /*-----------VARIABLES SASS-----------*/
+/*--------- Front Page ---------------*/
 /*D├ëCHIAGE DU PARENT*/
 .content-area, .content-sidebar {
   padding-top: 0px; }
@@ -225,6 +226,7 @@ nav ul li a:hover{
 
 /*------IMPORT -------*/
 /*-----------VARIABLES SASS-----------*/
+/*--------- Front Page ---------------*/
 /*STYLE G├ëN├ëRAUX*/
 #footer-content {
   background-color: #f1f1f1;
@@ -280,6 +282,7 @@ nav ul li a:hover{
 
 /*------IMPORT -------*/
 /*-----------VARIABLES SASS-----------*/
+/*--------- Front Page ---------------*/
 /*ENLEVER LA SIDEBAR*/
 .site:before {
   display: none; }
@@ -376,3 +379,37 @@ div #section-membres-ca {
   margin-bottom: 0px; }
   .articles-apropos ul li {
     list-style-type: square; }
+
+/*--------------------STYLES DE LA PAGE CONTACT----------------------*/
+/*------IMPORT -------*/
+/*-----------VARIABLES SASS-----------*/
+/*--------- Front Page ---------------*/
+div.articles-apropos h1 {
+  line-height: 1;
+  margin-bottom: 70px; }
+div.articles-apropos i {
+  color: #880000; }
+div.articles-apropos .contact-infos {
+  display: inline-block;
+  width: 31.25%;
+  vertical-align: top;
+  text-align: center;
+  margin-right: 2.60417%; }
+div.articles-apropos .contact-infos:nth-child(2) {
+  margin-right: 0px; }
+
+/*------------------------------------------STYLE FRONT PAGE------------------------------*/
+/*------IMPORT -------*/
+/*-----------VARIABLES SASS-----------*/
+/*--------- Front Page ---------------*/
+.firstSlide {
+  width: 100%; }
+
+.firstSlide img {
+  width: 66.66667%; }
+
+section .asideSlide1 h2 {
+  font-size: 1em;
+  text-transform: uppercase;
+  font-family: zona_problack;
+  text-align: center; }
