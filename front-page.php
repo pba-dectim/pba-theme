@@ -10,6 +10,9 @@ get_header();
             <figcaption>
                 <h1>Le patrimoine</h1>
                 <h2>Pour que l'avenir se souvienne !</h2></figcaption>
+                <section class="asideSlide1">
+    
+ 
         </figure>
 
 <section class="asideSlide1">
@@ -58,18 +61,10 @@ get_header();
     <article>
     <p>
         
-        La Société du patrimoine de Boucherville, organisme à but non lucratif, a comme objectif de promouvoir les intérêts socio-culturels et patrimoniaux des citoyens et des organismes de Boucherville. Pour y parvenir, elle privilégie les moyens suivants:
+Engagée dans la communauté à protéger cet héritage de plus de 350 ans d’histoire, la Société du Patrimoine de Boucherville contribue activement à la préservation et à la mise en valeur du patrimoine architectural, religieux, culturel et naturel de Boucherville. Quelques-unes des réalisations et activités qui témoignent de cet engagement : restauration du vitrail de la famille Boucher; concerts-bénéfices, expositions et événements spéciaux; protection des biens mobiliers et immobiliers; érection de monuments et plaques commémoratives; mérite patrimonial ainsi que des publications et documents d’archives.
         
     </p>
-    
-    <ul>
-        
-        <li>conception de projets d'écomusée</li>
-        <li>organisation de conférences, expositions, événements spéciaux</li>
-        <li>publication de documents</li>
-        <li>campagnes de levée de fonds et organisation d'activités de financement</li>
-        
-    </ul>
+
     
     </article>
     
@@ -77,15 +72,14 @@ get_header();
         
         
         <p>
-            La Société est ouverte sans restriction à tout citoyen ou organisme intéressé au patrimoine de Boucherville, que ce soit dans ses aspects historique, culturel, architectural, religieux ou environnemental, et désireux de participer à sa mise en valeur.
-            
+La Société est ouverte sans restriction à tout citoyen ou organisme intéressé au patrimoine de Boucherville, que ce soit dans ses aspects historique, culturel, architectural, religieux ou environnemental, et désireux de participer à sa mise en valeur.
         </p>
         
         
         
         <p>
             
-            Pour devenir membre, il suffit de payer une cotisation annuelle de 10$ (individu), de 25$ (organisme à but non lucratif), ou de 100$ (société commerciale). La Société du patrimoine a, de plus, reçu le mandat du conseil municipal de créer et d'exploiter des écomusées.
+Notre mission : préserver et faire rayonner les richesses de notre patrimoine Bouchervillois pour les générations présentes et futures
             
         </p>
         
@@ -96,6 +90,11 @@ get_header();
     
 </section>
 
+<section class="secFier">
+    
+    <h1>Fiers de notre patrimoine</h1>
+    
+</section>
 
 <?php
 

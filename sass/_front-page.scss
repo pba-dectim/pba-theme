@@ -8,6 +8,7 @@
 #full_video{
 max-width: 100%;
 margin:0;
+     
 }
 
 .asideSlide1 h2{
@@ -37,8 +38,7 @@ max-width:90%;
 }
 
 figure{
-     vertical-align: middle;
-     line-height: 1280px / 1920px *100%;
+
      width: 1280px / 1920px *100%;
     display: inline-block;
     position: relative;
@@ -49,10 +49,12 @@ figure{
 
 figure h1{
 font-size: 7vmin;
+    
 }
 
 figure h2{
 font-size: 3.3vmin;
+    
 }
 
 figcaption{
@@ -74,6 +76,7 @@ figcaption{
 .secMandat{
 max-width:1200px;
     margin: auto;
+    
 }
 
 .secMandat h1{
@@ -90,4 +93,17 @@ max-width: 540px;
     float:left;
     margin: 20px;
     margin-top: 0;
+}
+
+.secMandat article p {
+margin-bottom: 70px;
+}
+
+/*---------------------- secFier ---------------------------*/
+
+.secFier h1{
+background-color: #880000;
+    color: white;
+    padding:30px;
+    font-size: 4em;
 }

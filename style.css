@@ -409,8 +409,6 @@ div #section-membres-ca {
   float: right; }
 
 figure {
-  vertical-align: middle;
-  line-height: 66.66667%;
   width: 66.66667%;
   display: inline-block;
   position: relative;
@@ -453,3 +451,13 @@ figcaption {
   float: left;
   margin: 20px;
   margin-top: 0; }
+
+.secMandat article p {
+  margin-bottom: 70px; }
+
+/*---------------------- secFier ---------------------------*/
+.secFier h1 {
+  background-color: #880000;
+  color: white;
+  padding: 30px;
+  font-size: 4em; }
