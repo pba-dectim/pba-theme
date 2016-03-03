@@ -5,9 +5,6 @@ function theme_enqueue_styles() {
 
 }
 
-
-add_theme_support( 'post-thumbnails' );
-
 // Register Custom Post Type
 function cpt_patrimoine() {
 
@@ -62,6 +59,55 @@ function cpt_patrimoine() {
 
 }
 add_action( 'init', 'cpt_patrimoine', 0 );
+
+if ( ! function_exists( 'patrimoine_taxonomy' ) ) {
+
+// Register Custom Taxonomy
+function patrimoine_taxonomy() {
+
+	$labels = array(
+		'name'                       => _x( 'Patrimoine-categories', 'Taxonomy General Name', 'text_domain' ),
+		'singular_name'              => _x( 'Patrimoine-categorie', 'Taxonomy Singular Name', 'text_domain' ),
+		'menu_name'                  => __( 'Catégories du patrimoine', 'text_domain' ),
+		'all_items'                  => __( 'Toutes les catégories', 'text_domain' ),
+		'parent_item'                => __( 'Parent', 'text_domain' ),
+		'parent_item_colon'          => __( 'Parent :', 'text_domain' ),
+		'new_item_name'              => __( 'Nouvelle catégorie', 'text_domain' ),
+		'add_new_item'               => __( 'Ajouter une catégorie', 'text_domain' ),
+		'edit_item'                  => __( 'Modifier une catégorie', 'text_domain' ),
+		'update_item'                => __( 'Mettre à jour', 'text_domain' ),
+		'view_item'                  => __( 'Voir la catégorie', 'text_domain' ),
+		'separate_items_with_commas' => __( 'Séparer les catégories par des virgules', 'text_domain' ),
+		'add_or_remove_items'        => __( 'Ajouter ou supprimer la catégorie', 'text_domain' ),
+		'choose_from_most_used'      => __( 'Choisir par les plus utilisées', 'text_domain' ),
+		'popular_items'              => __( 'Plus populaires', 'text_domain' ),
+		'search_items'               => __( 'Rechercher une catégorie', 'text_domain' ),
+		'not_found'                  => __( 'Aucune catégorie trouvée', 'text_domain' ),
+		'no_terms'                   => __( 'Aucune catégorie', 'text_domain' ),
+		'items_list'                 => __( 'Liste des catégories', 'text_domain' ),
+		'items_list_navigation'      => __( 'Navigation', 'text_domain' ),
+	);
+	$rewrite = array(
+		'slug'                       => 'categorie-du-patrimoine',
+		'with_front'                 => true,
+		'hierarchical'               => true,
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => true,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => true,
+		'rewrite'                    => $rewrite,
+	);
+	register_taxonomy( 'patrimoine_category', array( 'post_type_patrimoine' ), $args );
+
+}
+add_action( 'init', 'patrimoine_taxonomy', 0 );
+
+}
 
 if ( ! function_exists('custom_post_realisation') ) {
 
@@ -121,5 +167,51 @@ function custom_post_realisation() {
 add_action( 'init', 'custom_post_realisation', 0 );
 
 }
+
+// Register Custom Taxonomy
+function realisation_taxonomy() {
+
+	$labels = array(
+		'name'                       => _x( 'Realisation-categories', 'Taxonomy General Name', 'text_domain' ),
+		'singular_name'              => _x( 'Realisation-categorie', 'Taxonomy Singular Name', 'text_domain' ),
+		'menu_name'                  => __( 'Catégories des réalisations', 'text_domain' ),
+		'all_items'                  => __( 'Toutes les catégories', 'text_domain' ),
+		'parent_item'                => __( 'Parent', 'text_domain' ),
+		'parent_item_colon'          => __( 'Parent :', 'text_domain' ),
+		'new_item_name'              => __( 'Nouvelle catégorie', 'text_domain' ),
+		'add_new_item'               => __( 'Ajouter une catégorie', 'text_domain' ),
+		'edit_item'                  => __( 'Modifier une catégorie', 'text_domain' ),
+		'update_item'                => __( 'Mettre à jour', 'text_domain' ),
+		'view_item'                  => __( 'Voir la catégorie', 'text_domain' ),
+		'separate_items_with_commas' => __( 'Séparer les catégories par des virgules', 'text_domain' ),
+		'add_or_remove_items'        => __( 'Ajouter ou supprimer la catégorie', 'text_domain' ),
+		'choose_from_most_used'      => __( 'Choisir par les plus utilisées', 'text_domain' ),
+		'popular_items'              => __( 'Plus populaires', 'text_domain' ),
+		'search_items'               => __( 'Rechercher une catégorie', 'text_domain' ),
+		'not_found'                  => __( 'Aucune catégorie trouvée', 'text_domain' ),
+		'no_terms'                   => __( 'Aucune catégorie', 'text_domain' ),
+		'items_list'                 => __( 'Liste des catégories', 'text_domain' ),
+		'items_list_navigation'      => __( 'Navigation', 'text_domain' ),
+	);
+	$rewrite = array(
+		'slug'                       => 'categorie-des-realisations',
+		'with_front'                 => true,
+		'hierarchical'               => true,
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => true,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => true,
+		'rewrite'                    => $rewrite,
+	);
+	register_taxonomy( 'realisation_category', array( 'post_type_realisatio' ), $args );
+
+}
+add_action( 'init', 'realisation_taxonomy', 0 );
+
 
 ?>
