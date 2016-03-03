@@ -4,18 +4,37 @@
 @import "variables.scss";
 
 .firstSlide{
- width:100%;
-}
-
-.firstSlide img{
  width: 1280px / 1920px *100%;
+    display: inline-block;
 }
 
-section .asideSlide1 h2{
+#full_video{
+max-width: 100%;
+
+}
+
+.asideSlide1 h2{
 
     font-size: $h1Section;
     text-transform: uppercase;
     font-family: zona_problack;
     text-align: center;
-    
+    color:white;
+    background-color:black;
+    padding:20px;
+    margin-bottom: 50px;
 }
+
+.asideSlide1 p{
+
+max-width:90%;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.asideSlide1{
+     width: 640px / 1920px *100%;
+    float: right;
+}
+

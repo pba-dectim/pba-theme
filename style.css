@@ -385,13 +385,28 @@ div #section-membres-ca {
 /*-----------VARIABLES SASS-----------*/
 /*--------- Front Page ---------------*/
 .firstSlide {
-  width: 100%; }
+  width: 66.66667%;
+  display: inline-block; }
 
-.firstSlide img {
-  width: 66.66667%; }
+#full_video {
+  max-width: 100%; }
 
-section .asideSlide1 h2 {
-  font-size: 1em;
+.asideSlide1 h2 {
+  font-size: 2.5em;
   text-transform: uppercase;
   font-family: zona_problack;
-  text-align: center; }
+  text-align: center;
+  color: white;
+  background-color: black;
+  padding: 20px;
+  margin-bottom: 50px; }
+
+.asideSlide1 p {
+  max-width: 90%;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 50px; }
+
+.asideSlide1 {
+  width: 33.33333%;
+  float: right; }
