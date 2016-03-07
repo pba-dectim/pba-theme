@@ -27,7 +27,7 @@ get_header(); ?>
 	'exclude'            => '',
 	'echo'               => 1,
 	'selected'           => 0,
-	'hierarchical'       => 0, 
+	'hierarchical'       => 1, 
 	'name'               => 'cat',
 	'id'                 => '',
 	'class'              => 'postform',
@@ -39,9 +39,34 @@ get_header(); ?>
 ); ?>
 <?php wp_dropdown_categories( $args ); ?>   
            
-                
+                      <div id="ficheInfo" class="blockInfo">
+
+                                <h3>CATÉGORIE(S)</h3>
+                                <?php 
+                               
+                                $term = get_field('categorie_de_lelement');
+                               
+                                if( $term ): ?>
+
+                                    <p><?php echo $term->name; ?><p>
+                                    
+                                   
+                                <?php endif; ?>
+
+
+                                <h3>ANNÉE DE CONSTRUCTION</h3>
+                                <p><?php the_field('annee_de_construction'); ?></p>
+
+                                <h3>PRIX</h3>
+                                <?php the_field('prix_ou_nomination'); ?>
+
+                                <h3>ADRESSE</h3>
+                                <p><?php the_field('adresse_patrimoine'); ?></p>
+
+                            </div>
+			
+				<section id="listing-content-ajax">
 			<?php
-					
 					// Start the Loop.
 					while ( have_posts() ) : the_post(); 
 
@@ -50,12 +75,13 @@ get_header(); ?>
                     <article class="listing-post-single">
 						<h1><?php the_field('date_de_la_realisation', $post_id);?><span>-</span><?php the_title(); ?></h1>
 						<?php /*?>get_template_part( 'content', get_post_format() );<?php */?>
-						<p><?php the_content(); ?></p>
+						<p><?php the_excerpt(); ?></p>
                         <img src="<?php the_post_thumbnail_url('medium'); ?>" alt="test" />
                         <a href="<?php the_permalink(); ?>">Voir la fiche</a>
 					</article>
-					<?php endwhile;
-					// Previous/next page navigation.
+					<?php endwhile; ?>
+				</section>
+					<?php // Previous/next page navigation.
 					twentyfourteen_paging_nav(); ?>
 
 				<?php endif;
