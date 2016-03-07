@@ -105,9 +105,8 @@ div #section-membres-ca {
 /*SECTION POLITIQUE CULTURELLE*/
 
 #section-politique-culturelle {
-    text-align: center;
-    width: 75%;
-    margin: 0 auto;
+    width: 65%;
+    //margin: 0 auto;
 }
 
 /*STYLE DES LISTES*/
@@ -116,5 +115,45 @@ div #section-membres-ca {
     margin-bottom: 0px;
     li {
         list-style-type: square;
+    }
+}
+
+
+/*RESPONSIVE DE LA PAGE À PROPOS*/
+
+@media (max-width: 960px) {
+    
+    /*SECTION MANDAT & HISTORIQUE*/
+    .articles-apropos article{
+        display:block;
+        width:100%;
+        margin-bottom:70px;
+    }
+    .articles-apropos article:last-child{
+        margin-bottom:0px;
+    }
+    
+    /*SECTION FONDATEURS*/
+    
+    #section-membres-ca{
+        h2{
+            text-align:left;
+        }
+    }
+    
+    #centre-CA{
+        width:100%;
+        text-align: left;
+        
+        li{
+            list-style-type: none;
+        }
+        
+    }
+    
+    /*SECTION POLITIQUE CULTURELLE*/
+    #section-politique-culturelle {
+        width: auto;
+        //margin: 0 auto;
     }
 }

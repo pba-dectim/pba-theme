@@ -1,46 +1,39 @@
 /*------------------------------------------STYLE DU HEADER------------------------------*/
 
-/*------IMPORT -------*/
-@import "variables.scss";
 
+/*------IMPORT -------*/
+
+@import "variables.scss";
 
 /*DÉCHIAGE DU PARENT*/
 
-.content-area, .content-sidebar{
-    padding-top: 0px;   
+.content-area,
+.content-sidebar {
+    padding-top: 0px;
 }
 
 /* SITE */
-
-
 
 ::selection {
     background: $primaryColor;
     color: $lightColor1;
 }
-
 .site {
     max-width: 100%;
-    
 }
-
-.site-content{
-    width:100%;
-    margin:0 auto;
+.site-content {
+    width: 100%;
+    margin: 0 auto;
     box-sizing: border-box;
-    
 }
-
 .site-main {
-	padding-top: 70px;
+    padding-top: 70px;
 }
-
-body{
-    font-family:zona_proregular;
+body {
+    font-family: zona_proregular;
     box-sizing: border-box;
     line-height: 24px;
 }
-
 
 /* NAV */
 
@@ -50,50 +43,49 @@ body{
     box-shadow: 0px 2px 2px 0.00px rgba(0, 0, 0, 0.12);
     position: fixed;
     font-family: zona_proregular;
-    
+}
+
+/* LOGO */
+
+img.logoSPB {
+    margin-left: 40px;
 }
 
 /*HEADER*/
 
-.header-main{
-    padding-top:0px;
-    padding-bottom:0px;
-    
+.header-main {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
 }
-
-.site-title
-{
-    line-height:70px;    
+.site-title {
+    line-height: 70px;
 }
 
 /*FONT SIZE*/
 
 .primary-navigation {
     font-size: 16px;
-    margin-right:0px;
+    margin-right: 0px;
     line-height: 70px;
 }
 
 /*LIENS DU NAV*/
 
 .site-navigation a {
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
     //transition: ease-in-out 0.15s;
     font-size: 16px;
     padding-bottom: 6px;
 }
-
-#primary-menu li:last-child
-{
-    padding-right:40px;    
+#primary-menu li:last-child {
+    padding-right: 40px;
 }
-
 .primary-navigation li:hover > a,
 .primary-navigation li.focus > a {
     background: none;
 }
-
 .site-navigation a:hover {
     background: none;
     border-style: solid;
@@ -103,13 +95,10 @@ body{
     border-left: 0px;
     border-top: 0px;
 }
-
 nav ul li a {
     font-size: 18px;
     color: $lightColor1;
-    
 }
-
 
 /* HEADER HOVER
 
@@ -131,23 +120,20 @@ nav ul li a:hover{
     /*font-weight: 900;*/
 }
 
-
 /* SEARCH */
 
 .search-toggle {
     background-color: $lightColor1;
     color: $primaryColor;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 40px / 1920px *100%;
+    padding-right: 40px / 1920px *100%;
     padding-bottom: 22px;
     transition: ease-in-out 0.15s;
     line-height: 80px;
 }
-
 .search-toggle:before {
     font-size: 24px;
 }
-
 .search-toggle:hover,
 .search-toggle.active {
     background-color: $lightColor2;
@@ -159,26 +145,168 @@ nav ul li a:hover{
 .search-toggle:before {
     color: $primaryColor;
 }
-
 .search-box {
     background-color: black;
     opacity: 0.8;
     padding: 12px;
-    min-height:100vh;
-    margin-top:22px;
+    min-height: 100vh;
+    margin-top: 22px;
+    width: 100%;
 }
-
-.search-box .search-field{
-    width:25%;
-    margin:0 auto;
+.search-box-wrapper {
+    padding-left: 0px;
+}
+.search-box .search-field {
+    width: 25%;
+    margin: 0 auto;
     font-family: zona_problack;
     text-transform: uppercase;
-    font-size:24px;
-    color:white;
-    float:none;
-    padding:10px;
+    font-size: 24px;
+    color: white;
+    float: none;
+    padding: 10px;
     background-color: rgba(0, 0, 255, 0.0);
-    position:fixed;
-    top:50%;
-    left:35%;
+    position: fixed;
+    top: 50%;
+    left: 35%;
+}
+.primary-navigation.toggled-on {
+    padding-top: 70px;
+    margin-left: 0px;
+    margin-right: 0px;
+    //padding-bottom:0px;
+}
+
+/*-------RESPONSIVE DU HEADER-------*/
+
+
+/*MENU HAMBURGER*/
+
+.menu-toggle {
+    height: 70px;
+    ;
+    //padding-left: 20px;
+    //padding-right: 20px;
+    //width:auto;
+    background-color: $primaryColor;
+}
+.menu-toggle:active,
+.menu-toggle:focus {
+    background-color: $primaryColor;
+}
+.menu-toggle:hover {
+    background-color: #444;
+}
+.menu-toggle:before {
+    font-size: 20px;
+}
+.menu-toggle:focus {
+    outline: none;
+}
+@media screen and (max-width: 1350px) {
+    .primary-navigation {
+        float: none;
+        //width:100%;
+        padding-top: 70px;
+        text-align: center;
+    }
+    #primary-menu li:last-child {
+        padding-right: 0px;
+    }
+    .primary-navigation.toggled-on {
+        padding-bottom: 0px;
+    }
+}
+@media screen and (min-width: 1058px) {
+    .primary-navigation .menu-toggle {
+        display: none;
+    }
+}
+@media screen and (max-width: 1057px) {
+    .primary-navigation .menu-toggle {
+        display: inline-block !important;
+        //padding-left: 20px;
+        //padding-right: 20px;
+    }
+    .search-toggle {
+        margin-right: 48px;
+    }
+    .primary-navigation li {
+        display: none;
+    }
+    .primary-navigation.toggled-on li {
+        display: block;
+        border-top: 0px;
+    }
+    .primary-navigation a {
+        border-top: none;
+        //line-height:70px;
+    }
+}
+@media screen and (max-width: 783px) {
+    .search-toggle {
+        margin-right: 18px;
+    }
+    .primary-navigation {
+        float: none;
+        /* width: 100%; */
+        margin: 0 1px 0 -12px;
+        /* padding: 112px; */
+        text-align: center;
+        padding-top: 70px;
+        text-transform: uppercase;
+    }
+    #primary-menu li {
+        line-height: inherit;
+        border-top: 0px;
+        height: auto;
+    }
+    .site-navigation a:hover {
+        color: white;
+        border: 0px;
+    }
+    .primary-navigation.toggled-on {
+        padding-bottom: 0px;
+    }
+    /*#primary-menu li a{
+        padding:10px 0;
+        font-size:18px;
+    }
+    #primary-menu li a:hover{
+        border:0px;
+    }*/
+    /*
+    .primary-navigation a {
+    padding:30px 0;
+    }
+    */
+}
+@media screen and (min-width: 783px) {
+    #primary-menu li {
+        padding: 10px 0;
+    }
+    .primary-navigation li:hover > a,
+    .primary-navigation li.focus > a {
+        background-color: $primaryColor;
+        color: #fff;
+    }
+    .primary-navigation ul ul a:hover,
+    .primary-navigation ul ul li.focus > a {
+        background-color: $primaryColor;
+        color: #fff;
+    }
+    .site-navigation a:hover {
+        color: white;
+    }
+}
+@media screen and (max-width: 672px) {
+    .search-toggle {
+        margin-right: 38px;
+    }
+}
+@media screen and (max-width: 400px) {
+    /* LOGO */
+    img.logoSPB {
+        margin-left: 10px;
+    }
 }
