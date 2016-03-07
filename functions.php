@@ -216,5 +216,10 @@ function realisation_taxonomy() {
 }
 add_action( 'init', 'realisation_taxonomy', 0 );
 
+function test(){
+    wp_enqueue_script ( "lightboxVideo", get_stylesheet_directory_uri()."/lightbox/videoLightbox.js", array("jquery"));
+}
+add_action( 'wp_enqueue_scripts', 'test' );
+
 
 ?>

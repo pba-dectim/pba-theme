@@ -62,29 +62,33 @@ get_header(); ?>
 
                             --><div id="galerie" class="blockInfo">
                             
-                              
-                                <?php 
+                            
+                            <?php
 
-                                    $images = get_field('galerie_photo_patrimoine');
+                                $images = get_field('galerie_photo_patrimoine');
 
-                                        if( $images ): ?>
-                                            <ul> 
-                                                <?php foreach( $images as $image ): ?>
-                                                    <li>
-                                                        <a href="<?php echo $image['url']; ?>">
-                                                             <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
-                                                        </a>
-                                                        
-                                                    </li>
-                                                <?php endforeach; ?>
-                                            </ul>
-                                        <?php endif; ?>
-                                        
+                                    if( $images ): ?>
+                                        <ul> 
+                                            <?php foreach( $images as $image ): 
+                                                $content = '<li>';
+                                                    $content .= '<a href="'. $image['url'] .'">';
+                                                        $content .= '<img src="'. $image['sizes']['thumbnail'] .'" alt="'. $image['alt'] .'" />';
+                                                    $content .= '</a>';
+                                                $content .= '</li>';
+            
+                                            if ( function_exists('slb_activate') ){
+                                                $content = slb_activate($content);
+                                            }
+    
+                                            echo $content;?>
+                                    <?php endforeach; ?>
+                                        </ul>
+                            <?php endif; ?>                        
 
                                 
                                 <div id="boutonGalerie">
                                     <div><a href="#">CARTE INTÉRACTIVE</a></div><!--
-                                    --><div><a href="#">BALADODIFFUSEUR</a></div>
+                                    --><div id="showVideo"><a href="#">VIDÉO</a></div>
                                 </div>
 
 
