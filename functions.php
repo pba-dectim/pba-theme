@@ -5,6 +5,8 @@ function theme_enqueue_styles() {
 
 }
 
+add_theme_support( 'post-thumbnails' ); 
+
 // Register Custom Post Type
 function cpt_patrimoine() {
 
@@ -222,6 +224,8 @@ function test(){
 add_action( 'wp_enqueue_scripts', 'test' );
 
 
+
+
 function add_script() {
 	
 	wp_register_script ( 'script-jf', get_stylesheet_directory_uri().'/js/script.js', array('jquery'));
@@ -265,4 +269,5 @@ if ( $query->have_posts() ) :
 	echo $content;
 die();
 }
+
 
