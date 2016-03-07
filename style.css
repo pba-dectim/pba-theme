@@ -505,9 +505,7 @@ div #section-membres-ca {
 
 /*SECTION POLITIQUE CULTURELLE*/
 #section-politique-culturelle {
-  text-align: center;
-  width: 75%;
-  margin: 0 auto; }
+  width: 65%; }
 
 /*STYLE DES LISTES*/
 .articles-apropos ul {
@@ -515,6 +513,30 @@ div #section-membres-ca {
   .articles-apropos ul li {
     list-style-type: square; }
 
+/*RESPONSIVE DE LA PAGE ├Ç PROPOS*/
+@media (max-width: 960px) {
+  /*SECTION MANDAT & HISTORIQUE*/
+  .articles-apropos article {
+    display: block;
+    width: 100%;
+    margin-bottom: 70px; }
+
+  .articles-apropos article:last-child {
+    margin-bottom: 0px; }
+
+  /*SECTION FONDATEURS*/
+  #section-membres-ca h2 {
+    text-align: left; }
+
+  #centre-CA {
+    width: 100%;
+    text-align: left; }
+    #centre-CA li {
+      list-style-type: none; }
+
+  /*SECTION POLITIQUE CULTURELLE*/
+  #section-politique-culturelle {
+    width: auto; } }
 /*--------------------STYLES DE LA PAGE CONTACT----------------------*/
 /*------IMPORT -------*/
 /*-----------VARIABLES SASS-----------*/
