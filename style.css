@@ -439,8 +439,7 @@ div.articles-apropos {
   text-align: center;
   color: white;
   background-color: black;
-  padding: 20px;
-  margin-bottom: 50px; }
+  padding: 20px; }
 
 .asideSlide1 p {
   max-width: 90%;
@@ -468,7 +467,43 @@ figure h2 {
 
 figcaption {
   left: 0;
-  top: 35%;
+  top: 37%;
+  right: 60px;
+  margin: 0;
+  padding: 0px;
+  bottom: 0;
+  position: absolute;
+  text-align: center;
+  color: white; }
+
+.owl-carousel owl-theme div p {
+  width: 40%; }
+
+.owl-carousel owl-theme {
+  width: 40%; }
+
+.containtFigure {
+  height: 54.1vh;
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  background-size: cover;
+  z-index: 1;
+  top: 0;
+  left: 0; }
+
+.containtFigure img {
+  opacity: 0.5; }
+
+.containtFigure h3 {
+  font-size: 5vmin; }
+
+.containtFigcaption h4 {
+  font-size: 1.3vmin; }
+
+.containtFigcaption {
+  left: 0;
+  top: 0;
   right: 0;
   margin: 0;
   padding: 0px;
@@ -476,6 +511,10 @@ figcaption {
   position: absolute;
   text-align: center;
   color: white; }
+
+.owl-theme .owl-nav.disabled + .owl-dots {
+  position: relative;
+  margin-top: -30px; }
 
 /*---------------------- secMandat ---------------------------*/
 .secMandat {
@@ -494,10 +533,8 @@ figcaption {
   min-height: 264px;
   float: left;
   margin: 20px;
-  margin-top: 0; }
-
-.secMandat article p {
-  margin-bottom: 70px; }
+  margin-top: 0;
+  margin-bottom: 50px; }
 
 /*---------------------- secFier ---------------------------*/
 .secFier {
@@ -536,6 +573,11 @@ figcaption {
   padding: 15px;
   border: 1px #880000 solid;
   width: 40%; }
+
+@media screen and (min-width: 320px) and (max-width: 1306px) {
+  .asideSlide1 {
+    float: none;
+    width: 100%; } }
 /*---------------------STYLES DE LA PAGE SINGLE---------------------------*/
 /*------IMPORT -------*/
 /*-----------VARIABLES SASS-----------*/
