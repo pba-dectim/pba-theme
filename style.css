@@ -124,10 +124,15 @@ body {
   position: fixed;
   font-family: zona_proregular; }
 
+/* LOGO */
+img.logoSPB {
+  margin-left: 40px; }
+
 /*HEADER*/
 .header-main {
   padding-top: 0px;
-  padding-bottom: 0px; }
+  padding-bottom: 0px;
+  padding-left: 0px; }
 
 .site-title {
   line-height: 70px; }
@@ -140,8 +145,8 @@ body {
 
 /*LIENS DU NAV*/
 .site-navigation a {
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
   font-size: 16px;
   padding-bottom: 6px; }
 
@@ -185,8 +190,8 @@ nav ul li a:hover{
 .search-toggle {
   background-color: white;
   color: #880000;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 2.08333%;
+  padding-right: 2.08333%;
   padding-bottom: 22px;
   transition: ease-in-out 0.15s;
   line-height: 80px; }
@@ -228,6 +233,120 @@ nav ul li a:hover{
   top: 50%;
   left: 35%; }
 
+.primary-navigation.toggled-on {
+  padding-top: 70px;
+  margin-left: 0px;
+  margin-right: 0px; }
+
+/*-------RESPONSIVE DU HEADER-------*/
+/*MENU HAMBURGER*/
+.menu-toggle {
+  height: 70px;
+  background-color: #880000; }
+
+.menu-toggle:active,
+.menu-toggle:focus {
+  background-color: #880000; }
+
+.menu-toggle:hover {
+  background-color: #444; }
+
+.menu-toggle:before {
+  font-size: 20px; }
+
+.menu-toggle:focus {
+  outline: none; }
+
+@media screen and (max-width: 1350px) {
+  .primary-navigation {
+    float: none;
+    padding-top: 70px;
+    text-align: center; }
+
+  #primary-menu li:last-child {
+    padding-right: 0px; }
+
+  .primary-navigation.toggled-on {
+    padding-bottom: 0px; } }
+@media screen and (min-width: 1058px) {
+  .primary-navigation .menu-toggle {
+    display: none; } }
+@media screen and (max-width: 1057px) {
+  .primary-navigation .menu-toggle {
+    display: inline-block !important; }
+
+  .search-toggle {
+    margin-right: 48px; }
+
+  .primary-navigation li {
+    display: none; }
+
+  .primary-navigation.toggled-on li {
+    display: block;
+    border-top: 0px; }
+
+  .primary-navigation a {
+    border-top: none; } }
+@media screen and (max-width: 783px) {
+  .search-toggle {
+    margin-right: 18px; }
+
+  .primary-navigation {
+    float: none;
+    /* width: 100%; */
+    margin: 0 1px 0 -12px;
+    /* padding: 112px; */
+    text-align: center;
+    padding-top: 70px;
+    text-transform: uppercase; }
+
+  #primary-menu li {
+    line-height: inherit;
+    border-top: 0px;
+    height: auto; }
+
+  .site-navigation a:hover {
+    color: white;
+    border: 0px; }
+
+  .primary-navigation.toggled-on {
+    padding-bottom: 0px; }
+
+  /*#primary-menu li a{
+      padding:10px 0;
+      font-size:18px;
+  }
+  #primary-menu li a:hover{
+      border:0px;
+  }*/
+  /*
+  .primary-navigation a {
+  padding:30px 0;
+  }
+  */ }
+@media screen and (min-width: 783px) {
+  #primary-menu li {
+    padding: 10px 0; }
+
+  .primary-navigation li:hover > a,
+  .primary-navigation li.focus > a {
+    background-color: #880000;
+    color: #fff; }
+
+  .primary-navigation ul ul a:hover,
+  .primary-navigation ul ul li.focus > a {
+    background-color: #880000;
+    color: #fff; }
+
+  .site-navigation a:hover {
+    color: white; } }
+@media screen and (max-width: 672px) {
+  .search-toggle {
+    margin-right: 38px; } }
+@media screen and (max-width: 400px) {
+  /* LOGO */
+  img.logoSPB {
+    margin-left: 10px; } }
 /*------IMPORT -------*/
 /*-----------VARIABLES SASS-----------*/
 /*--------- Front Page ---------------*/
