@@ -218,4 +218,51 @@ function realisation_taxonomy() {
 }
 add_action( 'init', 'realisation_taxonomy', 0 );
 
-?>
+
+
+
+function add_script() {
+	
+	wp_register_script ( 'script-jf', get_stylesheet_directory_uri().'/js/script.js', array('jquery'));
+	wp_enqueue_script ( 'script-jf');
+	$pluginDir = get_stylesheet_directory_uri();
+    wp_localize_script( 'script-jf', 'pluginDir', $pluginDir );
+	wp_localize_script('script-jf', 'ajaxurl', admin_url( 'admin-ajax.php' ) );
+}	
+add_action('wp_enqueue_scripts', 'add_script');
+
+add_action( 'wp_ajax_listing_ajax_action', 'listing_ajax_action' );
+add_action( 'wp_ajax_nopriv_listing_ajax_action', 'listing_ajax_action' );
+
+function listing_ajax_action() {
+	
+	
+
+	$param = $_POST['cat_id'];
+	$query = new WP_Query( array( 
+	'category' => $param,
+	'post_type' => array('post_type_realisatio','post_type_patrimoine')
+	 ) );
+if ( $query->have_posts() ) : 
+	while ( $query->have_posts() ) : $query->the_post(); 
+	
+	$content .= "<div><h1>ta mère</h1></div>";
+	
+		/*echo category_description($category_id);*/
+		//if ( is_post_type_archive('post_type_realisatio') ) {
+			/*$content .= '<article class="listing-post-single">
+				<h1>'. the_field("date_de_la_realisation", $post_id) .'<span>-</span>'. the_title() . '</h1>
+					<p>' . the_excerpt() . '</p>
+					<img src="'. the_post_thumbnail_url("medium") . '" alt="test" />
+					 <a href="'. the_permalink() . '">Voir la fiche</a>               
+			</article>';*/
+		//}
+		
+	endwhile;
+	endif;
+	
+	echo $content;
+die();
+}
+
+
