@@ -71,3 +71,23 @@
     margin: 0 auto;
     padding: 40px 0;
 }
+
+
+/*---------RESPONSIVE DU FOOTER---------*/
+
+@media (max-width: 440px) {
+  #footer-Button-zone a:first-child {
+    margin-right: 0px;
+    
+  }
+}
+
+@media (max-width: 410px) {
+  #footer-Button-zone a{
+    margin:10px 20px !important;
+    display:block;
+  }
+  #footer-Button-zone a:first-child {
+      margin-bottom:10px;
+  }
+}
