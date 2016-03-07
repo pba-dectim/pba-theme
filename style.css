@@ -208,7 +208,11 @@ nav ul li a:hover{
   opacity: 0.8;
   padding: 12px;
   min-height: 100vh;
-  margin-top: 22px; }
+  margin-top: 22px;
+  width: 100%; }
+
+.search-box-wrapper {
+  padding-left: 0px; }
 
 .search-box .search-field {
   width: 25%;
@@ -536,6 +540,7 @@ figcaption {
   padding: 15px;
   border: 1px #880000 solid;
   width: 40%; }
+
 /*---------------------STYLES DE LA PAGE SINGLE---------------------------*/
 /*------IMPORT -------*/
 /*-----------VARIABLES SASS-----------*/
