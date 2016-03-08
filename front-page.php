@@ -5,6 +5,8 @@ get_header();
 ?>
 
 
+
+
 <figure class="firstSlide">
           <video id="full_video" id="js-video" src="<?php echo get_stylesheet_directory_uri(); ?>/video/accueil2.mp4" autoplay="" loop="" muted="" type="video/mp4" poster="http://www.ville.candiac.qc.ca/modules/candiac/assets/images/home-background.jpg"></video> 
             <figcaption>
@@ -81,8 +83,11 @@ if ($query->have_posts() ) {
        
         
     </article>
-    
+ 
 </section> 
+
+
+</div>
 
 <section class="secMandat">
     
