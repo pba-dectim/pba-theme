@@ -11,6 +11,8 @@ div.articles-apropos{
     h1{
         line-height:1;
         margin-bottom:70px;
+        text-align:left;
+        
     }
     
     i{
@@ -28,7 +30,7 @@ div.articles-apropos{
     
     .contact-infos:nth-child(2){
        
-        margin-right: 0px
+        margin-right: 0px;
     }
     
     /*----FORM-----*/
@@ -41,11 +43,13 @@ div.articles-apropos{
             //width: 594px / 854.531px * 100%;
             text-align:right;
             margin: 0 145px;
+            
         }
         
         input, textarea{
             border-radius:0px;
             width:100%;
+            min-width: 300px;
             
             //width: 594px / 854.531px * 100%;
         }
@@ -77,6 +81,82 @@ div.articles-apropos{
     
 }
 
+/*RESPONSIVE DE LA PAGE CONTACT*/
+
+@media (max-width: 1465px) {
+
+    div.articles-apropos{
+        
+        padding-bottom:0px;
+        
+        h1{
+            text-align:center;
+            width:100%;
+        }  
+        
+        article{
+            width:100%;
+            
+        }
+        article:first-child{
+            margin-bottom:70px;
+        }
+        
+        
+    }
+    
+}
+
+@media (max-width: 900px) {
+    
+    div.articles-apropos{
+        
+        .contact-infos{
+            display:block;
+            width: 100%;
+            margin-bottom:35px;
+        }
+        
+        .contact-infos:last-child{
+            
+            margin-bottom:0px;
+        }
+        
+        
+        
+        #section-form{
+            
+            form{
+                margin:0 40px;
+            }
+            
+        }    
+        
+    }
+    
+        
+}
+
+@media (max-width: 480px) {
+    
+    div.articles-apropos{
+        
+        #section-form{
+            
+            form{
+                margin:0 20px;
+            }
+            
+            input, textarea{
+            
+            min-width: 0px;
+            
+            }
+            
+        }
+    }
+    
+}
 
 
 
