@@ -13,8 +13,8 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
 
-			<header class="page-header">
-				<h1 class="page-title"><?php _e( 'Not Found', 'twentyfourteen' ); ?></h1>
+			<header class="page404-header">
+				<h1 class="page404-title">Erreur 404</h1>
 			</header>
 
 			<div class="page-content">
@@ -27,6 +27,5 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-get_sidebar( 'content' );
-get_sidebar();
+
 get_footer();
