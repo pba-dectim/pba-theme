@@ -731,13 +731,10 @@ figcaption {
   border: 1px #880000 solid;
   width: 40%; }
 
-
 @media screen and (min-width: 320px) and (max-width: 1306px) {
   .asideSlide1 {
     float: none;
     width: 100%; } }
-
-
 /*---------------------STYLES DE LA PAGE SINGLE---------------------------*/
 /*------IMPORT -------*/
 /*-----------VARIABLES SASS-----------*/
@@ -746,9 +743,19 @@ figcaption {
   margin: auto;
   margin-top: 150px;
   position: absolute;
+  z-index: 1000;
   top: 0;
   left: 0;
   right: 0; }
+#contenu_single #lightboxVideo {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8); }
 #contenu_single #ficheInfo {
   background-color: #f1f1f1;
   box-sizing: border-box;
@@ -771,7 +778,8 @@ figcaption {
   padding: 70px 0 0; }
   #contenu_single #galerie ul {
     margin: 0 auto;
-    list-style: none; }
+    list-style: none;
+    margin-bottom: 20px; }
     #contenu_single #galerie ul li {
       width: calc(25% - 4px);
       margin-bottom: 4px;
@@ -788,7 +796,6 @@ figcaption {
     border: 1px #880000 solid;
     text-align: center;
     padding: 20px 0;
-    margin: 20px 0;
     cursor: pointer;
     transition: ease-in-out 0.15s; }
   #contenu_single #galerie #boutonGalerie div:hover {
@@ -807,3 +814,13 @@ figcaption {
   display: inline-block;
   vertical-align: top;
   width: 30%; }
+
+/*---------------------STYLES DE LA PAGE 404---------------------------*/
+/*------IMPORT -------*/
+/*-----------VARIABLES SASS-----------*/
+/*--------- Front Page ---------------*/
+.page404-header {
+  max-width: 100%;
+  margin-top: 50px; }
+  .page404-header h1 {
+    font-size: 5em; }
