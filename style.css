@@ -546,7 +546,8 @@ div.articles-apropos {
   /*----FORM-----*/ }
   div.articles-apropos h1 {
     line-height: 1;
-    margin-bottom: 70px; }
+    margin-bottom: 70px;
+    text-align: left; }
   div.articles-apropos i {
     color: #880000;
     margin-bottom: 25px; }
@@ -563,7 +564,8 @@ div.articles-apropos {
     margin: 0 145px; }
   div.articles-apropos #section-form input, div.articles-apropos #section-form textarea {
     border-radius: 0px;
-    width: 100%; }
+    width: 100%;
+    min-width: 300px; }
   div.articles-apropos #section-form textarea {
     max-height: 183px; }
   div.articles-apropos #section-form p {
@@ -581,6 +583,31 @@ div.articles-apropos {
     background-color: #880000;
     color: white; }
 
+/*RESPONSIVE DE LA PAGE CONTACT*/
+@media (max-width: 1465px) {
+  div.articles-apropos {
+    padding-bottom: 0px; }
+    div.articles-apropos h1 {
+      text-align: center;
+      width: 100%; }
+    div.articles-apropos article {
+      width: 100%; }
+    div.articles-apropos article:first-child {
+      margin-bottom: 70px; } }
+@media (max-width: 900px) {
+  div.articles-apropos .contact-infos {
+    display: block;
+    width: 100%;
+    margin-bottom: 35px; }
+  div.articles-apropos .contact-infos:last-child {
+    margin-bottom: 0px; }
+  div.articles-apropos #section-form form {
+    margin: 0 40px; } }
+@media (max-width: 480px) {
+  div.articles-apropos #section-form form {
+    margin: 0 20px; }
+  div.articles-apropos #section-form input, div.articles-apropos #section-form textarea {
+    min-width: 0px; } }
 /*------------------------------------------STYLE FRONT PAGE------------------------------*/
 /*------IMPORT -------*/
 /*-----------VARIABLES SASS-----------*/
