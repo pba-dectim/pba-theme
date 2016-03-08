@@ -6,6 +6,13 @@
 @import "variables.scss";
 #contenu_single {
     
+    iframe {
+        margin: auto;
+        margin-top: 150px;   
+        position: absolute;
+        top: 0; left: 0;  right: 0;
+    }
+    
     #ficheInfo {
         background-color: #f1f1f1;
         box-sizing: border-box;

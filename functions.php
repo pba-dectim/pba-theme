@@ -5,6 +5,8 @@ function theme_enqueue_styles() {
 
 }
 
+add_theme_support( 'post-thumbnails' ); 
+
 // Register Custom Post Type
 function cpt_patrimoine() {
 
@@ -216,6 +218,13 @@ function realisation_taxonomy() {
 }
 add_action( 'init', 'realisation_taxonomy', 0 );
 
+function test(){
+    wp_enqueue_script ( "lightboxVideo", get_stylesheet_directory_uri()."/lightbox/videoLightbox.js", array("jquery"));
+}
+add_action( 'wp_enqueue_scripts', 'test' );
+
+
+
 
 function add_script() {
 	
@@ -260,4 +269,5 @@ if ( $query->have_posts() ) :
 	echo $content;
 die();
 }
+
 

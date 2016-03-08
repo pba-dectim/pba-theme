@@ -21,14 +21,14 @@ get_header();
         
         <h2>
             
-            Bienvenue
+           <?php the_field("titre_du_mot_de_bienvenue"); ?>
             
         </h2>
         
         
                 <p>
             
-            Quisque consequat massa ut lacinia interdum. Curabitur a sapien est. Morbi semper iaculis augue sed rhoncus. Integer in arcu et ipsum lacinia pellentesque. In hac habitasse platea dictumst. Mauris nec imperdiet tortor. Cras vel mattis tortor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer convallis nec libero in accumsan.
+  <?php the_field("mot_de_bienvenue"); ?>
             
         </p>
         
@@ -39,15 +39,46 @@ get_header();
         
         <h2>
             
-            Actualités
+            <?php the_field("titre_des_actualites"); ?>
             
         </h2>
         
-        <p>
+       
             
-            Quisque consequat massa ut lacinia interdum. Curabitur a sapien est. Morbi semper iaculis augue sed rhoncus. Integer in arcu et ipsum lacinia pellentesque. In hac habitasse platea dictumst. Mauris nec imperdiet tortor. Cras vel mattis tortor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer convallis nec libero in accumsan.
-            
-        </p>
+        <div class="owl-carousel owl-theme">
+ 
+
+ <?php 
+
+$query = new WP_Query( array( 'post_type' => 'post' ) );
+
+if ($query->have_posts() ) {
+	while ( $query->have_posts() ) {
+		$query->the_post(); ?>
+
+        <div> <aside class="containtFigure" style="background-image:url('<?php the_post_thumbnail_url('full');?>')">
+        
+       <aside class="containtFigcaption">
+        <h3>   <?php
+           the_title();
+           ?>
+           </h3>
+                   <h4>   <?php
+           the_content();
+           ?>
+           </h4>
+       </aside>
+       </aside> </div> 
+       <?php
+		//
+	} // end while
+    wp_reset_query();
+} // end if
+
+?>
+
+</div>
+       
         
     </article>
     
@@ -55,44 +86,29 @@ get_header();
 
 <section class="secMandat">
     
-    <h1>Notre Mandat</h1>
+    <h1>          <?php the_field("section_notre_mandat"); ?></h1>
     
 <div class="wrapMandat">    
-    <article>
+  
     <p>
         
-Engagée dans la communauté à protéger cet héritage de plus de 350 ans d’histoire, la Société du Patrimoine de Boucherville contribue activement à la préservation et à la mise en valeur du patrimoine architectural, religieux, culturel et naturel de Boucherville. Quelques-unes des réalisations et activités qui témoignent de cet engagement : restauration du vitrail de la famille Boucher; concerts-bénéfices, expositions et événements spéciaux; protection des biens mobiliers et immobiliers; érection de monuments et plaques commémoratives; mérite patrimonial ainsi que des publications et documents d’archives.
+        
+<?php the_field("texte_notre_mandat"); ?>
         
     </p>
 
     
-    </article>
+ 
+   
     
-    <article>
-        
-        
-        <p>
-La Société est ouverte sans restriction à tout citoyen ou organisme intéressé au patrimoine de Boucherville, que ce soit dans ses aspects historique, culturel, architectural, religieux ou environnemental, et désireux de participer à sa mise en valeur.
-        </p>
-        
-        
-        
-        <p>
-            
-Notre mission : préserver et faire rayonner les richesses de notre patrimoine Bouchervillois pour les générations présentes et futures
-            
-        </p>
-        
-        
-    </article>
     
     </div>
-    
+
 </section>
 
 <section class="secFier">
     
-    <h1>Fiers de notre patrimoine</h1>
+    <h1><?php the_field("titre_section_patrimoine"); ?></h1>
     
     <article class="contPhoto">
         
@@ -167,6 +183,24 @@ Notre mission : préserver et faire rayonner les richesses de notre patrimoine B
     </article>
     
 </section>
+
+    <script>
+    $(document).ready(function(){
+  $('.owl-carousel').owlCarousel();
+});
+        
+        var owl = $('.owl-carousel');
+owl.owlCarousel({
+    
+    loop:true,
+    margin:10,
+    items:1,
+    autoplay:true,
+    autoplayTimeout:5000,
+   
+    autoplayHoverPause:true
+});
+    </script>
 
 <?php
 
