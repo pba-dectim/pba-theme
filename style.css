@@ -636,7 +636,9 @@ div.articles-apropos {
   float: right;
   z-index: 1;
   position: relative;
-  background-color: white; }
+  background-color: white;
+  height: 94.1vmin;
+  overflow: hidden; }
 
 .artBvn:first-child {
   min-height: 321px; }
@@ -647,7 +649,9 @@ figure {
   position: relative;
   z-index: 1;
   top: 0;
-  left: 0; }
+  left: 0;
+  overflow: hidden;
+  height: 94.1vmin; }
 
 figure h1 {
   font-size: 7vmin; }
@@ -687,10 +691,8 @@ figcaption {
   opacity: 0.5; }
 
 .containtFigure h3 {
-  font-size: 5vmin; }
-
-.containtFigcaption h4 {
-  font-size: 1.3vmin; }
+  font-size: 5vmin;
+  opacity: 1; }
 
 .containtFigcaption {
   left: 0;
@@ -700,8 +702,7 @@ figcaption {
   padding: 0px;
   bottom: 0;
   position: absolute;
-  text-align: center;
-  color: white; }
+  text-align: center; }
 
 .owl-theme .owl-nav.disabled + .owl-dots {
   position: relative;
@@ -753,30 +754,51 @@ figcaption {
   font-size: 2em;
   text-transform: uppercase; }
 
+.btnVoirPlus {
+  margin-top: 35px;
+  margin-bottom: 15px; }
+
 .contInfo a {
-  text-transform: uppercase; }
+  color: #880000;
+  border: 1px #880000 solid;
+  padding: 18px;
+  transition: ease-in-out 0.15s; }
+
+.contInfo a:hover {
+  color: white;
+  border: 1px #880000 solid;
+  background-color: #880000; }
 
 .contInfo img {
   max-width: 100%; }
 
-.btnVoirPlus {
-  display: inline-block;
-  padding: 15px;
-  border: 1px #880000 solid;
-  width: 40%; }
-
 @media screen and (min-width: 768px) and (max-width: 1306px) {
+  #full_video {
+    width: 100%; }
+
+  figure {
+    width: 100%; }
+
   .asideSlide1 {
     float: none;
-    width: 100%; }
+    width: 100%;
+    margin-top: -7px;
+    height: inherit; }
 
   .contInfo {
     max-width: 48%;
     margin-bottom: 10px; } }
 @media (max-width: 767px) {
+  figure {
+    width: 100%; }
+
+  #full_video {
+    width: 100%; }
+
   .asideSlide1 {
     float: none;
-    width: 100%; }
+    width: 100%;
+    height: inherit; }
 
   .secMandat article {
     display: block;
@@ -800,10 +822,6 @@ figcaption {
   .secMandat h1 {
     font-size: 2.7em;
     margin: 0; } }
-@media screen and (min-width: 320px) and (max-width: 1306px) {
-  .asideSlide1 {
-    float: none;
-    width: 100%; } }
 /*---------------------STYLES DE LA PAGE SINGLE---------------------------*/
 /*------IMPORT -------*/
 /*-----------VARIABLES SASS-----------*/
