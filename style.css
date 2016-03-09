@@ -800,14 +800,14 @@ figcaption {
   .secMandat h1 {
     font-size: 2.7em;
     margin: 0; } }
-@media screen and (min-width: 320px) and (max-width: 1306px) {
-  .asideSlide1 {
-    float: none;
-    width: 100%; } }
 /*---------------------STYLES DE LA PAGE SINGLE---------------------------*/
 /*------IMPORT -------*/
 /*-----------VARIABLES SASS-----------*/
 /*--------- Front Page ---------------*/
+#contenu_single .blockInfo {
+  display: inline-block;
+  vertical-align: top;
+  width: 30%; }
 #contenu_single iframe {
   margin: auto;
   margin-top: 150px;
@@ -855,35 +855,71 @@ figcaption {
       display: inline-block; }
       #contenu_single #galerie ul li img {
         width: 100%; }
-  #contenu_single #galerie #boutonGalerie a {
-    color: #880000;
-    font-family: zona_problack; }
-  #contenu_single #galerie #boutonGalerie div {
-    width: calc( 50% - 2px );
-    display: inline-block;
-    box-sizing: border-box;
-    border: 1px #880000 solid;
-    text-align: center;
-    padding: 20px 0;
-    cursor: pointer;
-    transition: ease-in-out 0.15s; }
-  #contenu_single #galerie #boutonGalerie div:hover {
-    border: 1px #880000 solid;
-    background-color: #880000; }
-    #contenu_single #galerie #boutonGalerie div:hover a {
-      color: white; }
-  #contenu_single #galerie #boutonGalerie div:first-child {
-    margin: 0 4px 0 0; }
+  #contenu_single #galerie #boutonGalerie {
+    margin-bottom: 20px; }
+    #contenu_single #galerie #boutonGalerie a {
+      color: #880000;
+      font-family: zona_problack;
+      padding: 5px; }
+    #contenu_single #galerie #boutonGalerie div {
+      width: calc( 50% - 2px );
+      display: inline-block;
+      box-sizing: border-box;
+      border: 1px #880000 solid;
+      text-align: center;
+      padding: 20px 0;
+      cursor: pointer;
+      transition: ease-in-out 0.15s; }
+    #contenu_single #galerie #boutonGalerie div:hover {
+      border: 1px #880000 solid;
+      background-color: #880000; }
+      #contenu_single #galerie #boutonGalerie div:hover a {
+        color: white; }
+    #contenu_single #galerie #boutonGalerie div:first-child {
+      margin: 0 4px 0 0; }
 #contenu_single h1, #contenu_single h2, #contenu_single h3, #contenu_single h4, #contenu_single h5, #contenu_single h6 {
   margin: 0 auto;
   font-family: zona_problack;
   font-size: 2em; }
 
-#contenu_single .blockInfo {
-  display: inline-block;
-  vertical-align: top;
-  width: 30%; }
-
+/*----------------------------- Responsive -----------------------------*/
+@media (max-width: 1350px) {
+  #contenu_single #galerie #boutonGalerie div {
+    width: 100%;
+    display: block; }
+  #contenu_single #galerie #boutonGalerie div:first-child {
+    margin: 0 4px 4px 0; } }
+@media (max-width: 1250px) {
+  #contenu_single #galerie {
+    padding: 0 0 0;
+    display: block;
+    width: 100%; }
+    #contenu_single #galerie #boutonGalerie {
+      text-align: center; }
+      #contenu_single #galerie #boutonGalerie div {
+        width: 40%;
+        display: inline-block; }
+      #contenu_single #galerie #boutonGalerie div:first-child {
+        margin: 0 4px 4px 0; }
+    #contenu_single #galerie ul {
+      text-align: center; }
+      #contenu_single #galerie ul li {
+        width: auto; }
+  #contenu_single #ficheInfo {
+    width: 40%; }
+  #contenu_single #txtInfo {
+    width: 50%; } }
+@media (max-width: 950px) {
+  #contenu_single .blockInfo {
+    display: block; }
+  #contenu_single #galerie {
+    width: 100%; }
+  #contenu_single #ficheInfo {
+    width: 100%; }
+  #contenu_single #txtInfo {
+    width: 100%;
+    padding: 0;
+    margin: 0; } }
 /*---------------------STYLES DE LA PAGE 404---------------------------*/
 /*------IMPORT -------*/
 /*-----------VARIABLES SASS-----------*/
