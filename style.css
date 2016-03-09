@@ -822,6 +822,39 @@ figcaption {
   .secMandat h1 {
     font-size: 2.7em;
     margin: 0; } }
+
+/*------------------------------------------STYLE DU SEARCH------------------------------*/
+/*------IMPORT -------*/
+/*-----------VARIABLES SASS-----------*/
+/*--------- Front Page ---------------*/
+/*-----------------------*/
+.search .page-header {
+  margin-top: 35px; }
+  .search .page-header h1 {
+    font-family: zona_proregular; }
+.search .site-content .entry-header, .search .site-content .entry-content, .search .site-content .entry-summary, .search .site-content .entry-meta, .search .page-content {
+  max-width: 65%;
+  text-align: center;
+  /*---SURVOL DES TITRES-----*/
+  /*BOUTONS VOIR PLUS*/ }
+  .search .site-content .entry-header .entry-title a:hover, .search .site-content .entry-content .entry-title a:hover, .search .site-content .entry-summary .entry-title a:hover, .search .site-content .entry-meta .entry-title a:hover, .search .page-content .entry-title a:hover {
+    color: #880000; }
+  .search .site-content .entry-header .more-link, .search .site-content .entry-content .more-link, .search .site-content .entry-summary .more-link, .search .site-content .entry-meta .more-link, .search .page-content .more-link {
+    margin: auto;
+    margin-top: 35px;
+    font-family: zona_problack;
+    border: 1px #880000 solid;
+    padding: 22px 3.90625%;
+    transition: ease-in-out 0.15s;
+    display: block;
+    width: 35%;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-sizing: border-box; }
+  .search .site-content .entry-header .more-link:hover, .search .site-content .entry-content .more-link:hover, .search .site-content .entry-summary .more-link:hover, .search .site-content .entry-meta .more-link:hover, .search .page-content .more-link:hover {
+    color: white;
+    background-color: #880000; }
+
 /*---------------------STYLES DE LA PAGE SINGLE---------------------------*/
 /*------IMPORT -------*/
 /*-----------VARIABLES SASS-----------*/

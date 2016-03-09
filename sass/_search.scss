@@ -1,0 +1,60 @@
+/*------------------------------------------STYLE DU SEARCH------------------------------*/
+
+
+/*------IMPORT -------*/
+
+@import "variables.scss";
+
+
+/*-----------------------*/
+
+.search{
+
+    .page-header{
+    
+        margin-top:35px;
+        
+        h1{
+            font-family: zona_proregular;
+        }
+        
+        
+        
+    }
+    
+    .site-content .entry-header, .site-content .entry-content, .site-content .entry-summary, .site-content .entry-meta, .page-content{
+        max-width:65%;
+        text-align:center;
+        
+        
+        /*---SURVOL DES TITRES-----*/
+        .entry-title a:hover{
+            color:$primaryColor;
+        }
+        
+        
+        /*BOUTONS VOIR PLUS*/
+        .more-link{
+            margin:auto;
+            margin-top:35px;
+            
+            font-family: zona_problack;
+            border: 1px $primaryColor solid;
+            padding: 22px 75px/1920px * 100%;
+            transition: ease-in-out 0.15s;
+            display:block;
+            width:35%;
+            
+            text-decoration: none;
+            
+            text-transform:uppercase;
+            
+            box-sizing:border-box;
+        }
+        .more-link:hover{
+            color: white;
+            background-color:$primaryColor;
+        }
+
+    }
+}
