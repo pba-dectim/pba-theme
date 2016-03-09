@@ -6,7 +6,6 @@ get_header();
 
 
 
-
 <figure class="firstSlide">
           <video id="full_video" id="js-video" src="<?php echo get_stylesheet_directory_uri(); ?>/video/accueil2.mp4" autoplay="" loop="" muted="" type="video/mp4" poster="http://www.ville.candiac.qc.ca/modules/candiac/assets/images/home-background.jpg"></video> 
             <figcaption>
@@ -101,15 +100,11 @@ if ($query->have_posts() ) {
 <?php the_field("texte_notre_mandat"); ?>
         
     </p>
-
-    
- 
-   
-    
     
     </div>
 
 </section>
+
 
 <section class="secFier">
     
@@ -122,9 +117,10 @@ if ($query->have_posts() ) {
            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/maison.jpg">
             
             <h4>62 de montbrun</h4>
-            
-            <div class="btnVoirPlus">
-            <a href="">En savoir plus</a>
+         
+            <div class="btnVoirPlus">   <a href="">
+            En savoir plus
+            </a>
             </div>
         </div>
         

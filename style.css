@@ -636,7 +636,9 @@ div.articles-apropos {
   float: right;
   z-index: 1;
   position: relative;
-  background-color: white; }
+  background-color: white;
+  height: 94.1vmin;
+  overflow: hidden; }
 
 .artBvn:first-child {
   min-height: 321px; }
@@ -647,7 +649,9 @@ figure {
   position: relative;
   z-index: 1;
   top: 0;
-  left: 0; }
+  left: 0;
+  overflow: hidden;
+  height: 94.1vmin; }
 
 figure h1 {
   font-size: 7vmin; }
@@ -687,10 +691,8 @@ figcaption {
   opacity: 0.5; }
 
 .containtFigure h3 {
-  font-size: 5vmin; }
-
-.containtFigcaption h4 {
-  font-size: 1.3vmin; }
+  font-size: 5vmin;
+  opacity: 1; }
 
 .containtFigcaption {
   left: 0;
@@ -700,8 +702,7 @@ figcaption {
   padding: 0px;
   bottom: 0;
   position: absolute;
-  text-align: center;
-  color: white; }
+  text-align: center; }
 
 .owl-theme .owl-nav.disabled + .owl-dots {
   position: relative;
@@ -753,30 +754,51 @@ figcaption {
   font-size: 2em;
   text-transform: uppercase; }
 
+.btnVoirPlus {
+  margin-top: 35px;
+  margin-bottom: 15px; }
+
 .contInfo a {
-  text-transform: uppercase; }
+  color: #880000;
+  border: 1px #880000 solid;
+  padding: 18px;
+  transition: ease-in-out 0.15s; }
+
+.contInfo a:hover {
+  color: white;
+  border: 1px #880000 solid;
+  background-color: #880000; }
 
 .contInfo img {
   max-width: 100%; }
 
-.btnVoirPlus {
-  display: inline-block;
-  padding: 15px;
-  border: 1px #880000 solid;
-  width: 40%; }
-
 @media screen and (min-width: 768px) and (max-width: 1306px) {
+  #full_video {
+    width: 100%; }
+
+  figure {
+    width: 100%; }
+
   .asideSlide1 {
     float: none;
-    width: 100%; }
+    width: 100%;
+    margin-top: -7px;
+    height: inherit; }
 
   .contInfo {
     max-width: 48%;
     margin-bottom: 10px; } }
 @media (max-width: 767px) {
+  figure {
+    width: 100%; }
+
+  #full_video {
+    width: 100%; }
+
   .asideSlide1 {
     float: none;
-    width: 100%; }
+    width: 100%;
+    height: inherit; }
 
   .secMandat article {
     display: block;
@@ -800,6 +822,7 @@ figcaption {
   .secMandat h1 {
     font-size: 2.7em;
     margin: 0; } }
+
 /*------------------------------------------STYLE DU SEARCH------------------------------*/
 /*------IMPORT -------*/
 /*-----------VARIABLES SASS-----------*/
@@ -836,6 +859,10 @@ figcaption {
 /*------IMPORT -------*/
 /*-----------VARIABLES SASS-----------*/
 /*--------- Front Page ---------------*/
+#contenu_single .blockInfo {
+  display: inline-block;
+  vertical-align: top;
+  width: 30%; }
 #contenu_single iframe {
   margin: auto;
   margin-top: 150px;
@@ -883,35 +910,71 @@ figcaption {
       display: inline-block; }
       #contenu_single #galerie ul li img {
         width: 100%; }
-  #contenu_single #galerie #boutonGalerie a {
-    color: #880000;
-    font-family: zona_problack; }
-  #contenu_single #galerie #boutonGalerie div {
-    width: calc( 50% - 2px );
-    display: inline-block;
-    box-sizing: border-box;
-    border: 1px #880000 solid;
-    text-align: center;
-    padding: 20px 0;
-    cursor: pointer;
-    transition: ease-in-out 0.15s; }
-  #contenu_single #galerie #boutonGalerie div:hover {
-    border: 1px #880000 solid;
-    background-color: #880000; }
-    #contenu_single #galerie #boutonGalerie div:hover a {
-      color: white; }
-  #contenu_single #galerie #boutonGalerie div:first-child {
-    margin: 0 4px 0 0; }
+  #contenu_single #galerie #boutonGalerie {
+    margin-bottom: 20px; }
+    #contenu_single #galerie #boutonGalerie a {
+      color: #880000;
+      font-family: zona_problack;
+      padding: 5px; }
+    #contenu_single #galerie #boutonGalerie div {
+      width: calc( 50% - 2px );
+      display: inline-block;
+      box-sizing: border-box;
+      border: 1px #880000 solid;
+      text-align: center;
+      padding: 20px 0;
+      cursor: pointer;
+      transition: ease-in-out 0.15s; }
+    #contenu_single #galerie #boutonGalerie div:hover {
+      border: 1px #880000 solid;
+      background-color: #880000; }
+      #contenu_single #galerie #boutonGalerie div:hover a {
+        color: white; }
+    #contenu_single #galerie #boutonGalerie div:first-child {
+      margin: 0 4px 0 0; }
 #contenu_single h1, #contenu_single h2, #contenu_single h3, #contenu_single h4, #contenu_single h5, #contenu_single h6 {
   margin: 0 auto;
   font-family: zona_problack;
   font-size: 2em; }
 
-#contenu_single .blockInfo {
-  display: inline-block;
-  vertical-align: top;
-  width: 30%; }
-
+/*----------------------------- Responsive -----------------------------*/
+@media (max-width: 1350px) {
+  #contenu_single #galerie #boutonGalerie div {
+    width: 100%;
+    display: block; }
+  #contenu_single #galerie #boutonGalerie div:first-child {
+    margin: 0 4px 4px 0; } }
+@media (max-width: 1250px) {
+  #contenu_single #galerie {
+    padding: 0 0 0;
+    display: block;
+    width: 100%; }
+    #contenu_single #galerie #boutonGalerie {
+      text-align: center; }
+      #contenu_single #galerie #boutonGalerie div {
+        width: 40%;
+        display: inline-block; }
+      #contenu_single #galerie #boutonGalerie div:first-child {
+        margin: 0 4px 4px 0; }
+    #contenu_single #galerie ul {
+      text-align: center; }
+      #contenu_single #galerie ul li {
+        width: auto; }
+  #contenu_single #ficheInfo {
+    width: 40%; }
+  #contenu_single #txtInfo {
+    width: 50%; } }
+@media (max-width: 950px) {
+  #contenu_single .blockInfo {
+    display: block; }
+  #contenu_single #galerie {
+    width: 100%; }
+  #contenu_single #ficheInfo {
+    width: 100%; }
+  #contenu_single #txtInfo {
+    width: 100%;
+    padding: 0;
+    margin: 0; } }
 /*---------------------STYLES DE LA PAGE 404---------------------------*/
 /*------IMPORT -------*/
 /*-----------VARIABLES SASS-----------*/

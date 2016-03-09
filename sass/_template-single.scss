@@ -6,6 +6,12 @@
 @import "variables.scss";
 #contenu_single {
     
+    .blockInfo {
+        display: inline-block;
+        vertical-align:top;
+        width: 30%;
+    }
+    
     iframe {
         margin: auto;
         margin-top: 150px;   
@@ -71,9 +77,12 @@
         
         #boutonGalerie {
             
+            margin-bottom: 20px;
+            
             a {
                 color: #880000;
                 font-family: zona_problack;
+                padding: 5px;
             }
             
             div {
@@ -108,16 +117,97 @@
         font-family: zona_problack;
         font-size: 2em;
     }
-
+    
 }
 
-#contenu_single .blockInfo {
-    display: inline-block;
-    vertical-align:top;
-    width: 30%;
+ 
+/*----------------------------- Responsive -----------------------------*/
+    
+@media (max-width: 1350px) {
+    #contenu_single {
+
+        #galerie {
+
+            #boutonGalerie {
+
+                div {
+                    width: 100%;
+                    display: block;
+                }
+
+                div:first-child {
+                    margin: 0 4px 4px 0;
+                }
+            }  
+        }
+    }
+}
+
+@media (max-width: 1250px) {
+    #contenu_single {
+
+        #galerie {
+            padding: 0 0 0;
+            display: block;  
+            width: 100%;
+            
+            #boutonGalerie {
+                
+                text-align: center;
+
+                div {
+                    width: 40%;
+                    display: inline-block;
+                }
+
+                div:first-child {
+                    margin: 0 4px 4px 0;
+                }
+            }  
+            
+            ul {
+                
+                text-align: center;
+            
+                li {
+                    width: auto;
+                }
+            }
+        }
+        
+        #ficheInfo {
+            width: 40%;
+        }
+        
+        #txtInfo {
+            width: 50%;
+        }
+    }
 }
 
 
+@media (max-width: 950px) {
+    #contenu_single {
+        .blockInfo {
+            display: block;
+        }
+        
+        #galerie {
+            width: 100%;
+        }
+        
+        #ficheInfo {
+            width: 100%;
+        }
 
+        #txtInfo {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+            
+    }
+    
+}
 
 
