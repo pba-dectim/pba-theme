@@ -14,14 +14,7 @@ get_header(); ?>
                         <h1>Le patrimoine</h1>
               </section>
               <div>
-               	
-               <section id="listing-content-ajax">
-                    <div id="ficheInfo" class="blockInfo">
-                        <h3>CATÉGORIE(S)</h3>
-                        <p><?php echo category_description( $category_id ); ?></p>
-                    </div> 
-                    <div>
-                        <?php $args = array(
+               	  <?php $args = array(
                             'show_option_all'    => '',
                             'show_option_none'   => 'Veuillez choisir une catégorie à afficher',
                             'option_none_value'  => '-1',
@@ -44,6 +37,13 @@ get_header(); ?>
                             'value_field'	     => 'term_id',	
                         ); ?>
                         <?php wp_dropdown_categories( $args ); ?>           
+               <section id="listing-content-ajax">
+                    <div id="ficheInfo" class="blockInfo">
+                        <h3>CATÉGORIE(S)</h3>
+                        <p><?php echo category_description( $category_id ); ?></p>
+                    </div> 
+                    <div>
+                      
                         <?php
                             while ( have_posts() ) : the_post(); 
                             

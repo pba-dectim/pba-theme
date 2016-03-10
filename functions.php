@@ -301,57 +301,59 @@ function listing_ajax_action() {
 
 	$param = $_POST['cat_id'];
 	$query = new WP_Query( array( 
-	'category' => $param,
-	'post_type' => array('post_type_realisatio','post_type_patrimoine')
+	'post_type' => array('post_type_realisatio','post_type_patrimoine'),
+	'tax_query' => array(
+		'relation' => 'OR',
+		array(
+			'taxonomy' => 'realisation_category',
+			'field'    => 'term_id',
+			'terms'    => $param,
+		),
+		array(
+			'taxonomy' => 'patrimoine_category',
+			'field'    => 'term_id',
+			'terms'    => $param,
+		)
+	)
 	 ) );
+	 
 	 echo category_description($param);
 	 
-	 $args = array(
-                            'show_option_all'    => '',
-                            'show_option_none'   => 'Veuillez choisir une catégorie à afficher',
-                            'option_none_value'  => '-1',
-                            'orderby'            => 'name', 
-                            'order'              => 'ASC',
-                            'show_count'         => 0,
-                            'hide_empty'         => 0, 
-                            'child_of'           => 0,
-                            'exclude'            => '',
-                            'echo'               => 1,
-                            'selected'           => 0,
-                            'hierarchical'       => 1, 
-                            'name'               => 'cat-selector',
-                            'id'                 => 'cat',
-                            'class'              => 'postform',
-                            'depth'              => 0,
-                            'tab_index'          => 0,
-                            'taxonomy'           => 'realisation_category',
-                            'hide_if_empty'      => false,
-                            'value_field'	     => 'term_id',	
-                        ); 
-	wp_dropdown_categories( $args );
+	
+	 
 	
 if ( $query->have_posts() ) : 
 	while ( $query->have_posts() ) : $query->the_post(); 
 	
-	$c .= $param;
 		
 		
-			$c .= '<article class="listing-post-single">
-				<div>
+			$c .= '<div id="accordion">
+				
 					<h1>'. get_field("date_de_la_realisation") .'<span>-</span>'. get_the_title() . '</h1>
+				<div>
 					<p>' . get_the_excerpt() . '</p>
 					<a href="'. get_the_permalink() . '">Voir la fiche</a>
-				</div>
-				<div>
 					'. get_the_post_thumbnail($sizes) . '
 				</div>
+				
+					
+				
 				</article>';
 		
 		
-	endwhile;
-	endif;
+		endwhile;
+		else : echo category_description($param);
+		
+		$c .= '<div>' . 'Aucun élément trouvé' . '</div>';
+		
+			
+		
+		endif;
+		
+		echo $c;
 	
-	echo $c;
+	
+	
 die();
 }
 

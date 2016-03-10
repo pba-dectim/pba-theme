@@ -35,21 +35,7 @@ Le Mérite Patrimonial est une reconnaissance destinée à honorer des maisons a
                	        
                	        
       	        
-               	        
-
-
-               	
-               	<section id="listing-content-ajax">
-                    <div id="ficheInfo" class="blockInfo">
-                        <h3>CATÉGORIE(S)</h3>
-                        <p><?php echo category_description( $category_id ); ?></p>
-
-                    </div>
-                  
-
- 
-                    <div>
-                        <?php $args = array(
+               	         <?php $args = array(
                             'show_option_all'    => '',
                             'show_option_none'   => 'Veuillez choisir une catégorie à afficher',
                             'option_none_value'  => '-1',
@@ -71,7 +57,21 @@ Le Mérite Patrimonial est une reconnaissance destinée à honorer des maisons a
                             'hide_if_empty'      => false,
                             'value_field'	     => 'term_id',	
                         ); ?>
-                        <?php wp_dropdown_categories( $args ); ?>           
+                        <?php wp_dropdown_categories( $args ); ?>     
+
+
+               	
+               	<section id="listing-content-ajax">
+                    <div id="ficheInfo" class="blockInfo">
+                        <h3>CATÉGORIE(S)</h3>
+                       
+
+                    </div>
+                  
+
+ 
+                    <div>
+                             
                         <?php
                             while ( have_posts() ) : the_post(); 
                             $post_id = get_the_ID();
@@ -91,7 +91,7 @@ Le Mérite Patrimonial est une reconnaissance destinée à honorer des maisons a
                               <?php the_post_thumbnail('medium'); ?>
                            
                         
-                        </div>
+                        	</div>
                             <?php endwhile; ?>
                          </div>
                      
