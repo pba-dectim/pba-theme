@@ -614,7 +614,8 @@ div.articles-apropos {
 /*--------- Front Page ---------------*/
 #full_video {
   max-width: 150%;
-  margin: 0; }
+  margin: 0;
+  transform: translateX(-9%); }
 
 .asideSlide1 h2 {
   font-size: 2.5em;
@@ -640,9 +641,6 @@ div.articles-apropos {
   height: 94.1vmin;
   overflow: hidden; }
 
-.artBvn:first-child {
-  min-height: 321px; }
-
 figure {
   width: 60%;
   display: inline-block;
@@ -662,7 +660,7 @@ figure h2 {
 figcaption {
   left: 0;
   top: 37%;
-  right: 60px;
+  right: 30px;
   margin: 0;
   padding: 0px;
   bottom: 0;
@@ -691,8 +689,13 @@ figcaption {
   opacity: 0.5; }
 
 .containtFigure h3 {
-  font-size: 5vmin;
-  opacity: 1; }
+  font-size: 1.7em;
+  text-transform: uppercase; }
+
+.containtFigure h4 {
+  font-size: 1.1em;
+  font-family: 'roboto';
+  font-weight: 300; }
 
 .containtFigcaption {
   left: 0;
@@ -702,7 +705,15 @@ figcaption {
   padding: 0px;
   bottom: 0;
   position: absolute;
-  text-align: center; }
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.7); }
+
+.containtFigcaption hr {
+  height: 2px;
+  margin-top: 30px;
+  background-color: black;
+  display: block;
+  width: 30%; }
 
 .owl-theme .owl-nav.disabled + .owl-dots {
   position: relative;
@@ -762,7 +773,8 @@ figcaption {
   color: #880000;
   border: 1px #880000 solid;
   padding: 18px;
-  transition: ease-in-out 0.15s; }
+  transition: ease-in-out 0.15s;
+  text-transform: uppercase; }
 
 .contInfo a:hover {
   color: white;
@@ -774,10 +786,15 @@ figcaption {
 
 @media screen and (min-width: 768px) and (max-width: 1306px) {
   #full_video {
-    width: 100%; }
+    width: 100%;
+    transform: translateX(0%); }
 
   figure {
-    width: 100%; }
+    width: 100%;
+    height: auto; }
+
+  figcaption {
+    right: 0; }
 
   .asideSlide1 {
     float: none;
@@ -790,15 +807,21 @@ figcaption {
     margin-bottom: 10px; } }
 @media (max-width: 767px) {
   figure {
-    width: 100%; }
+    width: 100%;
+    height: auto; }
 
   #full_video {
-    width: 100%; }
+    width: 100%;
+    transform: translateX(0%); }
+
+  figcaption {
+    right: 0; }
 
   .asideSlide1 {
     float: none;
     width: 100%;
-    height: inherit; }
+    height: inherit;
+    margin-top: -7px; }
 
   .secMandat article {
     display: block;
@@ -822,7 +845,6 @@ figcaption {
   .secMandat h1 {
     font-size: 2.7em;
     margin: 0; } }
-
 /*------------------------------------------STYLE DU SEARCH------------------------------*/
 /*------IMPORT -------*/
 /*-----------VARIABLES SASS-----------*/
@@ -984,3 +1006,33 @@ figcaption {
   margin-top: 50px; }
   .page404-header h1 {
     font-size: 5em; }
+
+/*---------------------STYLES DES LISTES---------------------------*/
+/*------IMPORT -------*/
+/*-----------VARIABLES SASS-----------*/
+/*--------- Front Page ---------------*/
+#contenu_realisation {
+  display: inline-block;
+  vertical-align: top;
+  width: 30%; }
+  #contenu_realisation #ficheInfo {
+    background-color: #f1f1f1;
+    box-sizing: border-box;
+    padding: 40px;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.4);
+    position: relative;
+    top: -50px; }
+    #contenu_realisation #ficheInfo p {
+      font-family: Roboto;
+      font-weight: bold;
+      color: #444444;
+      font-size: 1.2em; }
+  #contenu_realisation .listing-post-single {
+    margin: 0 5%;
+    box-sizing: border-box;
+    padding: 70px 0 0; }
+
+#accordion h1 {
+  font-size: 1.5em; }

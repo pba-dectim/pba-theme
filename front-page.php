@@ -7,7 +7,7 @@ get_header();
 
 
 <figure class="firstSlide">
-          <video id="full_video" id="js-video" src="<?php echo get_stylesheet_directory_uri(); ?>/video/accueil2.mp4" autoplay="" loop="" muted="" type="video/mp4" poster="http://www.ville.candiac.qc.ca/modules/candiac/assets/images/home-background.jpg"></video> 
+          <video id="full_video" id="js-video" src="<?php echo get_stylesheet_directory_uri(); ?>/video/accueil2.mp4" autoplay="" loop="" muted="" type="video/mp4" poster="<?php echo get_stylesheet_directory_uri(); ?>/img/510-marie-victorin-face.jpg"></video> 
             <figcaption>
                 <h1>Le patrimoine</h1>
                 <h2>Pour que l'avenir se souvienne !</h2></figcaption>
@@ -64,6 +64,7 @@ if ($query->have_posts() ) {
            the_title();
            ?>
            </h3>
+                  <hr>
                    <h4>   <?php
            the_content();
            ?>

@@ -4,7 +4,13 @@
 /*------IMPORT -------*/
 
 @import "variables.scss";
-/*#contenu-listing {
+
+
+#contenu_realisation {
+    
+            display: inline-block;
+        vertical-align:top;
+        width: 30%;
     
     #ficheInfo {
         background-color: #f1f1f1;
@@ -30,71 +36,9 @@
         padding: 70px 0 0;
     }
     
-    #galerie {
-        
-        padding: 70px 0 0;
-        
-        ul {
-            margin: 0 auto;
-            list-style: none;
-            
-            li {
-                width: calc(25% - 4px);
-                margin-bottom: 4px;
-                display: inline-block;
-                
-                img {
-                    width: 100%;
-                }
-            }
-        }
-        
-        #boutonGalerie {
-            
-            a {
-                color: #880000;
-                font-family: zona_problack;
-            }
-            
-            div {
-                width: calc( 50% - 2px );
-                display: inline-block;
-                box-sizing: border-box;
-                border: 1px #880000 solid;
-                text-align: center;
-                padding: 20px 0;
-                margin: 20px 0;
-                cursor: pointer;
-                transition: ease-in-out 0.15s;
-            }
-            
-            div:hover {
-                a {
-                    color: white;
-                }
-                border: 1px #880000 solid;
-                background-color: #880000;
-            }
-            
-            div:first-child {
-                margin: 0 4px 0 0;
-            }
-            
-        }
-        
-    }
-    
-    h1, h2, h3, h4, h5, h6 {
-        margin: 0 auto;
-        font-family: zona_problack;
-        font-size: 2em;
-    }
-
 }
-
-#contenu-listing .blockInfo {
-    display: inline-block;
-    vertical-align:top;
-    width: 30%;
-}*/
-
+    #accordion h1{
+    
+        font-size:1.5em;
+        
+    }
