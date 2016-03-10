@@ -34,13 +34,8 @@ get_header(); ?>
                             'echo'               => 1,
                             'selected'           => 0,
                             'hierarchical'       => 1, 
-<<<<<<< HEAD
-                            'name'               => 'cat',
-                            'id'                 => '',
-=======
                             'name'               => 'cat-selector',
                             'id'                 => 'cat',
->>>>>>> origin/master
                             'class'              => 'postform',
                             'depth'              => 0,
                             'tab_index'          => 0,
