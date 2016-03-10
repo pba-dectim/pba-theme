@@ -166,7 +166,7 @@ nav ul li a:hover{
     float: none;
     padding: 10px;
     background-color: rgba(0, 0, 255, 0.0);
-    text-align:center;
+    text-align:left;
     border-bottom: 2px white solid;
     
 }
@@ -182,7 +182,7 @@ nav ul li a:hover{
 
 #search-input-wrapper input:first-child{
     margin-right:150px;
-    text-align:center;
+    text-align:left;
 }
 
 /*ENLEVER LE X DU SEARCH DANS IE*/
@@ -210,6 +210,7 @@ display: none;
 /*Styles du boutons rechercher*/
 
 button, .button, input[type="button"], input[type="reset"], input[type="submit"]{
+    text-align:center;
     background-color:$primaryColor;
     color:white;
     transition:ease-in-out 0.15s;
