@@ -230,7 +230,8 @@ nav ul li a:hover{
   float: none;
   padding: 10px;
   background-color: rgba(0, 0, 255, 0);
-  text-align: center; }
+  text-align: center;
+  border-bottom: 2px white solid; }
 
 #search-input-wrapper {
   position: fixed;
@@ -543,12 +544,8 @@ div #section-membres-ca {
   background-color: #0f0f0f;
   color: white; }
 
-#section-membres-ca h2 {
-  text-align: center; }
-
-#centre-CA {
-  width: 80%;
-  margin: 0 auto; }
+#centre-CA h3 {
+  margin-top: 0px; }
 
 #section-membres-ca article {
   margin: 0 auto; }
@@ -558,7 +555,7 @@ div #section-membres-ca {
 
 /*SECTION POLITIQUE CULTURELLE*/
 #section-politique-culturelle {
-  width: 65%; }
+  width: 45%; }
 
 /*STYLE DES LISTES*/
 .articles-apropos ul {
@@ -584,8 +581,6 @@ div #section-membres-ca {
   #centre-CA {
     width: 100%;
     text-align: left; }
-    #centre-CA li {
-      list-style-type: none; }
 
   /*SECTION POLITIQUE CULTURELLE*/
   #section-politique-culturelle {
