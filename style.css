@@ -211,7 +211,7 @@ nav ul li a:hover{
 
 .search-box {
   background-color: black;
-  opacity: 0.8;
+  opacity: 0.9;
   padding: 12px;
   min-height: 100vh;
   margin-top: 22px;
@@ -221,7 +221,7 @@ nav ul li a:hover{
   padding-left: 0px; }
 
 .search-box .search-field {
-  width: 25%;
+  width: 100%;
   margin: 0 auto;
   font-family: zona_problack;
   text-transform: uppercase;
@@ -230,14 +230,57 @@ nav ul li a:hover{
   float: none;
   padding: 10px;
   background-color: rgba(0, 0, 255, 0);
+  text-align: center; }
+
+#search-input-wrapper {
   position: fixed;
   top: 50%;
-  left: 35%; }
+  left: 35%;
+  display: inline-block;
+  text-align: center; }
+
+#search-input-wrapper input:first-child {
+  margin-right: 150px;
+  text-align: center; }
+
+/*ENLEVER LE X DU SEARCH DANS IE*/
+input[type=text]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0; }
+
+input[type=text]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0; }
+
+/*ENLEVER LE X DU SEARCH DANS CHROME*/
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none; }
+
+.search-box .search-field:after {
+  color: white;
+  background-color: white; }
+
+/*Styles du boutons rechercher*/
+button, .button, input[type="button"], input[type="reset"], input[type="submit"] {
+  background-color: #880000;
+  transition: ease-in-out 0.15s; }
+
+button, .button, input[type="button"], input[type="reset"], input[type="submit"]:hover {
+  background-color: white;
+  color: #880000; }
 
 .primary-navigation.toggled-on {
   padding-top: 70px;
   margin-left: 0px;
   margin-right: 0px; }
+
+search-submit {
+  display: inline-block !important; }
 
 /*-------RESPONSIVE DU HEADER-------*/
 /*MENU HAMBURGER*/
@@ -822,7 +865,6 @@ figcaption {
   .secMandat h1 {
     font-size: 2.7em;
     margin: 0; } }
-
 /*------------------------------------------STYLE DU SEARCH------------------------------*/
 /*------IMPORT -------*/
 /*-----------VARIABLES SASS-----------*/
