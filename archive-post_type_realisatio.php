@@ -21,21 +21,30 @@ get_header(); ?>
               </section>
          
   	    
-                       <div id="contenu_realisation">
+
+                       <!----------------------- Début archive-post-type ----------------------------------------------------->                
+            <section class='section-content'>
+                  
+                    <div id="section_listing">
+                
+<!----------------------- Block Info ------------------------------------------------------------------>
+
+                    
+                        
+                        
                         <div id="ficheInfo" class="blockInfo">
 
-                                <h3>Merite patrimonial</h3>
-                                <br>
-                                <p>Afin de stimuler l’intérêt pour l’héritage architectural de notre Ville, la Société du Patrimoine de Boucherville présidée par madame Nicole Racicot-Saia, créa le 28 septembre 2001,  les prix Mérite patrimonial.
+                                <h3>Mérite patrimonial</h3>
+                                
+                                <p>Afin de stimuler l’intérêt pour l’héritage architectural de notre Ville, la Société du Patrimoine de Boucherville présidée par madame Nicole Racicot-Saia, créa le 28 septembre 2001,  les prix Mérite patrimonial.<br><br>Le Mérite Patrimonial est une reconnaissance destinée à honorer des maisons anciennes et à féliciter leurs propriétaires qui ont su garder et améliorer ces témoins de notre histoire dans le respect des traditions et des besoins de la modernité.</p>
 
-Le Mérite Patrimonial est une reconnaissance destinée à honorer des maisons anciennes et à féliciter leurs propriétaires qui ont su garder et améliorer ces témoins de notre histoire dans le respect des traditions et des besoins de la modernité.</p>
+                        </div> 
+                        
+                           <div id="recherchePatrimoine" class="blockInfo">
+                       
+                       
+                        <?php $args = array(
 
-                            </div>    	
-               	        </div>
-               	        
-               	        
-      	        
-               	         <?php $args = array(
                             'show_option_all'    => '',
                             'show_option_none'   => 'Veuillez choisir une catégorie à afficher',
                             'option_none_value'  => '-1',
@@ -57,46 +66,44 @@ Le Mérite Patrimonial est une reconnaissance destinée à honorer des maisons a
                             'hide_if_empty'      => false,
                             'value_field'	     => 'term_id',	
                         ); ?>
-                        <?php wp_dropdown_categories( $args ); ?>     
 
+                        <?php wp_dropdown_categories( $args ); ?>           
+                        <section id="listing-content-ajax">
+                                    <div>
+                                        
+                                                <?php
+                                        while ( have_posts() ) : the_post(); 
 
-               	
-               	<section id="listing-content-ajax">
-                    <div id="ficheInfo" class="blockInfo">
-                        <h3>CATÉGORIE(S)</h3>
-                       
+                                    ?>
+                                                    <article class="listing-post-single">
+                                                        <div>
+                                                           
+                                                            <div id="dropDown">
+                                                           
+                                                                <h1><?php the_title(); ?></h1>
+                                                                
+                                                                <div id="dropDownSelect">
+                                                                    <div id="laFleche"><i class="fa fa-chevron-down"></i></div>
+                                                                </div>
+                                                            
+                                                            </div>
+                                                            <p>
+                                                                <?php the_excerpt(); ?>
+                                                            </p>
+                                                            <!--<a href="<?php the_permalink(); ?>">Voir la fiche</a>-->
+                                                        </div>
+                                                        <div>
+                                                            <?php the_post_thumbnail('medium'); ?>
+                                                        </div>
+                                                        
+                                                        <div id="division"></div>
+                                                        
+                                                    </article>
 
-                    </div>
-                  
+                                                    <?php endwhile; ?>
+                                    </div>
+                                </section>
 
- 
-                    <div>
-                             
-                        <?php
-                            while ( have_posts() ) : the_post(); 
-                            $post_id = get_the_ID();
-                        ?>
-
-                          <div id="accordion"> 
-                         
-                             
-                              <h1><?php the_field('date_de_la_realisation', $post_id);?><span>-</span><?php the_title(); ?></h1>
-                              
-                              <div>
-                              
-                              <p><?php the_excerpt(); ?></p>
-                              <a href="<?php the_permalink(); ?>">Voir la fiche</a>
-                         
-                          
-                              <?php the_post_thumbnail('medium'); ?>
-                           
-                        
-                        	</div>
-                            <?php endwhile; ?>
-                         </div>
-                     
-
-			    </section>
 					<?php // Previous/next page navigation.
 					twentyfourteen_paging_nav(); ?>
 
