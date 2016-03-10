@@ -19,8 +19,8 @@ get_header(); ?>
                         <div class='banner_filter'></div>
                         <h1>Nos réalisations</h1>
               </section>
-              <div>
-               	    
+         
+  	    
                        <div id="contenu_realisation">
                         <div id="ficheInfo" class="blockInfo">
 
@@ -36,15 +36,20 @@ Le Mérite Patrimonial est une reconnaissance destinée à honorer des maisons a
                	        
       	        
                	        
-               	        
+
+
                	
                	<section id="listing-content-ajax">
                     <div id="ficheInfo" class="blockInfo">
                         <h3>CATÉGORIE(S)</h3>
                         <p><?php echo category_description( $category_id ); ?></p>
+
                     </div>
                   
 
+ 
+                    <div>
+>>>>>>> origin/master
                         <?php $args = array(
                             'show_option_all'    => '',
                             'show_option_none'   => 'Veuillez choisir une catégorie à afficher',
@@ -58,8 +63,8 @@ Le Mérite Patrimonial est une reconnaissance destinée à honorer des maisons a
                             'echo'               => 1,
                             'selected'           => 0,
                             'hierarchical'       => 1, 
-                            'name'               => 'cat',
-                            'id'                 => '',
+                            'name'               => 'cat-selector',
+                            'id'                 => 'cat',
                             'class'              => 'postform',
                             'depth'              => 0,
                             'tab_index'          => 0,
@@ -72,6 +77,7 @@ Le Mérite Patrimonial est une reconnaissance destinée à honorer des maisons a
                             while ( have_posts() ) : the_post(); 
                             $post_id = get_the_ID();
                         ?>
+
                           <div id="accordion"> 
                          
                              
@@ -90,6 +96,7 @@ Le Mérite Patrimonial est une reconnaissance destinée à honorer des maisons a
                             <?php endwhile; ?>
                          </div>
                      
+
 			    </section>
 					<?php // Previous/next page navigation.
 					twentyfourteen_paging_nav(); ?>

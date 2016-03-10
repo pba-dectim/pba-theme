@@ -218,6 +218,62 @@ function realisation_taxonomy() {
 }
 add_action( 'init', 'realisation_taxonomy', 0 );
 
+
+function cpt_path() {
+
+	$labels = array(
+		'name'                  => _x( 'Parcours', 'Post Type General Name', 'text_domain' ),
+		'singular_name'         => _x( 'Parcours', 'Post Type Singular Name', 'text_domain' ),
+		'menu_name'             => __( 'Parcours interactif', 'text_domain' ),
+		'name_admin_bar'        => __( 'Parcours interactif', 'text_domain' ),
+		'archives'              => __( 'Archives', 'text_domain' ),
+		'parent_item_colon'     => __( 'Parent :', 'text_domain' ),
+		'all_items'             => __( 'Tous les parcours', 'text_domain' ),
+		'add_new_item'          => __( 'Ajouter un parcours', 'text_domain' ),
+		'add_new'               => __( 'Ajouter', 'text_domain' ),
+		'new_item'              => __( 'Nouvel élément', 'text_domain' ),
+		'edit_item'             => __( 'Modifier', 'text_domain' ),
+		'update_item'           => __( 'Mettre à jour', 'text_domain' ),
+		'view_item'             => __( 'Voir un élément', 'text_domain' ),
+		'search_items'          => __( 'Rechercher', 'text_domain' ),
+		'not_found'             => __( 'Aucune élément trouvé', 'text_domain' ),
+		'not_found_in_trash'    => __( 'Aucune élément trouvé dans la corbeille', 'text_domain' ),
+		'featured_image'        => __( 'Image à la une', 'text_domain' ),
+		'set_featured_image'    => __( 'Mettre l\'image à la une', 'text_domain' ),
+		'remove_featured_image' => __( 'Effacer l\'image à la une', 'text_domain' ),
+		'use_featured_image'    => __( 'Utiliser l\'image à la une', 'text_domain' ),
+		'insert_into_item'      => __( 'Insérer', 'text_domain' ),
+		'uploaded_to_this_item' => __( 'Ajouter à cet élément', 'text_domain' ),
+		'items_list'            => __( 'Liste des parcours', 'text_domain' ),
+		'items_list_navigation' => __( 'Navigation', 'text_domain' ),
+		'filter_items_list'     => __( 'Filtre de la liste des éléments', 'text_domain' ),
+	);
+	$args = array(
+		'label'                 => __( 'Parcours', 'text_domain' ),
+		'description'           => __( 'Les parcours interactif', 'text_domain' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title'),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'menu_icon'             => 'dashicons-location',
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => 'archive-patrimoine',
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'page',
+		'rewrite' => array('slug' => 'patrimoine'),
+	);
+	register_post_type( 'post_type_path', $args );
+
+}
+add_action( 'init', 'cpt_path', 0 );
+
+
 function test(){
     wp_enqueue_script ( "lightboxVideo", get_stylesheet_directory_uri()."/lightbox/videoLightbox.js", array("jquery"));
 }
@@ -248,25 +304,54 @@ function listing_ajax_action() {
 	'category' => $param,
 	'post_type' => array('post_type_realisatio','post_type_patrimoine')
 	 ) );
+	 echo category_description($param);
+	 
+	 $args = array(
+                            'show_option_all'    => '',
+                            'show_option_none'   => 'Veuillez choisir une catégorie à afficher',
+                            'option_none_value'  => '-1',
+                            'orderby'            => 'name', 
+                            'order'              => 'ASC',
+                            'show_count'         => 0,
+                            'hide_empty'         => 0, 
+                            'child_of'           => 0,
+                            'exclude'            => '',
+                            'echo'               => 1,
+                            'selected'           => 0,
+                            'hierarchical'       => 1, 
+                            'name'               => 'cat-selector',
+                            'id'                 => 'cat',
+                            'class'              => 'postform',
+                            'depth'              => 0,
+                            'tab_index'          => 0,
+                            'taxonomy'           => 'realisation_category',
+                            'hide_if_empty'      => false,
+                            'value_field'	     => 'term_id',	
+                        ); 
+	wp_dropdown_categories( $args );
+	
 if ( $query->have_posts() ) : 
 	while ( $query->have_posts() ) : $query->the_post(); 
 	
-	$content .= "<div><h1>ta mère</h1></div>";
-	
-		/*echo category_description($category_id);*/
-		//if ( is_post_type_archive('post_type_realisatio') ) {
-			/*$content .= '<article class="listing-post-single">
-				<h1>'. the_field("date_de_la_realisation", $post_id) .'<span>-</span>'. the_title() . '</h1>
-					<p>' . the_excerpt() . '</p>
-					<img src="'. the_post_thumbnail_url("medium") . '" alt="test" />
-					 <a href="'. the_permalink() . '">Voir la fiche</a>               
-			</article>';*/
-		//}
+	$c .= $param;
+		
+		
+			$c .= '<article class="listing-post-single">
+				<div>
+					<h1>'. get_field("date_de_la_realisation") .'<span>-</span>'. get_the_title() . '</h1>
+					<p>' . get_the_excerpt() . '</p>
+					<a href="'. get_the_permalink() . '">Voir la fiche</a>
+				</div>
+				<div>
+					'. get_the_post_thumbnail($sizes) . '
+				</div>
+				</article>';
+		
 		
 	endwhile;
 	endif;
 	
-	echo $content;
+	echo $c;
 die();
 }
 

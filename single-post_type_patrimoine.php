@@ -27,6 +27,8 @@ get_header(); ?>
                     <section class='section-content'>
 
                         <div id="contenu_single">
+                            
+                            <div id="frameDuVideo"><?php the_field('video_patrimoine'); ?></div>
 
                             <div id="ficheInfo" class="blockInfo">
 
@@ -72,7 +74,7 @@ get_header(); ?>
                                             <?php foreach( $images as $image ): 
                                                 $content = '<li>';
                                                     $content .= '<a href="'. $image['url'] .'">';
-                                                        $content .= '<img src="'. $image['sizes']['thumbnail'] .'" alt="'. $image['alt'] .'" />';
+                                                        $content .= '<img src="'. $image['sizes']['large'] .'" alt="'. $image['alt'] .'" />';
                                                     $content .= '</a>';
                                                 $content .= '</li>';
             
@@ -90,8 +92,7 @@ get_header(); ?>
                                     <div><a href="#">CARTE INTÉRACTIVE</a></div><!--
                                     --><div id="showVideo"><a href="#">VIDÉO</a></div>
                                 </div>
-                                
-                                
+                    
 
                             </div>
 
