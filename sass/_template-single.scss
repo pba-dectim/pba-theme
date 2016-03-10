@@ -123,3 +123,192 @@
     }
     
 }
+
+ 
+/*----------------------------- Responsive -----------------------------*/
+    
+@media (max-width: 1350px) {
+    #contenu_single {
+
+        #galerie {
+
+            ul {
+                    li {
+                        width: calc(33% - 4px);
+                    }
+            }
+            
+            #boutonGalerie {
+                
+                div {
+                    width: 100%;
+                    display: block;
+                }
+
+                div:first-child {
+                    margin: 0 4px 4px 0;
+                }
+            }  
+        }
+    }
+}
+
+@media (max-width: 1250px) {
+    #contenu_single {
+
+        #galerie {
+            padding: 0 0 0;
+            display: block;  
+            width: 100%;
+            
+            #boutonGalerie {
+                
+                text-align: center;
+
+                div {
+                    width: 40%;
+                    display: inline-block;
+                }
+
+                div:first-child {
+                    margin: 0 24px 4px 10px;
+                }
+            }  
+            
+            ul { 
+                text-align: center;
+            }
+        }
+        
+        #ficheInfo {
+            width: 40%;
+        }
+        
+        #txtInfo {
+            width: 50%;
+        }
+    }
+}
+
+
+@media (max-width: 950px) {
+    #contenu_single {
+        .blockInfo {
+            display: block;
+        }
+        
+        #galerie {
+            width: 100%;
+        }
+        
+        #ficheInfo {
+            width: 100%;
+        }
+
+        #txtInfo {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+            
+    }
+    
+}
+
+@media (max-width: 650px) {
+    #contenu_single {
+        
+        #galerie {
+            
+            ul {
+                    li {
+                        width: 100%;
+                    }
+            }
+
+            #boutonGalerie {
+                
+                div {
+                    min-width: 200px;
+                }
+
+            }  
+            
+        }
+            
+    }
+    
+}
+
+@media (max-width: 530px) {
+    
+    .section-content > * {
+        padding: 20px;
+    }
+    
+    .banner-titre h1 {
+        font-size: 2.5em;
+    }
+    
+    #contenu_single {
+        
+        #galerie {
+            
+            #boutonGalerie {
+
+                div {
+                    width: 100%;
+                    display: block;
+                    
+                }
+
+                div:first-child {
+                    margin: 0 0 10px 0;
+                }
+                
+            }
+            
+        }
+            
+    }
+    
+}
+
+@media (max-width: 400px) {
+    
+    #contenu_single {
+        h1, h2, h3, h4, h5, h6 {
+            font-size: 1.5em;
+        }
+    }
+    
+}
+
+@media (max-width: 360px) {
+    
+    #contenu_single {
+        
+        #galerie {
+            
+            
+        
+            ul {
+                
+            
+                li {
+                   
+                    width: 100%;
+                    
+                    img {
+                        
+                    }
+                }
+            
+            }
+        }
+            
+    }
+    
+}
+
+

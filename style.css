@@ -294,6 +294,115 @@ input[type="submit"]:focus {
 search-submit {
   display: inline-block !important; }
 
+/*-------RESPONSIVE DU HEADER-------*/
+/*MENU HAMBURGER*/
+.menu-toggle {
+  height: 70px;
+  background-color: #880000; }
+
+.menu-toggle:active,
+.menu-toggle:focus {
+  background-color: #880000; }
+
+.menu-toggle:hover {
+  background-color: #444; }
+
+.menu-toggle:before {
+  font-size: 20px; }
+
+.menu-toggle:focus {
+  outline: none; }
+
+@media screen and (max-width: 1350px) {
+  .primary-navigation {
+    float: none;
+    padding-top: 70px;
+    text-align: center; }
+
+  #primary-menu li:last-child {
+    padding-right: 0px; }
+
+  .primary-navigation.toggled-on {
+    padding-bottom: 0px; } }
+@media screen and (min-width: 1058px) {
+  .primary-navigation .menu-toggle {
+    display: none; } }
+@media screen and (max-width: 1057px) {
+  .primary-navigation .menu-toggle {
+    display: inline-block !important; }
+
+  .search-toggle {
+    margin-right: 48px; }
+
+  .primary-navigation li {
+    display: none; }
+
+  .primary-navigation.toggled-on li {
+    display: block;
+    border-top: 0px; }
+
+  .primary-navigation a {
+    border-top: none; } }
+@media screen and (max-width: 783px) {
+  .search-toggle {
+    margin-right: 18px; }
+
+  .primary-navigation {
+    float: none;
+    /* width: 100%; */
+    margin: 0 1px 0 -12px;
+    /* padding: 112px; */
+    text-align: center;
+    padding-top: 70px;
+    text-transform: uppercase; }
+
+  #primary-menu li {
+    line-height: inherit;
+    border-top: 0px;
+    height: auto; }
+
+  .site-navigation a:hover {
+    color: white;
+    border: 0px; }
+
+  .primary-navigation.toggled-on {
+    padding-bottom: 0px; }
+
+  /*#primary-menu li a{
+      padding:10px 0;
+      font-size:18px;
+  }
+  #primary-menu li a:hover{
+      border:0px;
+  }*/
+  /*
+  .primary-navigation a {
+  padding:30px 0;
+  }
+  */ }
+@media screen and (min-width: 783px) {
+  #primary-menu li {
+    padding: 10px 0; }
+
+  .primary-navigation li:hover > a,
+  .primary-navigation li.focus > a {
+    background-color: #880000;
+    color: #fff; }
+
+  .primary-navigation ul ul a:hover,
+  .primary-navigation ul ul li.focus > a {
+    background-color: #880000;
+    color: #fff; }
+
+  .site-navigation a:hover {
+    color: white; } }
+@media screen and (max-width: 672px) {
+  .search-toggle {
+    margin-right: 38px; } }
+@media screen and (max-width: 400px) {
+  /* LOGO */
+  img.logoSPB {
+    margin-left: 10px; } }
 /*------IMPORT -------*/
 /*-----------VARIABLES SASS-----------*/
 /*--------- Front Page ---------------*/
@@ -350,6 +459,17 @@ search-submit {
   margin: 0 auto;
   padding: 40px 0; }
 
+/*---------RESPONSIVE DU FOOTER---------*/
+@media (max-width: 440px) {
+  #footer-Button-zone a:first-child {
+    margin-right: 0px; } }
+@media (max-width: 410px) {
+  #footer-Button-zone a {
+    margin: 10px 20px !important;
+    display: block; }
+
+  #footer-Button-zone a:first-child {
+    margin-bottom: 10px; } }
 /*------IMPORT -------*/
 /*-----------VARIABLES SASS-----------*/
 /*--------- Front Page ---------------*/
@@ -444,6 +564,28 @@ div #section-membres-ca {
   .articles-apropos ul li {
     list-style-type: square; }
 
+/*RESPONSIVE DE LA PAGE ├Ç PROPOS*/
+@media (max-width: 960px) {
+  /*SECTION MANDAT & HISTORIQUE*/
+  .articles-apropos article {
+    display: block;
+    width: 100%;
+    margin-bottom: 70px; }
+
+  .articles-apropos article:last-child {
+    margin-bottom: 0px; }
+
+  /*SECTION FONDATEURS*/
+  #section-membres-ca h2 {
+    text-align: left; }
+
+  #centre-CA {
+    width: 100%;
+    text-align: left; }
+
+  /*SECTION POLITIQUE CULTURELLE*/
+  #section-politique-culturelle {
+    width: auto; } }
 /*--------------------STYLES DE LA PAGE CONTACT----------------------*/
 /*------IMPORT -------*/
 /*-----------VARIABLES SASS-----------*/
@@ -490,6 +632,31 @@ div.articles-apropos {
     background-color: #880000;
     color: white; }
 
+/*RESPONSIVE DE LA PAGE CONTACT*/
+@media (max-width: 1465px) {
+  div.articles-apropos {
+    padding-bottom: 0px; }
+    div.articles-apropos h1 {
+      text-align: center;
+      width: 100%; }
+    div.articles-apropos article {
+      width: 100%; }
+    div.articles-apropos article:first-child {
+      margin-bottom: 70px; } }
+@media (max-width: 900px) {
+  div.articles-apropos .contact-infos {
+    display: block;
+    width: 100%;
+    margin-bottom: 35px; }
+  div.articles-apropos .contact-infos:last-child {
+    margin-bottom: 0px; }
+  div.articles-apropos #section-form form {
+    margin: 0 40px; } }
+@media (max-width: 480px) {
+  div.articles-apropos #section-form form {
+    margin: 0 20px; }
+  div.articles-apropos #section-form input, div.articles-apropos #section-form textarea {
+    min-width: 0px; } }
 /*------------------------------------------STYLE FRONT PAGE------------------------------*/
 /*------IMPORT -------*/
 /*-----------VARIABLES SASS-----------*/
@@ -666,6 +833,67 @@ figcaption {
 .contInfo img {
   max-width: 100%; }
 
+@media screen and (min-width: 768px) and (max-width: 1306px) {
+  #full_video {
+    width: 100%;
+    transform: translateX(0%); }
+
+  figure {
+    width: 100%;
+    height: auto; }
+
+  figcaption {
+    right: 0; }
+
+  .asideSlide1 {
+    float: none;
+    width: 100%;
+    margin-top: -7px;
+    height: inherit; }
+
+  .contInfo {
+    max-width: 48%;
+    margin-bottom: 10px; } }
+@media (max-width: 767px) {
+  figure {
+    width: 100%;
+    height: auto; }
+
+  #full_video {
+    width: 100%;
+    transform: translateX(0%); }
+
+  figcaption {
+    right: 0; }
+
+  .asideSlide1 {
+    float: none;
+    width: 100%;
+    height: inherit;
+    margin-top: -7px; }
+
+  .secMandat article {
+    display: block;
+    float: none;
+    margin: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    max-width: 100%; }
+
+  .contInfo {
+    max-width: 100%;
+    margin: 0px 40px 40px 40px; }
+
+  .secFier h1 {
+    font-size: 2em;
+    margin-bottom: 40px; }
+
+  .secMandat {
+    margin-top: 30px; }
+
+  .secMandat h1 {
+    font-size: 2.7em;
+    margin: 0; } }
 /*------------------------------------------STYLE DU SEARCH------------------------------*/
 /*------IMPORT -------*/
 /*-----------VARIABLES SASS-----------*/
@@ -797,101 +1025,7 @@ figcaption {
   font-family: zona_problack;
   font-size: 2em; }
 
-/*---------------------STYLES DE LA PAGE 404---------------------------*/
-/*------IMPORT -------*/
-/*-----------VARIABLES SASS-----------*/
-/*--------- Front Page ---------------*/
-.page404-header {
-  max-width: 100%;
-  margin-top: 50px; }
-  .page404-header h1 {
-    font-size: 5em; }
-
-/*---------------------STYLES DES LISTES---------------------------*/
-/*------IMPORT -------*/
-/*-----------VARIABLES SASS-----------*/
-/*--------- Front Page ---------------*/
-#contenu_realisation {
-  display: inline-block;
-  vertical-align: top;
-  width: 30%; }
-  #contenu_realisation #ficheInfo {
-    background-color: #f1f1f1;
-    box-sizing: border-box;
-    padding: 40px;
-    -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.4);
-    -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.4);
-    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.4);
-    position: relative;
-    top: -50px; }
-    #contenu_realisation #ficheInfo p {
-      font-family: Roboto;
-      font-weight: bold;
-      color: #444444;
-      font-size: 1.2em; }
-  #contenu_realisation .listing-post-single {
-    margin: 0 5%;
-    box-sizing: border-box;
-    padding: 70px 0 0; }
-
-#accordion h1 {
-  font-size: 1.5em; }
-
-/*------IMPORT -------*/
-/*-----------VARIABLES SASS-----------*/
-/*--------- Front Page ---------------*/
-/*------STYLES SEARCH.SCSS -------*/
-/*------STYLES TEMPLATE-404.SCSS -------*/
-/*------STYLES TEMPLATE-APROPOS.SCSS -------*/
-@media (max-width: 960px) {
-  /*SECTION MANDAT & HISTORIQUE*/
-  .articles-apropos article {
-    display: block;
-    width: 100%;
-    margin-bottom: 70px; }
-
-  .articles-apropos article:last-child {
-    margin-bottom: 0px; }
-
-  /*SECTION FONDATEURS*/
-  #section-membres-ca h2 {
-    text-align: left; }
-
-  #centre-CA {
-    width: 100%;
-    text-align: left; }
-
-  /*SECTION POLITIQUE CULTURELLE*/
-  #section-politique-culturelle {
-    width: auto; } }
-/*------STYLES TEMPLATE-CONTACT -------*/
-@media (max-width: 1465px) {
-  div.articles-apropos {
-    padding-bottom: 0px; }
-    div.articles-apropos h1 {
-      text-align: center;
-      width: 100%; }
-    div.articles-apropos article {
-      width: 100%; }
-    div.articles-apropos article:first-child {
-      margin-bottom: 70px; } }
-@media (max-width: 900px) {
-  div.articles-apropos .contact-infos {
-    display: block;
-    width: 100%;
-    margin-bottom: 35px; }
-  div.articles-apropos .contact-infos:last-child {
-    margin-bottom: 0px; }
-  div.articles-apropos #section-form form {
-    margin: 0 40px; } }
-@media (max-width: 480px) {
-  div.articles-apropos #section-form form {
-    margin: 0 20px; }
-  div.articles-apropos #section-form input,
-  div.articles-apropos #section-form textarea {
-    min-width: 0px; } }
-/*------STYLES TEMPLATE-LISTING.SCSS -------*/
-/*------STYLES TEMLPATE-SINGLE.SCSS -------*/
+/*----------------------------- Responsive -----------------------------*/
 @media (max-width: 1350px) {
   #contenu_single #galerie ul li {
     width: calc(33% - 4px); }
@@ -947,195 +1081,47 @@ figcaption {
   #contenu_single #galerie #boutonGalerie div:first-child {
     margin: 0 0 10px 0; } }
 @media (max-width: 400px) {
-  #contenu_single h1,
-  #contenu_single h2,
-  #contenu_single h3,
-  #contenu_single h4,
-  #contenu_single h5,
-  #contenu_single h6 {
+  #contenu_single h1, #contenu_single h2, #contenu_single h3, #contenu_single h4, #contenu_single h5, #contenu_single h6 {
     font-size: 1.5em; } }
 @media (max-width: 360px) {
   #contenu_single #galerie ul li {
     width: 100%; } }
-/*------STYLES FOOTER.SCSS -------*/
-@media (max-width: 440px) {
-  #footer-Button-zone a:first-child {
-    margin-right: 0px; } }
-@media (max-width: 410px) {
-  #footer-Button-zone a {
-    margin: 10px 20px !important;
-    display: block; }
+/*---------------------STYLES DE LA PAGE 404---------------------------*/
+/*------IMPORT -------*/
+/*-----------VARIABLES SASS-----------*/
+/*--------- Front Page ---------------*/
+.page404-header {
+  max-width: 100%;
+  margin-top: 50px; }
+  .page404-header h1 {
+    font-size: 5em; }
 
-  #footer-Button-zone a:first-child {
-    margin-bottom: 10px; } }
-/*------STYLES FRONT-PAGE.SCSS -------*/
-@media screen and (min-width: 768px) and (max-width: 1306px) {
-  #full_video {
-    width: 100%;
-    transform: translateX(0%); }
+/*---------------------STYLES DES LISTES---------------------------*/
+/*------IMPORT -------*/
+/*-----------VARIABLES SASS-----------*/
+/*--------- Front Page ---------------*/
+#contenu_realisation {
+  display: inline-block;
+  vertical-align: top;
+  width: 30%; }
+  #contenu_realisation #ficheInfo {
+    background-color: #f1f1f1;
+    box-sizing: border-box;
+    padding: 40px;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.4);
+    position: relative;
+    top: -50px; }
+    #contenu_realisation #ficheInfo p {
+      font-family: Roboto;
+      font-weight: bold;
+      color: #444444;
+      font-size: 1.2em; }
+  #contenu_realisation .listing-post-single {
+    margin: 0 5%;
+    box-sizing: border-box;
+    padding: 70px 0 0; }
 
-  figure {
-    width: 100%;
-    height: auto; }
-
-  figcaption {
-    right: 0; }
-
-  .asideSlide1 {
-    float: none;
-    width: 100%;
-    margin-top: -7px;
-    height: inherit; }
-
-  .contInfo {
-    max-width: 48%;
-    margin-bottom: 10px; } }
-@media (max-width: 767px) {
-  figure {
-    width: 100%;
-    height: auto; }
-
-  #full_video {
-    width: 100%;
-    transform: translateX(0%); }
-
-  figcaption {
-    right: 0; }
-
-  .asideSlide1 {
-    float: none;
-    width: 100%;
-    height: inherit;
-    margin-top: -7px; }
-
-  .secMandat article {
-    display: block;
-    float: none;
-    margin: auto;
-    padding-left: 40px;
-    padding-right: 40px;
-    max-width: 100%; }
-
-  .contInfo {
-    max-width: 100%;
-    margin: 0px 40px 40px 40px; }
-
-  .secFier h1 {
-    font-size: 2em;
-    margin-bottom: 40px; }
-
-  .secMandat {
-    margin-top: 30px; }
-
-  .secMandat h1 {
-    font-size: 2.7em;
-    margin: 0; } }
-/*------STYLES HEADER.SCSS -------*/
-/*MENU HAMBURGER*/
-.menu-toggle {
-  height: 70px;
-  background-color: #880000; }
-
-.menu-toggle:active,
-.menu-toggle:focus {
-  background-color: #880000; }
-
-.menu-toggle:hover {
-  background-color: #444; }
-
-.menu-toggle:before {
-  font-size: 20px; }
-
-.menu-toggle:focus {
-  outline: none; }
-
-@media screen and (max-width: 1350px) {
-  .primary-navigation {
-    float: none;
-    padding-top: 70px;
-    text-align: center; }
-
-  #primary-menu li:last-child {
-    padding-right: 0px; }
-
-  .primary-navigation.toggled-on {
-    padding-bottom: 0px; } }
-@media screen and (min-width: 1058px) {
-  .primary-navigation .menu-toggle {
-    display: none; } }
-@media screen and (max-width: 1057px) {
-  .primary-navigation .menu-toggle {
-    display: inline-block !important; }
-
-  .search-toggle {
-    margin-right: 48px; }
-
-  .primary-navigation li {
-    display: none; }
-
-  .primary-navigation.toggled-on li {
-    display: block;
-    border-top: 0px; }
-
-  .primary-navigation a {
-    border-top: none; } }
-@media screen and (max-width: 783px) {
-  .search-toggle {
-    margin-right: 18px; }
-
-  .primary-navigation {
-    float: none;
-    /* width: 100%; */
-    margin: 0 1px 0 -12px;
-    /* padding: 112px; */
-    text-align: center;
-    padding-top: 70px;
-    text-transform: uppercase; }
-
-  #primary-menu li {
-    line-height: inherit;
-    border-top: 0px;
-    height: auto; }
-
-  .site-navigation a:hover {
-    color: white;
-    border: 0px; }
-
-  .primary-navigation.toggled-on {
-    padding-bottom: 0px; }
-
-  /*#primary-menu li a{
-      padding:10px 0;
-      font-size:18px;
-  }
-  #primary-menu li a:hover{
-      border:0px;
-  }*/
-  /*
-  .primary-navigation a {
-  padding:30px 0;
-  }
-  */ }
-@media screen and (min-width: 783px) {
-  #primary-menu li {
-    padding: 10px 0; }
-
-  .primary-navigation li:hover > a,
-  .primary-navigation li.focus > a {
-    background-color: #880000;
-    color: #fff; }
-
-  .primary-navigation ul ul a:hover,
-  .primary-navigation ul ul li.focus > a {
-    background-color: #880000;
-    color: #fff; }
-
-  .site-navigation a:hover {
-    color: white; } }
-@media screen and (max-width: 672px) {
-  .search-toggle {
-    margin-right: 38px; } }
-@media screen and (max-width: 400px) {
-  /* LOGO */
-  img.logoSPB {
-    margin-left: 10px; } }
+#accordion h1 {
+  font-size: 1.5em; }
