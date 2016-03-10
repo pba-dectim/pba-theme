@@ -27,6 +27,30 @@
         text-align:center;
         
         
+        /*SEARCH FORM*/
+        
+        #search-input-wrapper{
+        
+            position:relative;
+            top:0;
+            left:0;
+            font-family:zona_proregular;
+            text-transform:uppercase;
+            
+            input[type="submit"]{
+                border: 1px $primaryColor solid;
+                background-color:white;
+                color:$primaryColor;
+            }
+            
+            input[type="submit"]:hover{
+                background-color:$primaryColor;
+                color:white;
+            }
+            
+        }
+        
+        
         /*---SURVOL DES TITRES-----*/
         .entry-title a:hover{
             color:$primaryColor;
