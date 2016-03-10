@@ -197,11 +197,12 @@ box-shadow: 0px 2px 10px #e0e0e0;
        margin: calc(1% - 6px);
     text-align: center;
         padding-bottom: 25px;
+ vertical-align: top;
 
 }
 
 .contInfo h4{
-font-size:2em;
+font-size:1.6em;
     text-transform: uppercase;
 }
 
@@ -213,7 +214,7 @@ margin-bottom: 15px;
 .contInfo a{
     color: #880000;
     border: 1px #880000 solid;
-    padding: 18px;
+    padding: 18px 70px;
     transition: ease-in-out 0.15s;
     text-transform: uppercase;
 }

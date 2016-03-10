@@ -12,9 +12,11 @@
 
 .banner-titre {
     padding: 178px 0px;
-    background-position: center center;
+    background-position: bottom center;
     position: relative;
     z-index: 0;
+    background-attachment: fixed;
+    
 }
 .banner_filter {
     background-color: black;

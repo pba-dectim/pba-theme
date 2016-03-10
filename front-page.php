@@ -108,82 +108,43 @@ if ($query->have_posts() ) {
 
 
 <section class="secFier">
-    
-    <h1><?php the_field("titre_section_patrimoine"); ?></h1>
-    
-    <article class="contPhoto">
+
+  <h1><?php the_field("titre_section_patrimoine"); ?></h1>
+ <article class="contPhoto">
+ <?php 
+
+$query_lastposts = new WP_Query( array( 
+    'post_type' => array(
+       
+        'post_type_patrimoine'),
+    'post_per_page' => 6)
+);
+
+if ($query_lastposts->have_posts() ) {
+	while ( $query_lastposts->have_posts() ) {
+		$query_lastposts->the_post(); ?>
         
-                <div class="contInfo">
+   
+     <div class="contInfo">
            
-           <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/maison.jpg">
+           <?php the_post_thumbnail('full');?>
             
-            <h4>62 de montbrun</h4>
+            <h4><?php the_title();?></h4>
          
-            <div class="btnVoirPlus">   <a href="">
+            <div class="btnVoirPlus">   <a href="<?php the_permalink();?>">
             En savoir plus
             </a>
             </div>
         </div>
-        
-                        <div class="contInfo">
-           
-           <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/maison.jpg">
-            
-            <h4>62 de montbrun</h4>
-            
-            <div class="btnVoirPlus">
-            <a href="">En savoir plus</a>
-            </div>
-        </div>
-        
-                        <div class="contInfo">
-           
-           <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/maison.jpg">
-            
-            <h4>62 de montbrun</h4>
-            
-            <div class="btnVoirPlus">
-            <a href="">En savoir plus</a>
-            </div>
-        </div>
-        
-                        <div class="contInfo">
-           
-           <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/maison.jpg">
-            
-            <h4>62 de montbrun</h4>
-            
-            <div class="btnVoirPlus">
-            <a href="">En savoir plus</a>
-            </div>
-        </div>
-        
-                        <div class="contInfo">
-           
-           <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/maison.jpg">
-            
-            <h4>62 de montbrun</h4>
-            
-            <div class="btnVoirPlus">
-            <a href="">En savoir plus</a>
-            </div>
-        </div>
-        
-                        <div class="contInfo">
-           
-           <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/maison.jpg">
-            
-            <h4>62 de montbrun</h4>
-            
-            <div class="btnVoirPlus">
-            <a href="">En savoir plus</a>
-            </div>
-        </div>
-        
+  
+       <?php
+		//
+	} // end while
+    wp_reset_query();
+} // end if
 
-        
-    </article>
-    
+?>
+  </article>
 </section>
 
     <script>
