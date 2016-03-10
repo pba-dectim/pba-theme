@@ -49,7 +49,6 @@ Le Mérite Patrimonial est une reconnaissance destinée à honorer des maisons a
 
  
                     <div>
->>>>>>> origin/master
                         <?php $args = array(
                             'show_option_all'    => '',
                             'show_option_none'   => 'Veuillez choisir une catégorie à afficher',

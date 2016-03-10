@@ -262,11 +262,11 @@ function cpt_path() {
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
 		'can_export'            => true,
-		'has_archive'           => 'archive-patrimoine',
+		'has_archive'           => 'archive-parcours',
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
-		'rewrite' => array('slug' => 'patrimoine'),
+		'rewrite' => array('slug' => 'parcours'),
 	);
 	register_post_type( 'post_type_path', $args );
 
