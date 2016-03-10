@@ -268,11 +268,21 @@ input[type="search"]::-webkit-search-results-decoration {
 /*Styles du boutons rechercher*/
 button, .button, input[type="button"], input[type="reset"], input[type="submit"] {
   background-color: #880000;
-  transition: ease-in-out 0.15s; }
+  color: white;
+  transition: ease-in-out 0.15s;
+  margin-top: 20px; }
 
 button, .button, input[type="button"], input[type="reset"], input[type="submit"]:hover {
   background-color: white;
   color: #880000; }
+
+button:active, .button:active, input[type="button"]:active, input[type="reset"]:active, input[type="submit"]:active {
+  background-color: #880000;
+  color: white; }
+
+input[type="submit"]:focus {
+  background-color: #880000;
+  color: white; }
 
 .primary-navigation.toggled-on {
   padding-top: 70px;
@@ -877,8 +887,22 @@ figcaption {
 .search .site-content .entry-header, .search .site-content .entry-content, .search .site-content .entry-summary, .search .site-content .entry-meta, .search .page-content {
   max-width: 65%;
   text-align: center;
+  /*SEARCH FORM*/
   /*---SURVOL DES TITRES-----*/
   /*BOUTONS VOIR PLUS*/ }
+  .search .site-content .entry-header #search-input-wrapper, .search .site-content .entry-content #search-input-wrapper, .search .site-content .entry-summary #search-input-wrapper, .search .site-content .entry-meta #search-input-wrapper, .search .page-content #search-input-wrapper {
+    position: relative;
+    top: 0;
+    left: 0;
+    font-family: zona_proregular;
+    text-transform: uppercase; }
+    .search .site-content .entry-header #search-input-wrapper input[type="submit"], .search .site-content .entry-content #search-input-wrapper input[type="submit"], .search .site-content .entry-summary #search-input-wrapper input[type="submit"], .search .site-content .entry-meta #search-input-wrapper input[type="submit"], .search .page-content #search-input-wrapper input[type="submit"] {
+      border: 1px #880000 solid;
+      background-color: white;
+      color: #880000; }
+    .search .site-content .entry-header #search-input-wrapper input[type="submit"]:hover, .search .site-content .entry-content #search-input-wrapper input[type="submit"]:hover, .search .site-content .entry-summary #search-input-wrapper input[type="submit"]:hover, .search .site-content .entry-meta #search-input-wrapper input[type="submit"]:hover, .search .page-content #search-input-wrapper input[type="submit"]:hover {
+      background-color: #880000;
+      color: white; }
   .search .site-content .entry-header .entry-title a:hover, .search .site-content .entry-content .entry-title a:hover, .search .site-content .entry-summary .entry-title a:hover, .search .site-content .entry-meta .entry-title a:hover, .search .page-content .entry-title a:hover {
     color: #880000; }
   .search .site-content .entry-header .more-link, .search .site-content .entry-content .more-link, .search .site-content .entry-summary .more-link, .search .site-content .entry-meta .more-link, .search .page-content .more-link {

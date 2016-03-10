@@ -210,13 +210,27 @@ display: none;
 
 button, .button, input[type="button"], input[type="reset"], input[type="submit"]{
     background-color:$primaryColor;
+    color:white;
     transition:ease-in-out 0.15s;
+    
+    margin-top:20px;
 }
 
 button, .button, input[type="button"], input[type="reset"], input[type="submit"]:hover{
     background-color:white;
     color:$primaryColor;
 }
+
+button:active, .button:active, input[type="button"]:active, input[type="reset"]:active, input[type="submit"]:active{
+    background-color:$primaryColor;
+    color:white;
+}
+
+input[type="submit"]:focus{
+    background-color:$primaryColor;
+    color:white;
+}
+
 .primary-navigation.toggled-on {
     padding-top: 70px;
     margin-left: 0px;
