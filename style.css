@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* CSS Document */
 /*
- Theme Name:   bravo
+ Theme Name:   Pbadectim
  Theme URI:    http://pba.dectim.ca/wp-content/pbadectim/
  Description:  Twenty Fourteen Child Theme
  Author:       Dectim equipe A
@@ -977,7 +977,8 @@ figcaption {
     font-family: Roboto;
     font-weight: bold;
     color: #444444;
-    font-size: 1.2em; }
+    font-size: 1.2em;
+    margin-bottom: 0; }
 #contenu_single #txtInfo {
   margin: 0 5%;
   box-sizing: border-box;
@@ -1020,12 +1021,14 @@ figcaption {
     #contenu_single #galerie #boutonGalerie div:first-child {
       margin: 0 4px 0 0; }
 #contenu_single h1, #contenu_single h2, #contenu_single h3, #contenu_single h4, #contenu_single h5, #contenu_single h6 {
-  margin: 0 auto;
+  margin: 10px auto;
   font-family: zona_problack;
   font-size: 2em; }
 
 /*----------------------------- Responsive -----------------------------*/
 @media (max-width: 1350px) {
+  #contenu_single iframe {
+    top: 100px; }
   #contenu_single #galerie ul li {
     width: calc(33% - 4px); }
   #contenu_single #galerie #boutonGalerie div {
@@ -1034,6 +1037,8 @@ figcaption {
   #contenu_single #galerie #boutonGalerie div:first-child {
     margin: 0 4px 4px 0; } }
 @media (max-width: 1250px) {
+  #contenu_single iframe {
+    top: 30px; }
   #contenu_single #galerie {
     padding: 0 0 0;
     display: block;
@@ -1063,6 +1068,8 @@ figcaption {
     padding: 0;
     margin: 0; } }
 @media (max-width: 650px) {
+  #contenu_single iframe {
+    top: 0px; }
   #contenu_single #galerie ul li {
     width: 100%; }
   #contenu_single #galerie #boutonGalerie div {
@@ -1104,6 +1111,17 @@ figcaption {
 
 #section_listing {
   /*BOUTONS VOIR PLUS*/ }
+  #section_listing #contenuRecherche {
+    width: 65%;
+    margin-left: 4.6%;
+    display: inline-block; }
+    #section_listing #contenuRecherche .listing-post-single #txtContenu {
+      width: 60%;
+      display: inline-block; }
+    #section_listing #contenuRecherche .listing-post-single #imgContenu {
+      width: 30%;
+      display: inline-block;
+      float: right; }
   #section_listing .more-link {
     margin: 35px 0;
     font-family: zona_problack;
@@ -1111,7 +1129,7 @@ figcaption {
     padding: 22px 3.90625%;
     transition: ease-in-out 0.15s;
     display: block;
-    width: 50%;
+    width: 315px;
     text-decoration: none;
     text-transform: uppercase;
     box-sizing: border-box; }
@@ -1122,9 +1140,9 @@ figcaption {
     display: inline-block;
     vertical-align: top; }
     #section_listing .blockInfo #division {
-      width: 100%;
+      width: 60%;
       height: 1px;
-      background-color: #444444;
+      background-color: #A5A5A5;
       margin-bottom: 35px; }
   #section_listing #ficheInfo {
     width: 30%;
@@ -1135,7 +1153,7 @@ figcaption {
     -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.4);
     box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.4);
     position: relative;
-    top: -65px; }
+    top: -230px; }
     #section_listing #ficheInfo h3 {
       text-transform: uppercase;
       margin-bottom: 30px; }
@@ -1145,7 +1163,6 @@ figcaption {
       line-height: 24px;
       font-size: 1em; }
   #section_listing #recherchePatrimoine {
-    width: 40%;
     margin: 0 70px; }
     #section_listing #recherchePatrimoine #dropDown h1 {
       text-align: inherit;
@@ -1167,6 +1184,8 @@ figcaption {
     font-size: 2em; }
   #section_listing .postform {
     margin: 40px 0;
+    margin-left: 35%;
+    display: block;
     border: 1px #880000 solid;
     font-size: 18px;
     font-family: zona_proregular;
@@ -1181,6 +1200,41 @@ figcaption {
       font-size: 20px;
       text-transform: uppercase; }
 
+/*----------------------------- Responsive -----------------------------*/
+@media (max-width: 1620px) {
+  #section_listing #contenuRecherche {
+    width: 60%;
+    margin-left: 4.6%; }
+    #section_listing #contenuRecherche .listing-post-single #txtContenu {
+      width: 100%;
+      display: inline-block; }
+    #section_listing #contenuRecherche .listing-post-single #imgContenu {
+      width: auto;
+      display: block;
+      float: none;
+      margin-bottom: 35px; }
+  #section_listing .more-link {
+    box-sizing: content-box; } }
+@media (max-width: 1250px) {
+  #section_listing #contenuRecherche {
+    width: 100%;
+    margin-left: 0;
+    display: block; }
+    #section_listing #contenuRecherche .listing-post-single #txtContenu {
+      width: 100%;
+      display: inline-block; }
+    #section_listing #contenuRecherche .listing-post-single #imgContenu {
+      width: auto;
+      display: block;
+      float: none;
+      margin-bottom: 35px; }
+  #section_listing #ficheInfo {
+    width: 100%;
+    margin-bottom: 35px;
+    position: inherit;
+    top: 0; }
+  #section_listing .postform {
+    margin: 40px auto; } }
 /* CORSE CSS 
 #contenu_realisation {
     

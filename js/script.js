@@ -1,6 +1,7 @@
 // JavaScript Document
 
 jQuery(document).ready(function ($) {
+    
      jQuery('#cat').on('change', function () {
 		 var value = jQuery("#cat option:selected").val();
 		  jQuery('#listing-content-ajax').html('<img id="ajax-gif" src="' + pluginDir + '/img/ajax-loader.gif" alt="' + "chargement de l'information" + '" />');
@@ -23,4 +24,16 @@ jQuery(document).ready(function ($) {
                 });
             });
 	 });
+    
+    
+    
+    /*jQuery( ".linkContent p" ).hide();
+    
+    jQuery( "#dropDown" ).click(function() {
+        val = this.id;
+        alert(val);
+        jQuery( "."+val ).slideToggle( "slow");
+    });*/
+    
+    
 });

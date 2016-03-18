@@ -10,6 +10,24 @@
 
 #section_listing {
     
+    #contenuRecherche {
+        width: 65%;
+        margin-left: 4.6%;
+        display: inline-block;
+        
+        .listing-post-single {
+            #txtContenu {
+                width: 60%;
+                display: inline-block;
+            }
+            #imgContenu {
+                width: 30%;
+                display: inline-block;
+                float: right;
+            }
+        }
+    }
+    
     /*BOUTONS VOIR PLUS*/
         .more-link{
             margin:35px 0;
@@ -18,7 +36,7 @@
             padding: 22px 75px/1920px * 100%;
             transition: ease-in-out 0.15s;
             display:block;
-            width:50%;
+            width:315px;
             text-decoration: none;
             text-transform:uppercase;
             box-sizing:border-box;
@@ -33,9 +51,9 @@
         vertical-align: top;
         
         #division {
-            width: 100%;
+            width: 60%;
             height: 1px;
-            background-color: #444444;
+            background-color: #A5A5A5;
             margin-bottom: 35px;
         }
     }
@@ -49,7 +67,7 @@
         -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.4);
         box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.4);
         position: relative;
-        top: -65px;
+        top: -230px;
         h3 {
             text-transform: uppercase;
             margin-bottom: 30px;
@@ -63,7 +81,6 @@
     }
     
     #recherchePatrimoine {
-        width: 40%;
         margin: 0 70px;
         
         #dropDown {
@@ -103,6 +120,8 @@
     
     .postform {
         margin: 40px 0;
+        margin-left: 35%;
+        display: block;
         border: 1px $primaryColor solid;
         font-size: 18px;
         font-family: zona_proregular;
@@ -123,7 +142,74 @@
 }
 
 
+/*----------------------------- Responsive -----------------------------*/
+    
+@media (max-width: 1620px) {
+    #section_listing {
+    
+        #contenuRecherche {
+            width: 60%;
+            margin-left: 4.6%;
 
+            .listing-post-single {
+                #txtContenu {
+                    width: 100%;
+                    display: inline-block;
+                }
+                #imgContenu {
+                    width: auto;
+                    display: block;
+                    float: none;
+                    margin-bottom: 35px;
+                }
+            }
+        }
+        
+        .more-link{
+            box-sizing: content-box;
+        }
+    }
+}
+
+@media (max-width: 1250px) {
+    #section_listing {
+        #contenuRecherche {
+            width: 100%;
+            margin-left: 0;
+            display: block;
+
+            .listing-post-single {
+                #txtContenu {
+                    width: 100%;
+                    display: inline-block;
+                }
+                #imgContenu {
+                    width: auto;
+                    display: block;
+                    float: none;
+                    margin-bottom: 35px;
+                }
+            }
+        }
+        
+        #ficheInfo {
+            width: 100%;
+            margin-bottom: 35px;
+            position:inherit;
+            top: 0;
+        }
+        
+        .postform {
+            margin: 40px auto;
+        }
+    }
+}
+
+@media (max-width: 780px) {
+    #section_listing {
+        
+    }
+}
 
 
 
