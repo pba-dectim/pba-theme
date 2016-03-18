@@ -47,6 +47,7 @@
             font-weight: bold;
             color: #444444;
             font-size: 1.2em;
+            margin-bottom: 0;
         }
     }
     
@@ -117,7 +118,7 @@
     }
     
     h1, h2, h3, h4, h5, h6 {
-        margin: 0 auto;
+        margin: 10px auto;
         font-family: zona_problack;
         font-size: 2em;
     }
@@ -129,6 +130,10 @@
     
 @media (max-width: 1350px) {
     #contenu_single {
+        
+        iframe {
+            top: 100px;
+        }
 
         #galerie {
 
@@ -155,6 +160,10 @@
 
 @media (max-width: 1250px) {
     #contenu_single {
+        
+        iframe {
+            top: 30px;
+        }
 
         #galerie {
             padding: 0 0 0;
@@ -217,6 +226,10 @@
 
 @media (max-width: 650px) {
     #contenu_single {
+        
+        iframe {
+            top: 0px;
+        }
         
         #galerie {
             

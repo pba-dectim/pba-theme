@@ -22,15 +22,6 @@ get_header(); ?>
                     <div id="section_listing">
                 
 <!----------------------- Block Info ------------------------------------------------------------------>
-
-                        
-                        <div id="ficheInfo" class="blockInfo">
-
-                                <h3>Mérite patrimonial</h3>
-                                
-                                <p>Afin de stimuler l’intérêt pour l’héritage architectural de notre Ville, la Société du Patrimoine de Boucherville présidée par madame Nicole Racicot-Saia, créa le 28 septembre 2001,  les prix Mérite patrimonial.<br><br>Le Mérite Patrimonial est une reconnaissance destinée à honorer des maisons anciennes et à féliciter leurs propriétaires qui ont su garder et améliorer ces témoins de notre histoire dans le respect des traditions et des besoins de la modernité.</p>
-
-                        </div> 
                         
                            <div id="recherchePatrimoine" class="blockInfo">
                            
@@ -59,14 +50,25 @@ get_header(); ?>
                                             <?php wp_dropdown_categories( $args ); ?>
                                
                                 <section id="listing-content-ajax">
-                                    <div>
+                                   
+                                   
+                                   <div id="ficheInfo" class="blockInfo">
+
+                                <h3>Mérite patrimonial</h3>
+                                
+                                <p>Afin de stimuler l’intérêt pour l’héritage architectural de notre Ville, la Société du Patrimoine de Boucherville présidée par madame Nicole Racicot-Saia, créa le 28 septembre 2001,  les prix Mérite patrimonial.<br><br>Le Mérite Patrimonial est une reconnaissance destinée à honorer des maisons anciennes et à féliciter leurs propriétaires qui ont su garder et améliorer ces témoins de notre histoire dans le respect des traditions et des besoins de la modernité.</p>
+
+                        </div> 
+                                   
+                                   
+                                    <div id="contenuRecherche">
                                         
                                                 <?php
                                         while ( have_posts() ) : the_post(); 
 
                                     ?>
                                                     <article class="listing-post-single">
-                                                        <div>
+                                                        <div id="txtContenu">
                                                            
                                                             <div id="dropDown">
                                                            
@@ -77,12 +79,12 @@ get_header(); ?>
                                                                 </div>
                                                             
                                                             </div>
-                                                            <p>
+                                                            <div class="linkContent">
                                                                 <?php the_excerpt(); ?>
-                                                            </p>
+                                                            </div>
                                                             <!--<a href="<?php the_permalink(); ?>">Voir la fiche</a>-->
                                                         </div>
-                                                        <div>
+                                                        <div id="imgContenu">
                                                             <?php the_post_thumbnail('medium'); ?>
                                                         </div>
                                                         
