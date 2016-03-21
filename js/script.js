@@ -1,9 +1,11 @@
 // JavaScript Document
 
 jQuery(document).ready(function ($) {
+	accordion();
      jQuery('#cat').on('change', function () {
 		 var value = jQuery("#cat option:selected").val();
-		  jQuery('#listing-content-ajax').html('<img id="ajax-gif" src="' + pluginDir + '/img/ajax-loader.gif" alt="' + "chargement de l'information" + '" />');
+		 jQuery('#ficheInfo').html('');
+		  jQuery('#contenuRecherche').html('<img id="ajax-gif" src="' + pluginDir + '/img/ajax-loader.gif" alt="' + "chargement de l'information" + '" />');
           jQuery('#ajax-gif').fadeOut(0, function () {
                 jQuery(this).fadeIn(300, function () {
                     var data = {
@@ -15,7 +17,9 @@ jQuery(document).ready(function ($) {
                             this.remove();
                             jQuery('#listing-content-ajax').html(reponse);
                             jQuery('#listing-content-ajax').fadeOut(0, function(){
-                                jQuery(this).fadeIn(300);
+                                jQuery(this).fadeIn(300,function() {
+									accordion();
+								});
                             });
                             
                         });
@@ -23,4 +27,13 @@ jQuery(document).ready(function ($) {
                 });
             });
 	 });
+	
 });
+
+function accordion() {
+    $( "#accordion" ).accordion({
+      collapsible: true,
+	   active: false,
+	   heightStyle: "content"
+    });
+ }
