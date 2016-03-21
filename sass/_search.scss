@@ -18,9 +18,24 @@
             font-family: zona_proregular;
         }
         
+      /*---------IMAGES----------*/
+        
         
         
     }
+    
+        a.post-thumbnail{
+            /*display:none;*/
+            background:none;
+        }
+        
+        .search .full-width .post-thumbnail img:hover{
+            background:none;    
+        }
+    
+        .entry-summary img{
+            display:none;
+        }
     
     .site-content .entry-header, .site-content .entry-content, .site-content .entry-summary, .site-content .entry-meta, .page-content{
         max-width:65%;
@@ -49,6 +64,8 @@
             }
             
         }
+        
+        
         
         
         /*---SURVOL DES TITRES-----*/
