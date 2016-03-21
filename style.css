@@ -516,7 +516,7 @@ search-submit {
 
 /*STYLE DE LA SECTION DE CONTENU*/
 .section-content > * {
-  padding: 0 40px; }
+  padding: 70px 40px; }
 
 /*STYLES DES TITRES*/
 h1 {
@@ -1150,7 +1150,7 @@ figcaption {
 /*-----------VARIABLES SASS-----------*/
 /*--------- Front Page ---------------*/
 .section-content > * {
-  padding: 0 40px; }
+  padding: 70px 40px; }
 
 #section_listing {
   /*BOUTONS VOIR PLUS*/ }
