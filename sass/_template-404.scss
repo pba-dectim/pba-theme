@@ -13,3 +13,35 @@
         font-size: 5em;
     }
 }
+
+.error404{
+    .page-content{
+        
+        p{
+            text-align:center;
+        }
+        
+        form.search-form{
+            text-align:center;
+            
+            input[type="submit"]{
+                border: 1px $primaryColor solid;
+                background-color:white;
+                color:$primaryColor;
+            }
+            
+            input[type="submit"]:hover{
+                background-color:$primaryColor;
+                color:white;
+            }
+            
+        }
+        
+        div#search-input-wrapper{
+        position: initial;
+        display: inline-block;
+        text-align: center;
+        }
+    }     
+}
+
