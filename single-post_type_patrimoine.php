@@ -33,16 +33,20 @@ get_header(); ?>
                             <div id="ficheInfo" class="blockInfo">
 
                                 <h3>CATÉGORIE(S)</h3>
-                                <?php 
-                               
-                                $term = get_field('categorie_de_lelement');
-                               
-                                if( $term ): ?>
-
-                                    <p><?php echo $term->name; ?><p>
-                                    
-                                   
-                                <?php endif; ?>
+                             
+                               <?php
+							   $postid = get_the_ID();
+								$terms = get_the_terms( $postid, 'patrimoine_category');
+								if ($terms && ! is_wp_error($terms)) :
+									$term_slugs_arr = array();
+									foreach ($terms as $term) {
+										$term_slugs_arr[] = $term->name;
+									}
+									$terms_slug_str = join( "<br />", $term_slugs_arr);
+								endif;
+								echo $terms_slug_str;
+								?>
+                             
 
 
                                 <h3>ANNÉE DE CONSTRUCTION</h3>
@@ -51,8 +55,6 @@ get_header(); ?>
                                 <h3>PRIX</h3>
                                 <?php the_field('prix_ou_nomination'); ?>
 
-                                <h3>ADRESSE</h3>
-                                <p><?php the_field('adresse_patrimoine'); ?></p>
 
                             </div><!--
 
@@ -87,7 +89,7 @@ get_header(); ?>
                                         </ul>
                             <?php endif; ?>                        
 
-                                
+                              <!--addresse?id=leID-->
                                 <div id="boutonGalerie">
                                     <div><a href="#">CARTE INTÉRACTIVE</a></div><!--
                                     --><div id="showVideo"><a href="#">VIDÉO</a></div>

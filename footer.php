@@ -21,8 +21,8 @@
 
             <div id='footer-Button-zone'>
 
-                <a href="#">CARTE INTÉRACTIVE</a>
-                <a href="#">CONTACTEZ-NOUS</a>
+                <a href="/carte-interactive/">CARTE INTÉRACTIVE</a>
+                <a href="/contact/">CONTACTEZ-NOUS</a>
 
             </div>
 

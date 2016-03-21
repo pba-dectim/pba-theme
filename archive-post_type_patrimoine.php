@@ -54,9 +54,9 @@ get_header(); ?>
                                    
                                    <div id="ficheInfo" class="blockInfo">
 
-                                <h3>Mérite patrimonial</h3>
+                                <h3>Plaques commémoratives</h3>
                                 
-                                <p>Afin de stimuler l’intérêt pour l’héritage architectural de notre Ville, la Société du Patrimoine de Boucherville présidée par madame Nicole Racicot-Saia, créa le 28 septembre 2001,  les prix Mérite patrimonial.<br><br>Le Mérite Patrimonial est une reconnaissance destinée à honorer des maisons anciennes et à féliciter leurs propriétaires qui ont su garder et améliorer ces témoins de notre histoire dans le respect des traditions et des besoins de la modernité.</p>
+                                <p>Afin de bien identifier les six bâtiments classés historiques de Boucherville, en 1992, la Société du Patrimoine a procédé à l’installation de plaques commémoratives en façade de chacun d’eux.<br><br>Cette initiative sert à la fois l’architecture et l’histoire.</p>
 
                         </div> 
                                    

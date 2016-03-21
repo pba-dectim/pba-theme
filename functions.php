@@ -316,40 +316,58 @@ function listing_ajax_action() {
 		)
 	)
 	 ) );
-	 
-	 echo category_description($param);
-	 
 	
-	 
+	if('post_type_realisatio') {
+		$taxname = get_term_by('id', $param, 'realisation_category');
+	}
+	if('post_type_patrimoine') {
+		$taxname = get_term_by('id', $param, 'patrimoine_category');
+	}
+	$term =	$wp_query->queried_object;
+	 $c = '<div id="ficheInfo" class="blockInfo">
+
+                                <h3>'. single_cat_title($param) .'</h3>
+                                
+                                <p>'. category_description($param) . '</p>
+
+                        </div>';
+	  $c .= '<div id="contenuRecherche">';
 	
 if ( $query->have_posts() ) : 
 	while ( $query->have_posts() ) : $query->the_post(); 
 	
 		
 		
-			$c .= '<div id="accordion">
-				
-					<h1>'. get_field("date_de_la_realisation") .'<span>-</span>'. get_the_title() . '</h1>
-				<div>
-					<p>' . get_the_excerpt() . '</p>
-					<a href="'. get_the_permalink() . '">Voir la fiche</a>
-					'. get_the_post_thumbnail($sizes) . '
-				</div>
-				
-					
-				
+                                    
+			$c .= '<article class="listing-post-single">
+					 <div id="txtContenu">
+							<div id="dropDown">
+								<h1>'. get_field("date_de_la_realisation") .' '. get_the_title() . '</h1>
+								<div id="dropDownSelect">
+									<div id="laFleche"><i class="fa fa-chevron-down"></i></div>
+								 </div>
+							</div>
+							<div class="linkContent">
+								<p>' . get_the_excerpt() . '</p>
+							</div>
+								<a class="more-link" href="'. get_the_permalink() . '">Continuer la lecture ...</a>
+					 </div>
+					 		<div id="imgContenu">
+								'. get_the_post_thumbnail($sizes) . '
+							</div>
+					<div id="division"></div>
 				</article>';
 		
 		
 		endwhile;
-		else : echo category_description($param);
+		else : 
 		
-		$c .= '<div>' . 'Aucun élément trouvé' . '</div>';
+		$c .= '<article class="listing-post-single"><div id="txtContenu">' . 'Aucun élément trouvé' . '</div></article>';
 		
 			
 		
 		endif;
-		
+		 $c .= '</div>';
 		echo $c;
 	
 	

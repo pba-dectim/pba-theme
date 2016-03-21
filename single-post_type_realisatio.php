@@ -26,30 +26,68 @@ get_header(); ?>
                     <section class='section-content'>
 
                         <div id="contenu_single">
+                        
+                        <div id="frameDuVideo"><?php the_field('video_dune_realisation'); ?></div>
 
                             <div id="ficheInfo" class="blockInfo">
 
                                 <h3>CATÉGORIE(S)</h3>
-                                <?php 
-                               
-                                $term = get_field('categorie_de_lelement');
-                               
-                                if( $term ): ?>
+                                 <?php
+							   $postid = get_the_ID();
+								$terms = get_the_terms( $postid, 'realisation_category');
+								if ($terms && ! is_wp_error($terms)) :
+									$term_slugs_arr = array();
+									foreach ($terms as $term) {
+										$term_slugs_arr[] = $term->name;
+									}
+									$terms_slug_str = join( "<br />", $term_slugs_arr);
+								endif;
+								echo $terms_slug_str;
+								?>
 
-                                    <p><?php echo $term->name; ?><p>
-                                    
-                                   
-                                <?php endif; ?>
 
+                                <h3>DATE DE LA RÉALISATION</h3>
+                                <p><?php the_field('date_de_la_realisation'); ?></p>
 
-                                <h3>ANNÉE DE CONSTRUCTION</h3>
-                                <p><?php the_field('annee_de_construction'); ?></p>
+                                <h3>LISTE DES GAGNANTS</h3>
+                                <?php  
+								$i = 0;
+									if( have_rows('liste_gagnant') ):
 
-                                <h3>PRIX</h3>
-                                <?php the_field('prix_ou_nomination'); ?>
+									// loop through the rows of data
+									while ( have_rows('liste_gagnant') ) : the_row();
+									
+										$i++;?>
+                                        <p>Prix #<?php echo $i;?></p>
+										<a href="<?php the_sub_field('gagnant');?>"><?php the_sub_field('gagnant');?></a>
+								
+									<?php endwhile;
+								
+								else :
+								
+									// Aucun gagnant trouvé.
+								
+								endif;
+                          ?>    
+                          		<h3>LISTE DES NOMINÉS</h3>
+                                <?php  
+								$j = 0;
+									if( have_rows('liste_nomines') ):
 
-                                <h3>ADRESSE</h3>
-                                <p><?php the_field('adresse_patrimoine'); ?></p>
+									// loop through the rows of data
+									while ( have_rows('liste_nomines') ) : the_row();
+								
+										$j++;?>
+										 <p>Prix #<?php echo $j;?></p>
+										<a href="<?php the_sub_field('nomine');?>"><?php the_sub_field('nomine');?></a>
+									<?php endwhile;
+								
+								else :
+								
+									// Aucun gagnant trouvé.
+								
+								endif;
+                          ?>    
 
                             </div><!--
 
@@ -64,26 +102,31 @@ get_header(); ?>
                               
                                 <?php 
 
-                                    $images = get_field('galerie_photo_patrimoine');
+                                    $images = get_field('galerie_photo_realisation');
 
                                         if( $images ): ?>
-                                            <ul> 
-                                                <?php foreach( $images as $image ): ?>
-                                                    <li>
-                                                        <a href="<?php echo $image['url']; ?>">
-                                                             <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
-                                                        </a>
-                                                        
-                                                    </li>
-                                                <?php endforeach; ?>
-                                            </ul>
-                                        <?php endif; ?>
+                                        <ul> 
+                                            <?php foreach( $images as $image ): 
+                                                $content = '<li>';
+                                                    $content .= '<a href="'. $image['url'] .'">';
+                                                        $content .= '<img src="'. $image['sizes']['large'] .'" alt="'. $image['alt'] .'" />';
+                                                    $content .= '</a>';
+                                                $content .= '</li>';
+            
+                                            if ( function_exists('slb_activate') ){
+                                                $content = slb_activate($content);
+                                            }
+    
+                                            echo $content;?>
+                                    <?php endforeach; ?>
+                                        </ul>
+                            <?php endif; ?>  
                                         
 
                                 
                                 <div id="boutonGalerie">
                                     <div><a href="#">CARTE INTÉRACTIVE</a></div><!--
-                                    --><div><a href="#">BALADODIFFUSEUR</a></div>
+                                    --><div id="showVideo"><a href="#">VIDÉO</a></div>
                                 </div>
 
 
