@@ -185,7 +185,7 @@ margin-bottom:60px;
     float:left;
     margin: 20px;
     margin-top: 0;
-      margin-bottom: 50px;
+    margin-bottom: 50px;
 }
 
 
@@ -280,9 +280,15 @@ max-width: 100%;
     max-width: 48%;
     margin-bottom: 10px;
     
-}
+    }
+    
+    #search-input-wrapper {
+    left: 20%;
+    }
 
 }
+
+
 
 
 @media (max-width: 767px) {
@@ -320,6 +326,11 @@ max-width: 100%;
     max-width: 100%;
         margin: 0px 40px 40px 40px;
     }
+    
+    #search-input-wrapper {
+    left: 0%;
+    }
+    
 .secFier h1 {
 
     font-size: 2em;
