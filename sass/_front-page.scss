@@ -103,16 +103,34 @@ figcaption{
 opacity: 0.5;
 }
 
-.containtFigure h3{
-font-size: 1.7em;
-
+.containtFigure h3 {
+    font-size: 1.7em;
     text-transform: uppercase;
+    margin: 40px auto;
+    width: 50%;
 }
 
 .containtFigure h4{
-font-size: 1.1em;
-    font-family: 'roboto';
+    font-size: 1.1em;
     font-weight: 300;
+}
+
+.containtFigcaption p {
+    max-width: 40%;
+}
+
+.btnVoirPlus a {
+    color: #880000;
+    border: 1px #880000 solid;
+    padding: 18px 8%;
+    -webkit-transition: ease-in-out 0.15s;
+    transition: ease-in-out 0.15s;
+    text-transform: uppercase;
+}
+
+.btnVoirPlus a:hover{
+    color:white;
+    background-color:$primaryColor;
 }
 
 .containtFigcaption{
