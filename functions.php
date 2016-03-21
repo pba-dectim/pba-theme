@@ -323,15 +323,16 @@ function listing_ajax_action() {
 	if('post_type_patrimoine') {
 		$taxname = get_term_by('id', $param, 'patrimoine_category');
 	}
-	$term =	$wp_query->queried_object;
+	
 	 $c = '<div id="ficheInfo" class="blockInfo">
 
-                                <h3>'. single_cat_title($param) .'</h3>
+                                <h3>'. $taxname->name .'</h3>
                                 
                                 <p>'. category_description($param) . '</p>
 
                         </div>';
 	  $c .= '<div id="contenuRecherche">';
+	  $c .= '<div id="accordion">';
 	
 if ( $query->have_posts() ) : 
 	while ( $query->have_posts() ) : $query->the_post(); 
@@ -339,14 +340,12 @@ if ( $query->have_posts() ) :
 		
 		
                                     
-			$c .= '<article class="listing-post-single">
-					 <div id="txtContenu">
-							<div id="dropDown">
-								<h1>'. get_field("date_de_la_realisation") .' '. get_the_title() . '</h1>
-								<div id="dropDownSelect">
-									<div id="laFleche"><i class="fa fa-chevron-down"></i></div>
+			$c .= '<div id="dropDownSelect">
+									<div id="laFleche"><i class="fa fa-chevron-down"><h1>'. get_field("date_de_la_realisation") .' '. get_the_title() . '</h1></i></div>
 								 </div>
-							</div>
+					<article class="listing-post-single">
+					 <div id="txtContenu">
+							
 							<div class="linkContent">
 								<p>' . get_the_excerpt() . '</p>
 							</div>
@@ -360,6 +359,7 @@ if ( $query->have_posts() ) :
 		
 		
 		endwhile;
+		$c .= '</div>';
 		else : 
 		
 		$c .= '<article class="listing-post-single"><div id="txtContenu">' . 'Aucun élément trouvé' . '</div></article>';
@@ -367,7 +367,9 @@ if ( $query->have_posts() ) :
 			
 		
 		endif;
+		 
 		 $c .= '</div>';
+		 
 		echo $c;
 	
 	

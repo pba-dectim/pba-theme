@@ -32,7 +32,7 @@ get_header(); ?>
                                         'orderby'            => 'name', 
                                         'order'              => 'ASC',
                                         'show_count'         => 0,
-                                        'hide_empty'         => 0, 
+                                        'hide_empty'         => 1, 
                                         'child_of'           => 0,
                                         'exclude'            => '',
                                         'echo'               => 1,
@@ -54,45 +54,43 @@ get_header(); ?>
                                    
                                    <div id="ficheInfo" class="blockInfo">
 
-                                <h3>Plaques commémoratives</h3>
+                                <h3>Le Patrimoine</h3>
                                 
-                                <p>Afin de bien identifier les six bâtiments classés historiques de Boucherville, en 1992, la Société du Patrimoine a procédé à l’installation de plaques commémoratives en façade de chacun d’eux.<br><br>Cette initiative sert à la fois l’architecture et l’histoire.</p>
+                                <p>La Société est ouverte sans restriction à tout citoyen ou organisme intéressé au patrimoine de Boucherville, que ce soit dans ses aspects historique, culturel, architectural, religieux ou environnemental, et désireux de participer à sa mise en valeur.</p>
 
                         </div> 
                                    
                                    
                                     <div id="contenuRecherche">
-                                        
+                                      <div id="accordion">
                                                 <?php
                                         while ( have_posts() ) : the_post(); 
 
                                     ?>
+                                    				<div id="dropDownSelect">
+                                                                    <div id="laFleche"><i class="fa fa-chevron-down"><h1><?php the_title(); ?></h1></i></div>
+                                                                </div>
                                                     <article class="listing-post-single">
                                                         <div id="txtContenu">
                                                            
-                                                            <div id="dropDown">
                                                            
-                                                                <h1><?php the_title(); ?></h1>
-                                                                
-                                                                <div id="dropDownSelect">
-                                                                    <div id="laFleche"><i class="fa fa-chevron-down"></i></div>
-                                                                </div>
-                                                            
-                                                            </div>
                                                             <div class="linkContent">
                                                                 <?php the_excerpt(); ?>
-                                                            </div>
+                                                              
+                                                            </div> 
+                                                             
                                                             <!--<a href="<?php the_permalink(); ?>">Voir la fiche</a>-->
                                                         </div>
                                                         <div id="imgContenu">
-                                                            <?php the_post_thumbnail('medium'); ?>
-                                                        </div>
+															<?php the_post_thumbnail('medium'); ?>
+                                                         </div>
                                                         
                                                         <div id="division"></div>
                                                         
                                                     </article>
 
                                                     <?php endwhile; ?>
+                                       </div>
                                     </div>
                                 </section>
 

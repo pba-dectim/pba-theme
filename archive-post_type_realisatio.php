@@ -39,13 +39,13 @@ get_header(); ?>
                        
                         <?php $args = array(
 
-                            'show_option_all'    => '',
-                            'show_option_none'   => 'Veuillez choisir une catégorie à afficher',
+                            'show_option_all'    => 'Veuillez choisir une catégorie à afficher',
+                            'show_option_none'   => '',
                             'option_none_value'  => '-1',
                             'orderby'            => 'name', 
                             'order'              => 'ASC',
                             'show_count'         => 0,
-                            'hide_empty'         => 0, 
+                            'hide_empty'         => 1, 
                             'child_of'           => 0,
                             'exclude'            => '',
                             'echo'               => 1,
@@ -65,44 +65,41 @@ get_header(); ?>
                         <section id="listing-content-ajax">  
                           <div id="ficheInfo" class="blockInfo">
 
-                                <h3>Mérite patrimonial</h3>
+                                <h3>Nos réalisations</h3>
                                 
-                                <p>Afin de stimuler l’intérêt pour l’héritage architectural de notre Ville, la Société du Patrimoine de Boucherville présidée par madame Nicole Racicot-Saia, créa le 28 septembre 2001,  les prix Mérite patrimonial.<br><br>Le Mérite Patrimonial est une reconnaissance destinée à honorer des maisons anciennes et à féliciter leurs propriétaires qui ont su garder et améliorer ces témoins de notre histoire dans le respect des traditions et des besoins de la modernité.</p>
+                                <p>Contribuer activement à la préservation et à la mise en valeur du patrimoine architectural, religieux, culturel et naturel de Boucherville.<br><br> La Société est ouverte sans restriction à tout citoyen ou organisme intéressé au patrimoine de Boucherville, que ce soit dans ses aspects historique, culturel, architectural, religieux ou environnemental, et désireux de participer à sa mise en valeur.</p>
 
                         </div>
                                     <div id="contenuRecherche">
-                                        
+                                       <div id="accordion">
                                                 <?php
                                         while ( have_posts() ) : the_post(); 
 
-                                    ?>
+                                    ?> 
+													 <div id="dropDownSelect">
+                                                           <div id="laFleche"><i class="fa fa-chevron-down"> <h1><?php the_title(); ?></h1></i></div>
+                                                      </div>
                                                    <article class="listing-post-single">
                                                         <div id="txtContenu">
                                                            
-                                                            <div id="dropDown">
-                                                           
-                                                                <h1><?php the_title(); ?></h1>
-                                                                
-                                                                <div id="dropDownSelect">
-                                                                    <div id="laFleche"><i class="fa fa-chevron-down"></i></div>
-                                                                </div>
-                                                            
-                                                            </div>
+                                                        
                                                             <div class="linkContent">
                                                                 <?php the_excerpt(); ?>
+                                                               
                                                             </div>
                                                             <!--<a href="<?php the_permalink(); ?>">Voir la fiche</a>-->
                                                         </div>
-                                                        <div id="imgContenu">
-                                                            <?php the_post_thumbnail('medium'); ?>
-                                                        </div>
+                                                         <div id="imgContenu">
+																	<?php the_post_thumbnail('medium'); ?>
+                                                                </div>
                                                         
                                                         <div id="division"></div>
                                                         
                                                     </article>
 
-
+													
                                                     <?php endwhile; ?>
+                                      </div>       
                                     </div>
                                 </section>
 
