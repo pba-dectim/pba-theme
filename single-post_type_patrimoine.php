@@ -18,7 +18,7 @@ get_header(); ?>
                     <!--					// Include the page content template.-->
                     <!--//					get_template_part( 'content', 'page' );-->
 
-                    <section class='banner-titre' style='background-image:url("<?php the_post_thumbnail_url(' full '); ?>"); '>
+                    <section class='banner-titre' style='background-image:url("<?php the_post_thumbnail_url(' full '); ?>"); background-repeat:no-repeat; background-size:cover;'>
                         <div class='banner_filter'></div>
                         <h1><?php the_title(); ?></h1>
                     </section>
