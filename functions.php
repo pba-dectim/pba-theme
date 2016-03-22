@@ -280,8 +280,6 @@ function test(){
 add_action( 'wp_enqueue_scripts', 'test' );
 
 
-
-
 function add_script() {
 	
 	wp_register_script ( 'script-jf', get_stylesheet_directory_uri().'/js/script.js', array('jquery'));
@@ -337,11 +335,16 @@ function listing_ajax_action() {
 if ( $query->have_posts() ) : 
 	while ( $query->have_posts() ) : $query->the_post(); 
 	
+		$daterel = '';
+		if( get_field('date_de_la_realisation') ):
 		
+		$daterel = get_field("date_de_la_realisation");
+		$daterel .= ' - ';
 		
+		endif;
                                     
 			$c .= '<div id="dropDownSelect">
-									<div id="laFleche"><i class="fa fa-chevron-down"><h1>'. get_field("date_de_la_realisation") .' '. get_the_title() . '</h1></i></div>
+									<div id="laFleche"><i class="fa fa-chevron-down"><h1>'.  $daterel .' '. get_the_title() . '</h1></i></div>
 								 </div>
 					<article class="listing-post-single">
 					 <div id="txtContenu">

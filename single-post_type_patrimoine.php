@@ -48,13 +48,14 @@ get_header(); ?>
 								?>
                              
 
-
-                                <h3>ANNÉE DE CONSTRUCTION</h3>
-                                <p><?php the_field('annee_de_construction'); ?></p>
-
-                                <h3>PRIX</h3>
-                                <?php the_field('prix_ou_nomination'); ?>
-
+								<?php if( get_field('annee_de_construction') ): ?>
+                                    <h3>ANNÉE DE CONSTRUCTION</h3>
+                                    <p><?php the_field('annee_de_construction'); ?></p>
+								 <?php endif; ?>
+								<?php if( get_field('prix_ou_nomination') ): ?>
+                                    <h3>PRIX</h3>
+                                    <?php the_field('prix_ou_nomination'); ?>
+								 <?php endif; ?>
 
                             </div><!--
 
@@ -91,8 +92,11 @@ get_header(); ?>
 
                               <!--addresse?id=leID-->
                                 <div id="boutonGalerie">
+                             
                                     <div><a href="#">CARTE INTÉRACTIVE</a></div><!--
+                                     <?php if( get_field('video_patrimoine') ): ?>
                                     --><div id="showVideo"><a href="#">VIDÉO</a></div>
+                                    <?php endif; ?>
                                 </div>
                     
 
