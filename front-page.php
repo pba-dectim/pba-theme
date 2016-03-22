@@ -7,7 +7,7 @@ get_header();
 
 
     <figure class="firstSlide">
-        <video id="full_video" id="js-video" src="<?php echo get_stylesheet_directory_uri(); ?>/video/accueil2.mp4" preload controls autoplay="" loop="" muted="" type="video/mp4" AddType video/ogg poster="<?php echo get_stylesheet_directory_uri(); ?>/img/510-marie-victorin-face.jpg"></video>
+        <video id="full_video" id="js-video" src="<?php echo get_stylesheet_directory_uri(); ?>/video/accueil2.mp4" preload autoplay="" loop="" muted="" type="video/mp4" AddType video/ogg poster="<?php echo get_stylesheet_directory_uri(); ?>/img/510-marie-victorin-face.jpg"></video>
         <figcaption>
             <h1>Le patrimoine</h1>
             <h2>Pour que l'avenir se souvienne !</h2></figcaption>
