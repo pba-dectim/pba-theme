@@ -28,7 +28,8 @@
 
             <div id='footer-contact-infos'>
 
-                <p>la Société du patrimoine de Boucherville 566, boul. Marie-Victorin Boucherville (Québec) J4B 1X1</p>
+                <p>la Société du patrimoine de Boucherville</p>
+                <p>566, boul. Marie-Victorin Boucherville (Québec) J4B 1X1</p>
 
                 
 

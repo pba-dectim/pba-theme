@@ -45,11 +45,11 @@ get_header(); ?>
 								echo $terms_slug_str;
 								?>
 
-
+								<?php if( get_field('date_de_la_realisation') ): ?>
                                 <h3>DATE DE LA RÉALISATION</h3>
                                 <p><?php the_field('date_de_la_realisation'); ?></p>
-
-                                <h3>LISTE DES GAGNANTS</h3>
+								<?php endif; ?>
+                                
                                 <?php  
 								$i = 0;
 									if( have_rows('liste_gagnant') ):
@@ -58,9 +58,11 @@ get_header(); ?>
 									while ( have_rows('liste_gagnant') ) : the_row();
 									
 										$i++;?>
+                                        <?php if( get_sub_field('gagnant') ): ?>
+                                        <h3>LISTE DES GAGNANTS</h3>
                                         <p>Prix #<?php echo $i;?></p>
 										<a href="<?php the_sub_field('gagnant');?>"><?php the_sub_field('gagnant');?></a>
-								
+										<?php endif; ?>
 									<?php endwhile;
 								
 								else :
@@ -69,7 +71,7 @@ get_header(); ?>
 								
 								endif;
                           ?>    
-                          		<h3>LISTE DES NOMINÉS</h3>
+                          		 
                                 <?php  
 								$j = 0;
 									if( have_rows('liste_nomines') ):
@@ -78,8 +80,11 @@ get_header(); ?>
 									while ( have_rows('liste_nomines') ) : the_row();
 								
 										$j++;?>
+										<?php if( get_sub_field('nomine') ): ?>
+                          				 <h3>LISTE DES NOMINÉS</h3>
 										 <p>Prix #<?php echo $j;?></p>
 										<a href="<?php the_sub_field('nomine');?>"><?php the_sub_field('nomine');?></a>
+                                        <?php endif; ?>
 									<?php endwhile;
 								
 								else :
@@ -126,7 +131,9 @@ get_header(); ?>
                                 
                                 <div id="boutonGalerie">
                                     <div><a href="#">CARTE INTÉRACTIVE</a></div><!--
+                                    <?php if( get_field('video_dune_realisation') ): ?>
                                     --><div id="showVideo"><a href="#">VIDÉO</a></div>
+                                    <?php endif; ?>
                                 </div>
 
 

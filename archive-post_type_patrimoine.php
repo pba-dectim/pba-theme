@@ -79,12 +79,12 @@ get_header(); ?>
                                                               
                                                             </div> 
                                                              
-                                                            <!--<a href="<?php the_permalink(); ?>">Voir la fiche</a>-->
+                                                             <a class="batman" href="<?php the_permalink(); ?>">Cotinuer la lecture</a>
                                                         </div>
                                                         <div id="imgContenu">
 															<?php the_post_thumbnail('medium'); ?>
                                                          </div>
-                                                                                                        
+
                                                     </article>
 
                                                     <?php endwhile; ?>
