@@ -93,8 +93,6 @@ get_header(); ?>
 																	<?php the_post_thumbnail('medium'); ?>
                                                                 </div>
                                                         
-                                                        <div id="division"></div>
-                                                        
                                                     </article>
 
 													
