@@ -28,7 +28,7 @@ body.post-type-archive-post_type_realisatio, body.post-type-archive-post_type_pa
             border-top: solid 1px #A5A5A5;
 
             #laFleche {
-                
+                cursor: pointer;
             }
 
         }
@@ -47,6 +47,7 @@ body.post-type-archive-post_type_realisatio, body.post-type-archive-post_type_pa
             float: right;
             position: relative;
             top: 25px;
+            color: $primaryColor;
         }
         
         .listing-post-single {
@@ -116,7 +117,18 @@ body.post-type-archive-post_type_realisatio, body.post-type-archive-post_type_pa
     }
     
     #recherchePatrimoine {
-        margin: 0 70px;
+        //margin: 0 70px;
+        width: 100%;
+        
+        .navigation {
+            .current {
+                border-top: 5px solid $primaryColor;
+                color: #880000;
+            }
+            a:hover {
+                border-top: 5px solid $primaryColor;
+            }
+        }
         
     }
     
@@ -132,6 +144,7 @@ body.post-type-archive-post_type_realisatio, body.post-type-archive-post_type_pa
     }
     
     .postform {
+        cursor: pointer;
         margin: 40px 0;
         margin-left: 35%;
         display: block;
