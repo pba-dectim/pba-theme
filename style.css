@@ -992,6 +992,10 @@ figcaption {
 /*------IMPORT -------*/
 /*-----------VARIABLES SASS-----------*/
 /*--------- Front Page ---------------*/
+/*OVERWRITE DU SECTION CONTENT PADDING TOP*/
+body.single-post_type_patrimoine .section-content > *, body.single-post_type_realisatio .section-content > * {
+  padding-top: 0px; }
+
 #contenu_single .blockInfo {
   display: inline-block;
   vertical-align: top;
@@ -1174,12 +1178,28 @@ figcaption {
 /*------IMPORT -------*/
 /*-----------VARIABLES SASS-----------*/
 /*--------- Front Page ---------------*/
+/*OVERWRITE DU SECTION CONTENT PADDING TOP*/
+body.post-type-archive-post_type_realisatio .section-content > *, body.post-type-archive-post_type_patrimoine .section-content > * {
+  padding-top: 0px; }
+
 #section_listing {
   /*BOUTONS VOIR PLUS*/ }
   #section_listing #contenuRecherche {
     width: 65%;
     margin-left: 4.6%;
     display: inline-block; }
+    #section_listing #contenuRecherche #dropDownSelect {
+      border-top: solid 1px #A5A5A5; }
+    #section_listing #contenuRecherche .fa {
+      width: 100%; }
+    #section_listing #contenuRecherche h1 {
+      float: left;
+      text-align: left; }
+    #section_listing #contenuRecherche .fa-chevron-down:before {
+      content: "\f078";
+      float: right;
+      position: relative;
+      top: 25px; }
     #section_listing #contenuRecherche .listing-post-single #txtContenu {
       width: 60%;
       display: inline-block; }
@@ -1187,7 +1207,9 @@ figcaption {
       width: 30%;
       display: inline-block;
       float: right; }
-  #section_listing .more-link {
+    #section_listing #contenuRecherche #accordion article {
+      padding-bottom: 30px; }
+  #section_listing .batman {
     margin: 35px 0;
     font-family: zona_problack;
     border: 1px #880000 solid;
@@ -1198,17 +1220,14 @@ figcaption {
     text-decoration: none;
     text-transform: uppercase;
     box-sizing: border-box; }
-  #section_listing .more-link:hover {
+  #section_listing .batman:hover {
     color: white;
     background-color: #880000; }
+  #section_listing .more-link {
+    display: none; }
   #section_listing .blockInfo {
     display: inline-block;
     vertical-align: top; }
-    #section_listing .blockInfo #division {
-      width: 60%;
-      height: 1px;
-      background-color: #A5A5A5;
-      margin-bottom: 35px; }
   #section_listing #ficheInfo {
     width: 30%;
     background-color: #f1f1f1;
@@ -1229,15 +1248,6 @@ figcaption {
       font-size: 1em; }
   #section_listing #recherchePatrimoine {
     margin: 0 70px; }
-    #section_listing #recherchePatrimoine #dropDown h1 {
-      text-align: inherit;
-      display: inline-block; }
-    #section_listing #recherchePatrimoine #dropDown #dropDownSelect {
-      display: inline-block;
-      float: right;
-      margin: 5px 0; }
-      #section_listing #recherchePatrimoine #dropDown #dropDownSelect #laFleche {
-        color: #880000; }
   #section_listing h1,
   #section_listing h2,
   #section_listing h3,

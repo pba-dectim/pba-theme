@@ -4,6 +4,15 @@
 /*------IMPORT -------*/
 
 @import "variables.scss";
+
+/*OVERWRITE DU SECTION CONTENT PADDING TOP*/
+
+body.single-post_type_patrimoine, body.single-post_type_realisatio{
+    .section-content > *{
+        padding-top:0px;
+    }
+} 
+
 #contenu_single {
     
     .blockInfo {

@@ -6,12 +6,48 @@
 @import "variables.scss";
 
 
+/*OVERWRITE DU SECTION CONTENT PADDING TOP*/
+
+body.post-type-archive-post_type_realisatio, body.post-type-archive-post_type_patrimoine{
+    .section-content > *{
+        padding-top:0px;
+    }
+}    
+
+
+
 #section_listing {
     
     #contenuRecherche {
         width: 65%;
         margin-left: 4.6%;
         display: inline-block;
+        
+        #dropDownSelect {
+
+            border-top: solid 1px #A5A5A5;
+
+            #laFleche {
+                
+            }
+
+        }
+        
+        .fa{
+            width:100%;
+        }
+
+        h1 {
+            float: left;
+            text-align: left;
+        }
+
+        .fa-chevron-down:before {
+            content: "\f078";
+            float: right;
+            position: relative;
+            top: 25px;
+        }
         
         .listing-post-single {
             #txtContenu {
@@ -24,10 +60,17 @@
                 float: right;
             }
         }
+        
+        #accordion {
+            
+            article {
+                padding-bottom: 30px;
+            }
+        }
     }
     
     /*BOUTONS VOIR PLUS*/
-        .more-link{
+        .batman{
             margin:35px 0;
             font-family: zona_problack;
             border: 1px $primaryColor solid;
@@ -39,21 +82,15 @@
             text-transform:uppercase;
             box-sizing:border-box;
         }
-        .more-link:hover{
+        .batman:hover{
             color: white;
             background-color:$primaryColor;
         }
+    .more-link {display:none;}
     
     .blockInfo {
         display: inline-block;
         vertical-align: top;
-        
-        #division {
-            width: 60%;
-            height: 1px;
-            background-color: #A5A5A5;
-            margin-bottom: 35px;
-        }
     }
     
     #ficheInfo {
@@ -80,28 +117,6 @@
     
     #recherchePatrimoine {
         margin: 0 70px;
-        
-        #dropDown {
-        
-            h1 {
-                text-align: inherit;
-                display: inline-block;
-            }
-        
-            #dropDownSelect {
-                
-                display: inline-block;
-                float: right;
-                margin: 5px 0;
-            
-                #laFleche {
-                    color: $primaryColor;
-                }
-                
-            }
-        
-        }
-        
         
     }
     

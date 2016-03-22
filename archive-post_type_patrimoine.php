@@ -84,9 +84,7 @@ get_header(); ?>
                                                         <div id="imgContenu">
 															<?php the_post_thumbnail('medium'); ?>
                                                          </div>
-                                                        
-                                                        <div id="division"></div>
-                                                        
+                                                                                                        
                                                     </article>
 
                                                     <?php endwhile; ?>
