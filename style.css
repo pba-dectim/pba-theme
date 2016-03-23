@@ -465,7 +465,7 @@ search-submit {
 
 /*SECTION INFO CONTACT*/
 #footer-contact-infos p {
-  width: 17.23958%;
+  /*width: 331px/ 1920px * 100%;*/
   min-width: 280px;
   margin: 0 auto; }
 
