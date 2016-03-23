@@ -1203,7 +1203,8 @@ body.single-post_type_patrimoine .section-content > *, body.single-post_type_rea
 /*-----------VARIABLES SASS-----------*/
 /*--------- Front Page ---------------*/
 /*OVERWRITE DU SECTION CONTENT PADDING TOP*/
-body.post-type-archive-post_type_realisatio .section-content > *, body.post-type-archive-post_type_patrimoine .section-content > * {
+body.post-type-archive-post_type_realisatio .section-content > *,
+body.post-type-archive-post_type_patrimoine .section-content > * {
   padding-top: 0px; }
 
 #section_listing {
@@ -1220,7 +1221,8 @@ body.post-type-archive-post_type_realisatio .section-content > *, body.post-type
       width: 100%; }
     #section_listing #contenuRecherche h1 {
       float: left;
-      text-align: left; }
+      text-align: left;
+      margin-right: 15px; }
     #section_listing #contenuRecherche .fa-chevron-down:before {
       content: "\f078";
       float: right;
@@ -1343,42 +1345,11 @@ body.post-type-archive-post_type_realisatio .section-content > *, body.post-type
     top: 0; }
   #section_listing .postform {
     margin: 40px auto; } }
-/* CORSE CSS 
-#contenu_realisation {
-    
-        display: inline-block;
-        vertical-align:top;
-        width: 30%;
-    
-    #ficheInfo {
-        background-color: #f1f1f1;
-        box-sizing: border-box;
-        padding: 40px;
-        -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.4);
-        -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.4);
-        box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.4);
-        position: relative;
-        top: -50px;
-        
-        p{
-            font-family: Roboto;
-            font-weight: bold;
-            color: #444444;
-            font-size: 1.2em;
-        }
-    }
-    
-    .listing-post-single {
-        margin: 0 5%;
-        box-sizing: border-box;
-        padding: 70px 0 0;
-    }
-    
-}
-    #accordion h1{
-    
-        font-size:1.5em;
-        
-    }
-
-*/
+@media (max-width: 700px) {
+  #section_listing h3 {
+    font-size: 1.5em; }
+  #section_listing #contenuRecherche #dropDownSelect #laFleche h1 {
+    font-size: 1.5em; } }
+@media (max-width: 400px) {
+  .list-view .content-area {
+    padding: 0; } }
