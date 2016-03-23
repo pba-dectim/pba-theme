@@ -9,7 +9,7 @@ get_header(); ?>
 
             <?php if ( have_posts() ) : ?>
 <!----------------------- Image Statique pour la bannière ---------------------------------------------->
-                <section class='banner-titre' style='background-image:url("<?php echo get_stylesheet_directory_uri(); ?>/img/46-pierre-boucher-arriere.jpg"); '>
+                <section class='banner-titre' style='background-image:url("<?php echo get_stylesheet_directory_uri(); ?>/img/vitrail.jpg"); '>
                     <div class='banner_filter'></div>
                     <h1>Le patrimoine</h1>
                 </section>

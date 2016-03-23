@@ -504,6 +504,8 @@ search-submit {
 .banner-titre {
   padding: 178px 0px;
   background-position: bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
   position: relative;
   z-index: 0;
   background-attachment: fixed; }
@@ -687,11 +689,14 @@ div.articles-apropos {
 /*-----------VARIABLES SASS-----------*/
 /*--------- Front Page ---------------*/
 #full_video {
-  max-width: 110%;
+  max-width: 150%;
   margin: 0; }
 
+.ui-accordion-content {
+  height: inherit !important; }
+
 .asideSlide1 h2 {
-  font-size: 2.5em;
+  font-size: 2.1em;
   text-transform: uppercase;
   font-family: zona_problack;
   text-align: center;
@@ -747,9 +752,14 @@ figcaption {
 .owl-carousel owl-theme {
   width: 40%; }
 
+.owl-theme .owl-nav.disabled + .owl-dots {
+  position: relative;
+  margin-top: -30px;
+  display: block; }
+
 .containtFigure {
   height: 54.1vh;
-  background-position: center center;
+  background-position: top center;
   width: 100%;
   display: inline-block;
   position: relative;
@@ -848,7 +858,7 @@ figcaption {
 
 .contInfo {
   max-width: calc(33.33% - 29px);
-  box-shadow: 0px 2px 10px #e0e0e0;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.4);
   background-color: #f1f1f1;
   display: inline-block;
   margin: calc(1% - 6px);

@@ -15,7 +15,7 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 
-			 <section class='banner-titre' style='background-image:url("<?php echo get_stylesheet_directory_uri(); ?>/img/46-pierre-boucher-arriere.jpg"); '>
+			 <section class='banner-titre' style='background-image:url("<?php echo get_stylesheet_directory_uri(); ?>/img/realisation.jpg"); '>
                         <div class='banner_filter'></div>
                         <h1>Nos réalisations</h1>
               </section>
