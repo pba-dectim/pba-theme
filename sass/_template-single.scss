@@ -267,7 +267,12 @@ body.single-post_type_patrimoine, body.single-post_type_realisatio{
 @media (max-width: 530px) {
     
     .section-content > * {
-        padding: 0 20px;
+        padding: 70px 20px;
+    }
+    
+    .banner_filter{
+        padding-left:0px;
+        padding-right:0px;
     }
     
     .banner-titre h1 {
