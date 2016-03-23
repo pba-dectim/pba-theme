@@ -175,10 +175,14 @@ nav ul li a:hover{
     text-align: left;
     border-bottom: 2px white solid;
 }
+
+.search-form{
+    width:100%;
+    text-align:center;
+    margin-top:150px;
+}
 #search-input-wrapper {
-    position: fixed;
-    top: 50%;
-    left: 35%;
+    position: relative;
     display: inline-block;
     text-align: center;
 }
@@ -399,6 +403,18 @@ search-submit {
     .search-toggle {
         margin-right: 38px;
     }
+    
+    .search-form {
+    width: 95%;
+        #search-input-wrapper{
+            
+            input{
+                font-size:18px;
+            }
+        }    
+    }
+    
+   
 }
 @media screen and (max-width: 400px) {
     /* LOGO */
