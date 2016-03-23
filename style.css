@@ -682,6 +682,9 @@ div.articles-apropos {
     margin-bottom: 0px; }
   div.articles-apropos #section-form form {
     margin: 0 40px; } }
+@media (max-width: 530px) {
+  div.articles-apropos h1 {
+    font-size: 2.5em; } }
 @media (max-width: 480px) {
   div.articles-apropos #section-form form {
     margin: 0 20px; }
@@ -1160,8 +1163,12 @@ body.single-post_type_patrimoine .section-content > *, body.single-post_type_rea
   #contenu_single #galerie #boutonGalerie div {
     min-width: 200px; } }
 @media (max-width: 530px) {
-  .single .section-content > * {
-    padding: 0 20px; }
+  .section-content > * {
+    padding: 70px 20px; }
+
+  .banner_filter {
+    padding-left: 0px;
+    padding-right: 0px; }
 
   .banner-titre h1 {
     font-size: 2.5em; }
