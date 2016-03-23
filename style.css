@@ -336,7 +336,11 @@ search-submit {
   .primary-navigation {
     float: none;
     padding-top: 70px;
-    text-align: center; }
+    text-align: center;
+    line-height: normal; }
+
+  .primary-navigation li a {
+    padding: 15px 0; }
 
   #primary-menu li:last-child {
     padding-right: 0px; }
@@ -565,6 +569,9 @@ div #section-membres-ca {
   background-color: #0f0f0f;
   color: white; }
 
+#section-membres-ca hr {
+  background-color: transparent; }
+
 #centre-CA h3 {
   margin-top: 0px; }
 
@@ -654,15 +661,13 @@ div.articles-apropos {
 
 /*RESPONSIVE DE LA PAGE CONTACT*/
 @media (max-width: 1465px) {
-  div.articles-apropos {
-    padding-bottom: 0px; }
-    div.articles-apropos h1 {
-      text-align: center;
-      width: 100%; }
-    div.articles-apropos article {
-      width: 100%; }
-    div.articles-apropos article:first-child {
-      margin-bottom: 70px; } }
+  div.articles-apropos h1 {
+    text-align: center;
+    width: 100%; }
+  div.articles-apropos article {
+    width: 100%; }
+  div.articles-apropos article:first-child {
+    margin-bottom: 70px; } }
 @media (max-width: 900px) {
   div.articles-apropos .contact-infos {
     display: block;
@@ -691,7 +696,7 @@ div.articles-apropos {
   font-family: zona_problack;
   text-align: center;
   color: white;
-  background-color: black;
+  background-color: #0f0f0f;
   padding: 20px; }
 
 .asideSlide1 p {
@@ -769,6 +774,10 @@ figcaption {
 .containtFigcaption p {
   max-width: 50%; }
 
+.btnVoirPlus {
+  font-family: roboto;
+  font-weight: 900; }
+
 .btnVoirPlus a {
   color: #880000;
   border: 1px #880000 solid;
@@ -790,12 +799,13 @@ figcaption {
   bottom: 0;
   position: absolute;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.7); }
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #0f0f0f; }
 
 .containtFigcaption hr {
   height: 2px;
   margin-top: 30px;
-  background-color: black;
+  background-color: #0f0f0f;
   display: block;
   width: 30%; }
 
@@ -944,6 +954,10 @@ figcaption {
   .secMandat h1 {
     font-size: 2.7em;
     margin: 0; } }
+@media (max-width: 440px) {
+  .home .secMandat h1 {
+    width: 50%;
+    margin: 0 auto; } }
 /*------------------------------------------STYLE DU SEARCH------------------------------*/
 /*------IMPORT -------*/
 /*-----------VARIABLES SASS-----------*/
