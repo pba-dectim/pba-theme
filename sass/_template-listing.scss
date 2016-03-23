@@ -127,6 +127,7 @@ body.post-type-archive-post_type_patrimoine {
     }
     .postform {
         cursor: pointer;
+        padding-right: 10px;
         margin: 40px 0;
         margin-left: 35%;
         display: block;
@@ -146,6 +147,9 @@ body.post-type-archive-post_type_patrimoine {
         }
         .level-0,
         level-1:hover {}
+    }
+    select::-ms-expand {
+        display: none;
     }
 }
 
@@ -209,11 +213,9 @@ body.post-type-archive-post_type_patrimoine {
 
 @media (max-width: 700px) {
     #section_listing {
-        
-        h3{
+        h3 {
             font-size: 1.5em;
         }
-        
         #contenuRecherche {
             #dropDownSelect {
                 #laFleche {
@@ -228,6 +230,24 @@ body.post-type-archive-post_type_patrimoine {
 
 @media (max-width: 400px) {
     .list-view .content-area {
-		padding:0;
-	}
+        padding: 0;
+    }
+}
+
+@media (max-width: 750px) {
+    #section_listing {
+        .postform {
+            font-size: 14px;
+            padding-left: 5px;
+            background-position-x: 98%;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .post-type-archive {
+        .banner-titre h1 {
+            font-size: 2em;
+        }
+    }
 }

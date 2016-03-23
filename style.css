@@ -1293,6 +1293,7 @@ body.post-type-archive-post_type_patrimoine .section-content > * {
     font-size: 2em; }
   #section_listing .postform {
     cursor: pointer;
+    padding-right: 10px;
     margin: 40px 0;
     margin-left: 35%;
     display: block;
@@ -1309,6 +1310,8 @@ body.post-type-archive-post_type_patrimoine .section-content > * {
       font-family: zona_problack;
       font-size: 20px;
       text-transform: uppercase; }
+  #section_listing select::-ms-expand {
+    display: none; }
 
 /*----------------------------- Responsive -----------------------------*/
 @media (max-width: 1620px) {
@@ -1353,3 +1356,11 @@ body.post-type-archive-post_type_patrimoine .section-content > * {
 @media (max-width: 400px) {
   .list-view .content-area {
     padding: 0; } }
+@media (max-width: 750px) {
+  #section_listing .postform {
+    font-size: 14px;
+    padding-left: 5px;
+    background-position-x: 98%; } }
+@media (max-width: 600px) {
+  .post-type-archive .banner-titre h1 {
+    font-size: 2em; } }
