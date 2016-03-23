@@ -284,6 +284,12 @@ search-submit {
     outline: none;
 }
 @media screen and (max-width: 1350px) {
+    
+    .site-main{
+        padding-top:138px;
+    }
+    
+    
     .primary-navigation {
         float: none;
         //width:100%;
@@ -292,9 +298,7 @@ search-submit {
         line-height:normal;
     }
     
-    .primary-navigation li a{
-        padding:15px 0;
-    }
+    
     
     #primary-menu li:last-child {
         padding-right: 0px;
@@ -309,6 +313,11 @@ search-submit {
     }
 }
 @media screen and (max-width: 1057px) {
+    
+    .site-main{
+        padding-top:70px;
+    }
+    
     .primary-navigation .menu-toggle {
         display: inline-block !important;
         //padding-left: 20px;
@@ -326,8 +335,10 @@ search-submit {
     }
     .primary-navigation a {
         border-top: none;
+        padding:15px 0;
         //line-height:70px;
     }
+   
 }
 @media screen and (max-width: 783px) {
     .search-toggle {
