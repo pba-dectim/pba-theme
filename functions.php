@@ -352,7 +352,7 @@ if ( $query->have_posts() ) :
 							<div class="linkContent">
 								<p>' . get_the_excerpt() . '</p>
 							</div>
-								<a class="more-link" href="'. get_the_permalink() . '">Continuer la lecture ...</a>
+								<a class="batman" href="'. get_the_permalink() . '">Continuer la lecture</a>
 					 </div>
 					 		<div id="imgContenu">
 								'. get_the_post_thumbnail($sizes) . '

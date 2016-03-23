@@ -3,7 +3,7 @@
 
 get_header(); ?>
 
-    <div id="main-content" class="main-content">
+   
 
         <div id="primary" class="content-area">
 
@@ -112,8 +112,7 @@ get_header(); ?>
         </div>
         <!-- #primary -->
 
-    </div>
-    <!-- #main-content -->
+  
 
     <?php
 

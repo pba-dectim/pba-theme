@@ -87,7 +87,7 @@ get_header(); ?>
                                                                 <?php the_excerpt(); ?>
                                                                
                                                             </div>
-                                                            <a class="batman" href="<?php the_permalink(); ?>">Cotinuer la lecture</a>
+                                                            <a class="batman" href="<?php the_permalink(); ?>">Continuer la lecture</a>
                                                         </div>
                                                          <div id="imgContenu">
 																	<?php the_post_thumbnail('medium'); ?>

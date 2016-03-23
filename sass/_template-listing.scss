@@ -69,6 +69,7 @@ body.post-type-archive-post_type_patrimoine {
         text-decoration: none;
         text-transform: uppercase;
         box-sizing: border-box;
+		text-align:center;
     }
     .batman:hover {
         color: white;
@@ -127,7 +128,6 @@ body.post-type-archive-post_type_patrimoine {
     }
     .postform {
         cursor: pointer;
-        padding-right: 10px;
         margin: 40px 0;
         margin-left: 35%;
         display: block;
@@ -135,7 +135,7 @@ body.post-type-archive-post_type_patrimoine {
         font-size: 18px;
         font-family: zona_proregular;
         color: #444444;
-        padding: 30px;
+        padding: 30px 60px 30px 30px;
         background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right;
         -webkit-appearance: none;
         background-position-x: 92.5%;
@@ -148,7 +148,7 @@ body.post-type-archive-post_type_patrimoine {
         .level-0,
         level-1:hover {}
     }
-    select::-ms-expand {
+	 select::-ms-expand {
         display: none;
     }
 }
@@ -213,9 +213,11 @@ body.post-type-archive-post_type_patrimoine {
 
 @media (max-width: 700px) {
     #section_listing {
-        h3 {
+        
+        h3{
             font-size: 1.5em;
         }
+        
         #contenuRecherche {
             #dropDownSelect {
                 #laFleche {
@@ -230,10 +232,9 @@ body.post-type-archive-post_type_patrimoine {
 
 @media (max-width: 400px) {
     .list-view .content-area {
-        padding: 0;
-    }
+		padding:0;
+	}
 }
-
 @media (max-width: 750px) {
     #section_listing {
         .postform {
