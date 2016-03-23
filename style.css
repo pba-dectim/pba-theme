@@ -97,6 +97,9 @@
   padding-top: 0px; }
 
 /* SITE */
+a {
+  outline: none; }
+
 ::-moz-selection {
   background: #880000;
   color: white; }
