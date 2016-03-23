@@ -106,6 +106,7 @@ figcaption {
     font-size: 1.7em;
     text-transform: uppercase;
     margin: 40px auto;
+     margin-bottom: 20px ;
     width: 70%;
 }
 
@@ -152,7 +153,7 @@ figcaption {
 
 .containtFigcaption hr {
     height: 2px;
-    margin-top: 30px;
+    margin-top: 10px;
     background-color: $darkColor1;
     display: block;
     width: 30%;
