@@ -583,7 +583,8 @@ div #section-membres-ca {
   margin: 0 auto; }
 
 #section-membres-ca article:first-child {
-  margin-right: 4.16667%; }
+  margin-right: 4.16667%;
+  margin-bottom: 20px; }
 
 /*SECTION POLITIQUE CULTURELLE*/
 #section-politique-culturelle {
@@ -1159,7 +1160,7 @@ body.single-post_type_patrimoine .section-content > *, body.single-post_type_rea
   #contenu_single #galerie #boutonGalerie div {
     min-width: 200px; } }
 @media (max-width: 530px) {
-  .section-content > * {
+  .single .section-content > * {
     padding: 0 20px; }
 
   .banner-titre h1 {
