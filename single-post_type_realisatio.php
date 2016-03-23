@@ -130,9 +130,9 @@ get_header(); ?>
 
                                 
                                 <div id="boutonGalerie">
-                                    <div><a href="#">CARTE INTÉRACTIVE</a></div><!--
+                                    
                                     <?php if( get_field('video_dune_realisation') ): ?>
-                                    --><div id="showVideo"><a href="#">VIDÉO</a></div>
+                                    <div id="showVideo"><a href="#">VIDÉO</a></div>
                                     <?php endif; ?>
                                 </div>
 

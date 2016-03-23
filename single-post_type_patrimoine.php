@@ -93,7 +93,7 @@ get_header(); ?>
                               <!--addresse?id=leID-->
                                 <div id="boutonGalerie">
                              
-                                    <div><a href="#">CARTE INTÉRACTIVE</a></div><!--
+                                    <div><a href="<?php the_permalink(31); ?>?id=<?php the_ID(); ?>">CARTE INTÉRACTIVE</a></div><!--
                                      <?php if( get_field('video_patrimoine') ): ?>
                                     --><div id="showVideo"><a href="#">VIDÉO</a></div>
                                     <?php endif; ?>
