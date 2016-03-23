@@ -289,7 +289,13 @@ search-submit {
         //width:100%;
         padding-top: 70px;
         text-align: center;
+        line-height:normal;
     }
+    
+    .primary-navigation li a{
+        padding:15px 0;
+    }
+    
     #primary-menu li:last-child {
         padding-right: 0px;
     }
